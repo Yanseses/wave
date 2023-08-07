@@ -1,0 +1,40 @@
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: #2323234d;;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .3s;
+
+  &:hover {
+    box-shadow: inset 0px 0px 10px 1px var(--background-purple);
+    transition: .3s;
+  }
+}
+
+.active {
+  color: var(--background-purple);
+}
+
+.avatarActive {
+  box-shadow: 0 0 2px 2px var(--background-purple);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -moz-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

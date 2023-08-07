@@ -1,0 +1,13 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.active {
+  background: linear-gradient(136deg, var(--background-purple) 0%, var(--background-violet) 100%);
+}

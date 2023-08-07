@@ -1,0 +1,21 @@
+.home {
+  display: grid;
+  grid-template-columns: auto 375px;
+  column-gap: 35px;
+  height: inherit;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  overflow: scroll;
+  padding: 40px 0 90px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+}

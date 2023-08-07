@@ -1,0 +1,91 @@
+.player {
+  width: -webkit-fill-available;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  bottom: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 46px;
+  align-items: center;
+  background-color: var(--background-player);
+  padding: 6px 26px;
+  width: -webkit-fill-available;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  column-gap: 14px;
+  align-items: center;
+}
+
+.additionally {
+  display: flex;
+  column-gap: 32px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+}
+
+.link {
+  &:hover {
+    color: var(--background-purple);
+  }
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  row-gap: 4px;
+}
+
+.timelineWrapper {
+  width: 100%;
+  height: 15px;
+  background-color: #464646;
+}
+
+.timelineText {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatarActive {
+  animation: 5s linear infinite rotate;
+}
+
+.progress {
+  width: 50%;
+  height: inherit;
+  background: linear-gradient(136deg, var(--background-purple) 0%, var(--background-violet) 100%);
+  border-radius: 0 20px 20px 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

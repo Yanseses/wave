@@ -1,0 +1,29 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  padding: 40px 35px;
+  box-shadow: 6px 4px 100px 0px var(--shadow-color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--background-purple);
+}

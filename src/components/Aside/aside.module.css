@@ -1,0 +1,4 @@
+.aside {
+  padding: 40px;
+  box-shadow: 6px 4px 100px 0px var(--shadow-color);
+}
