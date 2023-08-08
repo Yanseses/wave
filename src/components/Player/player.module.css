@@ -15,11 +15,31 @@
   width: -webkit-fill-available;
 }
 
-.info {
+.title {
+  font-size: 20px;
+  &:hover {
+    color: var(--background-purple);
+  }
+}
+
+.artist {
+  font-size: 14px;
+  &:hover {
+    color: var(--background-purple);
+  }
+}
+
+.about {
   display: flex;
   flex-direction: row;
   column-gap: 14px;
   align-items: center;
+}
+
+.aboutWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .additionally {
@@ -27,22 +47,10 @@
   column-gap: 32px;
 }
 
-.textWrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-}
-
 .controls {
   display: flex;
   justify-content: center;
   column-gap: 25px;
-}
-
-.link {
-  &:hover {
-    color: var(--background-purple);
-  }
 }
 
 .timeline {

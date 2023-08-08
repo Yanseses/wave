@@ -54,11 +54,7 @@ export function getChartTracks(){
           subtitle: el.subtitle,
           avatar: el.share.avatar,
           image: el.share.image,
-          artist: {
-            alias: el.artists ? el.artists[0].alias : null,
-            adamid: el.artists ? el.artists[0].adamid : null,
-            id: el.artists ? el.artists[0].id : null,
-          },
+          artists: el.artists || null,
           audio: el.hub.actions ? el.hub.actions[1].uri : null
         }))
         dispatch(getChartListSuccess(countryChart))

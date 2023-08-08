@@ -13,7 +13,9 @@ export const MenuItem: FC<IMenuItem> = ({ link, Icon, text }) => {
   return (
     <NavLink to={link} className={({ isActive }) => isActive ? `${styles.active} ${styles.item}` : styles.item}>
       <Icon />
-      <Text As="span" color={'primary'} size={16}>{text}</Text>
+      <Text As="span" color={'primary'} size={16}>
+        {text}
+      </Text>
     </NavLink>  
   )
 }

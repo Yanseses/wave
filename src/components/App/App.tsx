@@ -26,6 +26,7 @@ export const App: FC = () => {
         <Route path='/profile' element={ <Profile /> }/>
         <Route path='/genres/*' element={ <Genres /> }/>
         <Route path='/artists/*' element={ <Artists /> } />
+        <Route path='/sound/*' element={ <div>Sound</div> } />
         <Route path='*' element={ <NotFound /> } />
       </Routes>
       <Player />

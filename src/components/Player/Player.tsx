@@ -18,10 +18,6 @@ import { Button } from "../Button/Button";
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
-  const [ currentTime, setCurrentTime ] = useState({
-    min: '',
-    sec: ''
-  })
   const [ duration, setDuration ] = useState<string>();
   const [ isRepeat, setIsRepeat ] = useState<boolean>(false);
   const [ isMuted, setIsMuted ] = useState(true);
@@ -108,15 +104,36 @@ export const Player: FC = () => {
               </Button>
             </div>
             
-            <div className={styles.info}>
+            <div className={styles.about}>
               <Avatar image={data.image} name={data.title} size={68} activeClass={ data.isPlaying ? styles.avatarActive : '' } />
-              <div className={styles.textWrapper}>
-                <Link to={'/sound'} className={styles.link}>
-                  <Text As="p" size={20} color="inherit">{data.title}</Text>
+              <div className={styles.aboutWrapper}>
+                <Link to={`/sound/${data.id}`} className={styles.title}>
+                  { data.title }
                 </Link>
-                <Link to={ data.artist.alias ? `/artists/${data.artist.alias}` : '/artists' } className={styles.link}>
-                  <Text As="p" size={12} color="inherit">{data.subtitle}</Text>
-                </Link>
+                { data.artists && data.artists.length > 0 ? (
+                  <div className={styles.artists}>
+                    { data.artists.map((el: any, i: number, arr: any) => {
+                      const name = decodeURI(el.alias).split('-').join(' ');
+                      if((arr.length - 1) === i){
+                        return ( 
+                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist}>
+                            { name }
+                          </Link>
+                        )
+                      }
+                      return (
+                        <>
+                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist}>
+                            { name }
+                          </Link>
+                          <Text As='span' size={12}> & </Text>
+                        </>  
+                      )
+                      })
+                    }
+                  </div>
+                ) : ( <Text As='p' size={12}>{data.subtitle}</Text> ) 
+                }
               </div>
             </div>
 
