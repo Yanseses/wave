@@ -1,7 +1,7 @@
 // import axios from "axios"
 import { getCookie } from "../../utils/cookie"
 import { chartList, countryChartRu } from "../../utils/mocks/charts";
-import { getChartListFailed, getChartListRequest, getChartListSuccess, getGenresCountryFailed, getGenresCountryRequest, getGenresCountrySuccess } from "../actions/chart"
+import { getChartListFailed, getChartListRequest, getChartListSuccess, getGenresCountryFailed, getGenresCountryRequest, getGenresCountrySuccess } from "../actions/main"
 import { AppDispatch } from "../types/types";
 
 export function getChartGenres(){
@@ -19,9 +19,14 @@ export function getChartGenres(){
     //     throw new Error(req.statusText)
     //   }
     // }).then((data) => {
-    //   console.log(data)
+    //   const genres = {
+    //     country: data.countries.find((country: any) => country.id === getCookie('country')?.substring(3, 5)).genres,
+    //     global: data.global.genres
+    //   }
+    //   dispatch(getGenresCountrySuccess(genres))
     // }).catch((err) => {
     //   console.log(err)
+    //   dispatch(getGenresCountryFailed(err))
     // })
     setTimeout(async () => {
       return new Promise((resolve, reject) => {

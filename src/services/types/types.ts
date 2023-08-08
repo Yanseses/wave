@@ -1,7 +1,7 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { Action, ActionCreator } from 'redux';
 import { store } from '../../index';
-import { TChartActions } from '../actions/chart';
+import { TChartActions } from '../actions/main';
 
 export type TApplicationActions = TChartActions;
 

@@ -7,8 +7,8 @@ import { TrackList } from "../../components/TrackList/TrackList";
 import { useSelector } from '../../services/hooks';
 
 export const Home: FC = () => {
-  const chartTracks = useSelector(store => store.chart.chart.data);
-  const genres = useSelector(store => store.chart.genres.data);
+  const chartTracks = useSelector(store => store.main.chart.data);
+  const genres = useSelector(store => store.main.genres.data);
 
   return (
     <main className={styles.home}>

@@ -11,7 +11,7 @@ import {
   NextTrackIcon, 
   RepeatIcon } from "../../media/Icons";  
 import { useDispatch } from "react-redux";
-import { activePlayer, inactivePlayer, nextTrack, prevTrack } from "../../services/actions/chart";
+import { activePlayer, inactivePlayer, nextTrack, prevTrack } from "../../services/actions/main";
 import { Avatar } from "./Avatar/Avatar";
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
@@ -22,7 +22,7 @@ export const Player: FC = () => {
   const [ isRepeat, setIsRepeat ] = useState<boolean>(false);
   const [ isMuted, setIsMuted ] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const data = useSelector(store => store.chart.player);
+  const data = useSelector(store => store.main.player);
 
   const handleSpeaking = useCallback(() => {
     setIsMuted(!isMuted);
@@ -107,7 +107,7 @@ export const Player: FC = () => {
             <div className={styles.about}>
               <Avatar image={data.image} name={data.title} size={68} activeClass={ data.isPlaying ? styles.avatarActive : '' } />
               <div className={styles.aboutWrapper}>
-                <Link to={`/sound/${data.id}`} className={styles.title}>
+                <Link to={`/sound/${data.id}`} className={styles.title} state={{ name: data.title }}>
                   { data.title }
                 </Link>
                 { data.artists && data.artists.length > 0 ? (
@@ -116,14 +116,14 @@ export const Player: FC = () => {
                       const name = decodeURI(el.alias).split('-').join(' ');
                       if((arr.length - 1) === i){
                         return ( 
-                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist}>
+                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist} state={{ artist: el.alias }}>
                             { name }
                           </Link>
                         )
                       }
                       return (
                         <>
-                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist}>
+                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist} state={{ artist: el.alias }}>
                             { name }
                           </Link>
                           <Text As='span' size={12}> & </Text>

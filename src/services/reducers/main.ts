@@ -10,8 +10,8 @@ import {
   INACTIVE_PLAYER,
   NEXT_TRACK,
   PREV_TRACK
-} from "../actionTypes/chart"
-import { TChartActions } from "../actions/chart";
+} from "../actionTypes/main"
+import { TChartActions } from "../actions/main";
 
 interface IRequest {
   request: boolean,
@@ -42,7 +42,7 @@ const initStore = {
   player: null
 }
 
-export const chartReducer = (state: IChartStore = initStore, action: TChartActions) => {
+export const mainReducer = (state: IChartStore = initStore, action: TChartActions) => {
   switch(action.type){
     case GET_CHART_LIST_REQUEST:{
       return {
@@ -160,7 +160,7 @@ export const chartReducer = (state: IChartStore = initStore, action: TChartActio
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data.map((el: any, i: number, arr: any) => {
+          data: state.chart.data.map((el: any, i: number, arr: any[]) => {
             if(arr.length === index){
               el.isPlaying = false
             } else {              

@@ -6,7 +6,7 @@ import { GenresList } from '../../../components/GenresList/GenresList';
 import { Aside } from '../../../components/Aside/Aside';
 
 export const GenresMain: FC = () => {
-  const genres = useSelector(store => store.chart.genres.data);
+  const genres = useSelector(store => store.main.genres.data);
 
   return (
     <main className={styles.genres}>

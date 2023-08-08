@@ -3,7 +3,7 @@ import { PlayIcon, StopIcon } from '../../../media/Icons';
 import { FC, useCallback } from "react";
 import { Text } from '../../Text/Text';
 import { useDispatch } from '../../../services/hooks';
-import { activePlayer, addToPlayer, inactivePlayer } from '../../../services/actions/chart';
+import { activePlayer, addToPlayer, inactivePlayer } from '../../../services/actions/main';
 import { Avatar } from '../../Player/Avatar/Avatar';
 import { Button } from '../../Button/Button';
 

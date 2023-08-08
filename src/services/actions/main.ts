@@ -10,7 +10,7 @@ import {
   INACTIVE_PLAYER,
   NEXT_TRACK,
   PREV_TRACK
-} from "../actionTypes/chart"
+} from "../actionTypes/main"
 
 interface IGetChartListRequest {
   readonly type: typeof GET_CHART_LIST_REQUEST
