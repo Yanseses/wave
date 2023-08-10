@@ -1,3 +1,4 @@
+import { IGenres, ITrack } from "../../utils/types"
 import { 
   ACTIVE_PLAYER,
   ADD_TO_PLAYER,
@@ -23,7 +24,7 @@ interface IGetChartListFailed {
 
 interface IGetChartListSuccess {
   readonly type: typeof GET_CHART_LIST_SUCCESS,
-  payload: any
+  payload: ITrack[]
 }
 
 interface IGetGenresCountryRequest {
@@ -42,7 +43,7 @@ interface IGetGenresCountrySuccess {
 
 interface IAddToPlayer {
   readonly type: typeof ADD_TO_PLAYER,
-  payload: any
+  payload: string
 }
 
 interface IActivePlayer {
@@ -91,7 +92,7 @@ export const getChartListFailed = (error: string): IGetChartListFailed => {
   }
 }
 
-export const getChartListSuccess = (data: any): IGetChartListSuccess => {
+export const getChartListSuccess = (data: ITrack[]): IGetChartListSuccess => {
   return {
     type: GET_CHART_LIST_SUCCESS,
     payload: data
@@ -111,14 +112,14 @@ export const getGenresCountryFailed = (error: string): IGetGenresCountryFailed =
   }
 }
 
-export const getGenresCountrySuccess = (data: any): IGetGenresCountrySuccess => {
+export const getGenresCountrySuccess = (data: IGenres): IGetGenresCountrySuccess => {
   return {
     type: GET_GENRES_COUNTRY_SUCCESS,
     payload: data
   }
 }
 
-export const addToPlayer = (key: number): IAddToPlayer => {
+export const addToPlayer = (key: string): IAddToPlayer => {
   return {
     type: ADD_TO_PLAYER,
     payload: key

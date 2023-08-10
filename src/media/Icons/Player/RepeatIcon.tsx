@@ -1,7 +1,6 @@
-import { FC } from "react";
 import { IPlayerIcons } from "../utils";
 
-export const RepeatIcon: FC<IPlayerIcons> = ({ size = 30, color = 'white' }) => {
+export const RepeatIcon = ({ size = 30, color = 'white' }: IPlayerIcons): JSX.Element => {
   return (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M320 120l48 48-48 48"/>

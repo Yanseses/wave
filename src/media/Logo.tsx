@@ -1,6 +1,4 @@
-import { FC } from "react";
-
-export const Logo: FC = () => {
+export const Logo = (): JSX.Element => {
   return (
     <svg width="169" height="43" viewBox="0 0 169 43" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 15C0 13.3431 1.34315 12 3 12C4.65685 12 6 13.3431 6 15V28C6 29.6569 4.65685 31 3 31C1.34315 31 0 29.6569 0 28V15Z" fill="url(#paint0_linear_104_80)" />

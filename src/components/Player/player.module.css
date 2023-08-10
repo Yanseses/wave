@@ -83,7 +83,7 @@
 }
 
 .progress {
-  width: 50%;
+  width: 0%;
   height: inherit;
   background: linear-gradient(136deg, var(--background-purple) 0%, var(--background-violet) 100%);
   border-radius: 0 20px 20px 0;

@@ -1,6 +1,7 @@
 // import axios from "axios"
 import { getCookie } from "../../utils/cookie"
 import { chartList, countryChartRu } from "../../utils/mocks/charts";
+import { IGenres, ITrack, TGenresCountry } from "../../utils/types";
 import { getChartListFailed, getChartListRequest, getChartListSuccess, getGenresCountryFailed, getGenresCountryRequest, getGenresCountrySuccess } from "../actions/main"
 import { AppDispatch } from "../types/types";
 
@@ -32,8 +33,8 @@ export function getChartGenres(){
       return new Promise((resolve, reject) => {
         resolve(chartList)
       }).then((el: any) => {
-        const genres = {
-          country: el.countries.find((country: any) => country.id === getCookie('country')?.substring(3, 5)).genres,
+        const genres: IGenres = {
+          country: el.countries.find((country: TGenresCountry) => country.id === getCookie('country')?.substring(3, 5)).genres,
           global: el.global.genres
         }
         dispatch(getGenresCountrySuccess(genres))
@@ -52,9 +53,9 @@ export function getChartTracks(){
       return new Promise((resolve, reject) => {
         resolve(countryChartRu)
       }).then((req: any) => {
-        const countryChart = req.tracks.map((el: any) => ({
+        const countryChart: ITrack[] = req.tracks.map((el: any) => ({
           isPlaying: false,
-          id: el.key,
+          key: el.key,
           title: el.title,
           subtitle: el.subtitle,
           avatar: el.share.avatar,

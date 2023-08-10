@@ -1,3 +1,4 @@
+import { ITrack, IGenres } from "../../utils/types";
 import { 
   ACTIVE_PLAYER,
   ADD_TO_PLAYER,
@@ -16,13 +17,20 @@ import { TChartActions } from "../actions/main";
 interface IRequest {
   request: boolean,
   failed: boolean,
-  error: string,
-  data: any
+  error: string
 }
 
-interface IChartStore {
-  chart: IRequest,
-  genres: IRequest,
+type TChart = {
+  data: ITrack[] | null
+} & IRequest;
+
+type TGenres = {
+  data: IGenres[] | null
+} & IRequest;
+
+interface IMainStore {
+  chart: TChart,
+  genres: TGenres,
   player: any | null
 }
 
@@ -31,7 +39,7 @@ const initStore = {
     request: false,
     failed: false,
     error: '',
-    data: []
+    data: null
   },
   genres: {
     request: false,
@@ -42,7 +50,7 @@ const initStore = {
   player: null
 }
 
-export const mainReducer = (state: IChartStore = initStore, action: TChartActions) => {
+export const mainReducer = (state: IMainStore = initStore, action: TChartActions) => {
   switch(action.type){
     case GET_CHART_LIST_REQUEST:{
       return {
@@ -98,7 +106,7 @@ export const mainReducer = (state: IChartStore = initStore, action: TChartAction
     case GET_GENRES_COUNTRY_SUCCESS: {
       return {
         ...state,
-        player: state.chart.data[0],
+        player: state.chart.data ? state.chart.data![0] : null,
         genres: {
           ...state.genres,
           request: false,
@@ -112,12 +120,12 @@ export const mainReducer = (state: IChartStore = initStore, action: TChartAction
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data.map((el: any) => {
+          data: state.chart.data!.map((el: ITrack) => {
             el.isPlaying = false
             return el;
           })
         },
-        player: state.chart.data.find((el: any) => el.id === action.payload)
+        player: state.chart.data!.find((el: ITrack) => el.key === action.payload)
       }
     }
     case ACTIVE_PLAYER: {
@@ -125,8 +133,8 @@ export const mainReducer = (state: IChartStore = initStore, action: TChartAction
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data.map((el: any) => {
-            if(el.id === action.payload){
+          data: state.chart.data!.map((el: ITrack) => {
+            if(el.key === action.payload){
               el.isPlaying = true
             }
             return el;
@@ -143,7 +151,7 @@ export const mainReducer = (state: IChartStore = initStore, action: TChartAction
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data.map((el: any) => {
+          data: state.chart.data!.map((el: ITrack) => {
             el.isPlaying = false
             return el;
           })
@@ -155,12 +163,12 @@ export const mainReducer = (state: IChartStore = initStore, action: TChartAction
       }
     }
     case NEXT_TRACK: {
-      let index = state.chart.data.findIndex((el: any) => el.id === action.payload);
+      let index = state.chart.data!.findIndex((el: ITrack) => el.key === action.payload);
       return {
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data.map((el: any, i: number, arr: any[]) => {
+          data: state.chart.data!.map((el: ITrack, i: number, arr: ITrack[]) => {
             if(arr.length === index){
               el.isPlaying = false
             } else {              
@@ -173,18 +181,18 @@ export const mainReducer = (state: IChartStore = initStore, action: TChartAction
             return el;
           })
         },
-        player: index === (state.chart.data.length - 1)
-          ? state.chart.data[state.chart.data.length - 1]
-          : state.chart.data[state.chart.data.findIndex((el: any) => el.id === action.payload) + 1]
+        player: index === (state.chart.data!.length - 1)
+          ? state.chart.data![state.chart.data!.length - 1]
+          : state.chart.data![state.chart.data!.findIndex((el: ITrack) => el.key === action.payload) + 1]
       }
     }
     case PREV_TRACK: {
-      let index = state.chart.data.findIndex((el: any) => el.id === action.payload);
+      let index = state.chart.data!.findIndex((el: ITrack) => el.key === action.payload);
       return {
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data.map((el: any, i: number) => {
+          data: state.chart.data!.map((el: ITrack, i: number) => {
             if(index > 0){            
               if((index - 1) === i){
                 el.isPlaying = true
@@ -197,7 +205,7 @@ export const mainReducer = (state: IChartStore = initStore, action: TChartAction
             return el;
           })
         },
-        player: index > 0 ? state.chart.data[index - 1] : state.chart.data[0]
+        player: index > 0 ? state.chart.data![index - 1] : state.chart.data![0]
       }
     }
     default: {

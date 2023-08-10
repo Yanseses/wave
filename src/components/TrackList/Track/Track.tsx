@@ -17,10 +17,10 @@ export const Track: FC<ITrack> = ({ data, index }) => {
 
   const handlePlay = useCallback(() => {
     if(!data.isPlaying){
-      dispatch(addToPlayer(data.id))
-      dispatch(activePlayer(data.id))
+      dispatch(addToPlayer(data.key))
+      dispatch(activePlayer(data.key))
     } else {
-      dispatch(inactivePlayer(data.id))
+      dispatch(inactivePlayer(data.key))
     }
   }, [data, dispatch]);
   

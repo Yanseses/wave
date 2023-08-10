@@ -15,6 +15,7 @@ import { activePlayer, inactivePlayer, nextTrack, prevTrack } from "../../servic
 import { Avatar } from "./Avatar/Avatar";
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
+import { IArtists } from '../../utils/types';
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
@@ -38,9 +39,9 @@ export const Player: FC = () => {
   const handlePlay = useCallback(() => {
     if(audioRef.current){
       if(data.isPlaying){
-        dispatch(inactivePlayer(data.id))
+        dispatch(inactivePlayer(data.key))
       } else {
-        dispatch(activePlayer(data.id))
+        dispatch(activePlayer(data.key))
       }
     }
   }, [dispatch, data]);
@@ -54,11 +55,11 @@ export const Player: FC = () => {
   }, [isRepeat])
 
   const handlePrevTrack = useCallback(() => {
-    dispatch(prevTrack(data.id))
+    dispatch(prevTrack(data.key))
   }, [data, dispatch])
 
   const handleNextTrack = useCallback(() => {
-    dispatch(nextTrack(data.id))
+    dispatch(nextTrack(data.key))
   }, [data, dispatch])
 
   const handleLoadedAudio = () => {
@@ -107,12 +108,12 @@ export const Player: FC = () => {
             <div className={styles.about}>
               <Avatar image={data.image} name={data.title} size={68} activeClass={ data.isPlaying ? styles.avatarActive : '' } />
               <div className={styles.aboutWrapper}>
-                <Link to={`/sound/${data.id}`} className={styles.title} state={{ name: data.title }}>
+                <Link to={`/sound/${data.key}`} className={styles.title} state={{ name: data.title }}>
                   { data.title }
                 </Link>
                 { data.artists && data.artists.length > 0 ? (
                   <div className={styles.artists}>
-                    { data.artists.map((el: any, i: number, arr: any) => {
+                    { data.artists.map((el: IArtists, i: number, arr: IArtists[]) => {
                       const name = decodeURI(el.alias).split('-').join(' ');
                       if((arr.length - 1) === i){
                         return ( 
@@ -122,12 +123,12 @@ export const Player: FC = () => {
                         )
                       }
                       return (
-                        <>
-                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist} state={{ artist: el.alias }}>
+                        <span key={el.adamid}>
+                          <Link to={`/artists/${el.alias}`} className={styles.artist} state={{ artist: el.alias }}>
                             { name }
                           </Link>
                           <Text As='span' size={12}> & </Text>
-                        </>  
+                        </span>  
                       )
                       })
                     }

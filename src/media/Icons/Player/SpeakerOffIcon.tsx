@@ -1,7 +1,6 @@
-import { FC } from "react";
 import { IPlayerIcons } from "../utils";
 
-export const SpeakerOffIcon: FC<IPlayerIcons> = ({ size = 30, color = 'white' }) => {
+export const SpeakerOffIcon = ({ size = 30, color = 'white' }: IPlayerIcons): JSX.Element => {
   return (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path fill="none" stroke={color} strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" d="M416 432L64 80"/>
