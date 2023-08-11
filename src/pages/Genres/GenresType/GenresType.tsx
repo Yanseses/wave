@@ -3,11 +3,14 @@ import { FC, useEffect } from "react";
 import { Text } from '../../../components/Text/Text';
 import { useLocation, useNavigate } from 'react-router';
 import { TrackList } from '../../../components/TrackList/TrackList';
-import { countryChartRuPop } from '../../../utils/mocks/charts';
 import { Aside } from '../../../components/Aside/Aside';
+import { useDispatch, useSelector } from '../../../services/hooks';
+import { getGenresTrack } from '../../../services/thunks/main';
 
 export const GenresType: FC = () => {
   const navigator = useNavigate();
+  const dispatch = useDispatch();
+  const data = useSelector(store => store.main.tracks.data);
   const { state } = useLocation();
 
   useEffect(() => {
@@ -16,13 +19,17 @@ export const GenresType: FC = () => {
     }
   }, [state, navigator]);
 
+  useEffect(() => {
+    dispatch(getGenresTrack(state.listId))
+  }, [dispatch, state.listId])
+
   return (
     <main className={styles.type}>
       <section className={styles.wrapper}>
-      { state && (
+      { data && (
         <>
           <Text As='h2' size={26}>{ `Genre: ${state && state.name}` }</Text>
-          <TrackList tracks={countryChartRuPop.tracks} />
+          <TrackList tracks={data} />
         </>
         ) 
       }

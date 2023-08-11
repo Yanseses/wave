@@ -8,6 +8,9 @@ import {
   GET_GENRES_COUNTRY_FAILED, 
   GET_GENRES_COUNTRY_REQUEST,
   GET_GENRES_COUNTRY_SUCCESS,
+  GET_GENRE_TRACKS_FAILED,
+  GET_GENRE_TRACKS_REQUEST,
+  GET_GENRE_TRACKS_SUCCESS,
   INACTIVE_PLAYER,
   NEXT_TRACK,
   PREV_TRACK
@@ -28,9 +31,14 @@ type TGenres = {
   data: IGenres[] | null
 } & IRequest;
 
+type TTracks = {
+  data: ITrack[] | null
+} & IRequest;
+
 interface IMainStore {
   chart: TChart,
   genres: TGenres,
+  tracks: TTracks,
   player: any | null
 }
 
@@ -42,6 +50,12 @@ const initStore = {
     data: null
   },
   genres: {
+    request: false,
+    failed: false,
+    error: '',
+    data: null
+  },
+  tracks: {
     request: false,
     failed: false,
     error: '',
@@ -113,6 +127,35 @@ export const mainReducer = (state: IMainStore = initStore, action: TChartActions
           failed: false,
           data: action.payload
         },
+      }
+    }
+    case GET_GENRE_TRACKS_REQUEST: {
+      return {
+        ...state,
+        tracks: {
+          ...state.tracks,
+          request: true
+        }
+      }
+    }
+    case GET_GENRE_TRACKS_FAILED: {
+      return {
+        ...state,
+        tracks: {
+          ...state.tracks,
+          request: false,
+          failed: true
+        }
+      }
+    }
+    case GET_GENRE_TRACKS_SUCCESS: {
+      return {
+        ...state,
+        tracks: {
+          ...state.tracks,
+          request: false,
+          data: action.payload
+        }
       }
     }
     case ADD_TO_PLAYER: {

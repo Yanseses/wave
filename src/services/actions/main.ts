@@ -8,6 +8,9 @@ import {
   GET_GENRES_COUNTRY_FAILED,
   GET_GENRES_COUNTRY_REQUEST,
   GET_GENRES_COUNTRY_SUCCESS,
+  GET_GENRE_TRACKS_FAILED,
+  GET_GENRE_TRACKS_REQUEST,
+  GET_GENRE_TRACKS_SUCCESS,
   INACTIVE_PLAYER,
   NEXT_TRACK,
   PREV_TRACK
@@ -41,6 +44,20 @@ interface IGetGenresCountrySuccess {
   payload: any
 }
 
+interface IGetGenreTracksRequest {
+  readonly type: typeof GET_GENRE_TRACKS_REQUEST
+}
+
+interface IGetGenreTracksFailed {
+  readonly type: typeof GET_GENRE_TRACKS_FAILED,
+  payload: string
+}
+
+interface IGetGenreTracksSuccess {
+  readonly type: typeof GET_GENRE_TRACKS_SUCCESS,
+  payload: ITrack[]
+}
+
 interface IAddToPlayer {
   readonly type: typeof ADD_TO_PLAYER,
   payload: string
@@ -72,6 +89,9 @@ export type TChartActions = IGetChartListRequest
   | IGetGenresCountryRequest
   | IGetGenresCountryFailed
   | IGetGenresCountrySuccess
+  | IGetGenreTracksRequest
+  | IGetGenreTracksFailed
+  | IGetGenreTracksSuccess
   | IAddToPlayer
   | IActivePlayer
   | IInactivePlayer
@@ -115,6 +135,26 @@ export const getGenresCountryFailed = (error: string): IGetGenresCountryFailed =
 export const getGenresCountrySuccess = (data: IGenres): IGetGenresCountrySuccess => {
   return {
     type: GET_GENRES_COUNTRY_SUCCESS,
+    payload: data
+  }
+}
+
+export const getGenreTracksRequest = (): IGetGenreTracksRequest => {
+  return {
+    type: GET_GENRE_TRACKS_REQUEST
+  }
+}
+
+export const getGenreTracksFailed = (err: string): IGetGenreTracksFailed => {
+  return {
+    type: GET_GENRE_TRACKS_FAILED,
+    payload: err
+  }
+}
+
+export const getGenreTracksSuccess = (data: ITrack[]): IGetGenreTracksSuccess => {
+  return {
+    type: GET_GENRE_TRACKS_SUCCESS,
     payload: data
   }
 }
