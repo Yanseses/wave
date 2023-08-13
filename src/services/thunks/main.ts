@@ -2,7 +2,7 @@
 // import { apiHeader } from "../../utils/constants";
 import { getCookie } from "../../utils/cookie"
 import { chartList, countryChartRu, countryChartRuDance } from "../../utils/mocks/charts";
-import { IGenres, ITrack, TGenresCountry } from "../../utils/types";
+import { IGenres, ITrackData, TGenresCountry } from "../../utils/types";
 import { getChartListFailed, getChartListRequest, getChartListSuccess, getGenreTracksFailed, getGenreTracksRequest, getGenreTracksSuccess, getGenresCountryFailed, getGenresCountryRequest, getGenresCountrySuccess } from "../actions/main"
 import { AppDispatch } from "../types/types";
 
@@ -75,7 +75,7 @@ export function getChartTracks(){
       return new Promise((resolve, reject) => {
         resolve(countryChartRu)
       }).then((req: any) => {
-        const countryChart: ITrack[] = req.tracks.map((el: any) => ({
+        const countryChart: ITrackData[] = req.tracks.map((el: any) => ({
           isPlaying: false,
           key: el.key,
           title: el.title,
@@ -124,7 +124,7 @@ export function getGenresTrack(listid: string){
       return new Promise((resolve, reject) => {
         resolve(countryChartRuDance)
       }).then((req: any) => {
-        const countryChart: ITrack[] = req.tracks.map((el: any) => ({
+        const countryChart: ITrackData[] = req.tracks.map((el: any) => ({
           isPlaying: false,
           key: el.key,
           title: el.title,

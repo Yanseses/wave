@@ -87,6 +87,7 @@
   height: inherit;
   background: linear-gradient(136deg, var(--background-purple) 0%, var(--background-violet) 100%);
   border-radius: 0 20px 20px 0;
+  transition: .5s;
 }
 
 @keyframes rotate {

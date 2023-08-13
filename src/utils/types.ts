@@ -15,7 +15,7 @@ export type TGenresCountry = {
   countryId: string
 } & IGenresGlobal
 
-export interface ITrack {
+export interface ITrackData {
   isPlaying: boolean,
   key: string,
   title: string,

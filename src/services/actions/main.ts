@@ -1,4 +1,4 @@
-import { IGenres, ITrack } from "../../utils/types"
+import { IGenres, ITrackData } from "../../utils/types"
 import { 
   ACTIVE_PLAYER,
   ADD_TO_PLAYER,
@@ -27,7 +27,7 @@ interface IGetChartListFailed {
 
 interface IGetChartListSuccess {
   readonly type: typeof GET_CHART_LIST_SUCCESS,
-  payload: ITrack[]
+  payload: ITrackData[]
 }
 
 interface IGetGenresCountryRequest {
@@ -55,7 +55,7 @@ interface IGetGenreTracksFailed {
 
 interface IGetGenreTracksSuccess {
   readonly type: typeof GET_GENRE_TRACKS_SUCCESS,
-  payload: ITrack[]
+  payload: ITrackData[]
 }
 
 interface IAddToPlayer {
@@ -83,7 +83,7 @@ interface IPrevTrack {
   payload: string
 }
 
-export type TChartActions = IGetChartListRequest
+export type TMainActions = IGetChartListRequest
   | IGetChartListFailed
   | IGetChartListSuccess
   | IGetGenresCountryRequest
@@ -112,7 +112,7 @@ export const getChartListFailed = (error: string): IGetChartListFailed => {
   }
 }
 
-export const getChartListSuccess = (data: ITrack[]): IGetChartListSuccess => {
+export const getChartListSuccess = (data: ITrackData[]): IGetChartListSuccess => {
   return {
     type: GET_CHART_LIST_SUCCESS,
     payload: data
@@ -152,7 +152,7 @@ export const getGenreTracksFailed = (err: string): IGetGenreTracksFailed => {
   }
 }
 
-export const getGenreTracksSuccess = (data: ITrack[]): IGetGenreTracksSuccess => {
+export const getGenreTracksSuccess = (data: ITrackData[]): IGetGenreTracksSuccess => {
   return {
     type: GET_GENRE_TRACKS_SUCCESS,
     payload: data

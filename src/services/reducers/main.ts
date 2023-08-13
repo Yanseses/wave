@@ -1,4 +1,4 @@
-import { ITrack, IGenres } from "../../utils/types";
+import { ITrackData, IGenres } from "../../utils/types";
 import { 
   ACTIVE_PLAYER,
   ADD_TO_PLAYER,
@@ -15,7 +15,7 @@ import {
   NEXT_TRACK,
   PREV_TRACK
 } from "../actionTypes/main"
-import { TChartActions } from "../actions/main";
+import { TMainActions } from "../actions/main";
 
 interface IRequest {
   request: boolean,
@@ -24,7 +24,7 @@ interface IRequest {
 }
 
 type TChart = {
-  data: ITrack[] | null
+  data: ITrackData[] | null
 } & IRequest;
 
 type TGenres = {
@@ -32,10 +32,10 @@ type TGenres = {
 } & IRequest;
 
 type TTracks = {
-  data: ITrack[] | null
+  data: ITrackData[] | null
 } & IRequest;
 
-interface IMainStore {
+export interface IMainStore {
   chart: TChart,
   genres: TGenres,
   tracks: TTracks,
@@ -64,7 +64,7 @@ const initStore = {
   player: null
 }
 
-export const mainReducer = (state: IMainStore = initStore, action: TChartActions) => {
+export const mainReducer = (state: IMainStore = initStore, action: TMainActions) => {
   switch(action.type){
     case GET_CHART_LIST_REQUEST:{
       return {
@@ -163,12 +163,12 @@ export const mainReducer = (state: IMainStore = initStore, action: TChartActions
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data!.map((el: ITrack) => {
+          data: state.chart.data!.map((el: ITrackData) => {
             el.isPlaying = false
             return el;
           })
         },
-        player: state.chart.data!.find((el: ITrack) => el.key === action.payload)
+        player: state.chart.data!.find((el: ITrackData) => el.key === action.payload)
       }
     }
     case ACTIVE_PLAYER: {
@@ -176,7 +176,7 @@ export const mainReducer = (state: IMainStore = initStore, action: TChartActions
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data!.map((el: ITrack) => {
+          data: state.chart.data!.map((el: ITrackData) => {
             if(el.key === action.payload){
               el.isPlaying = true
             }
@@ -194,7 +194,7 @@ export const mainReducer = (state: IMainStore = initStore, action: TChartActions
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data!.map((el: ITrack) => {
+          data: state.chart.data!.map((el: ITrackData) => {
             el.isPlaying = false
             return el;
           })
@@ -206,12 +206,12 @@ export const mainReducer = (state: IMainStore = initStore, action: TChartActions
       }
     }
     case NEXT_TRACK: {
-      let index = state.chart.data!.findIndex((el: ITrack) => el.key === action.payload);
+      let index = state.chart.data!.findIndex((el: ITrackData) => el.key === action.payload);
       return {
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data!.map((el: ITrack, i: number, arr: ITrack[]) => {
+          data: state.chart.data!.map((el: ITrackData, i: number, arr: ITrackData[]) => {
             if(arr.length === index){
               el.isPlaying = false
             } else {              
@@ -226,16 +226,16 @@ export const mainReducer = (state: IMainStore = initStore, action: TChartActions
         },
         player: index === (state.chart.data!.length - 1)
           ? state.chart.data![state.chart.data!.length - 1]
-          : state.chart.data![state.chart.data!.findIndex((el: ITrack) => el.key === action.payload) + 1]
+          : state.chart.data![state.chart.data!.findIndex((el: ITrackData) => el.key === action.payload) + 1]
       }
     }
     case PREV_TRACK: {
-      let index = state.chart.data!.findIndex((el: ITrack) => el.key === action.payload);
+      let index = state.chart.data!.findIndex((el: ITrackData) => el.key === action.payload);
       return {
         ...state,
         chart: {
           ...state.chart,
-          data: state.chart.data!.map((el: ITrack, i: number) => {
+          data: state.chart.data!.map((el: ITrackData, i: number) => {
             if(index > 0){            
               if((index - 1) === i){
                 el.isPlaying = true

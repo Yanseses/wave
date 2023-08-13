@@ -6,10 +6,11 @@ import { useDispatch } from '../../../services/hooks';
 import { activePlayer, addToPlayer, inactivePlayer } from '../../../services/actions/main';
 import { Avatar } from '../../Player/Avatar/Avatar';
 import { Button } from '../../Button/Button';
+import { ITrackData } from '../../../utils/types';
 
 interface ITrack {
   index: number
-  data: any
+  data: ITrackData
 }
 
 export const Track: FC<ITrack> = ({ data, index }) => {

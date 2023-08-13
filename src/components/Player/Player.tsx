@@ -19,10 +19,15 @@ import { IArtists } from '../../utils/types';
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
-  const [ duration, setDuration ] = useState<string>();
+  const [ currentTime, setCurrentTime ] = useState({
+    min: '0',
+    sec: '00'
+  });
+  const [ duration, setDuration ] = useState<number>(0);
   const [ isRepeat, setIsRepeat ] = useState<boolean>(false);
   const [ isMuted, setIsMuted ] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const progressRef = useRef<HTMLDivElement | null>(null);
   const data = useSelector(store => store.main.player);
 
   const handleSpeaking = useCallback(() => {
@@ -52,7 +57,7 @@ export const Player: FC = () => {
         audioRef.current.play()
       }
     }
-  }, [isRepeat])
+  }, [isRepeat]);
 
   const handlePrevTrack = useCallback(() => {
     dispatch(prevTrack(data.key))
@@ -64,9 +69,30 @@ export const Player: FC = () => {
 
   const handleLoadedAudio = () => {
     if(audioRef.current){
-      setDuration((Math.floor(audioRef.current?.duration) / 60).toFixed(2))
+      setDuration(audioRef.current?.duration)
     }
   }
+
+  const handleProgress = () => {
+    if(audioRef.current && progressRef.current){
+      const min = Math.floor(audioRef.current.currentTime / 60).toFixed();
+      const sec = Math.floor(audioRef.current.currentTime % 60) < 10 ? `0${Math.floor(audioRef.current.currentTime % 60)}` : Math.floor(audioRef.current.currentTime % 60).toFixed();
+      if(currentTime.sec !== sec){
+        setCurrentTime({
+          ...currentTime,
+          sec: sec
+        })
+      }
+      if(currentTime.min !== min){
+        setCurrentTime({
+          ...currentTime,
+          min: min
+        })
+      }
+      progressRef.current.style.width = `${((audioRef.current?.currentTime) * (100 / audioRef.current.duration)).toFixed(4)}%`
+    }
+  }
+
 
   useEffect(() => {
     if(audioRef.current){
@@ -84,11 +110,11 @@ export const Player: FC = () => {
         <div className={styles.player}>
           <div className={styles.timeline}>
             <div className={styles.timelineWrapper}>
-              <div className={styles.progress}></div>
+              <div ref={progressRef} className={styles.progress}></div>
             </div>
             <div className={styles.timelineText}>
-              <Text As="p" size={12}>{ audioRef.current?.currentTime ? (Math.floor(audioRef.current?.currentTime) / 60).toFixed(2) : '0.00' }</Text>
-              <Text As="p" size={12}>{ duration }</Text>
+              <Text As="p" size={12}>{ `${currentTime.min}:${currentTime.sec}` }</Text>
+              <Text As="p" size={12}>{ `${Math.floor(duration / 60)}:${Math.floor(duration % 60)}` }</Text>
             </div>
           </div>
 
@@ -147,8 +173,9 @@ export const Player: FC = () => {
               </Button>
             </div>
             <audio 
-              ref={audioRef} 
+              ref={audioRef}
               onLoadedMetadata={handleLoadedAudio} 
+              onTimeUpdate={handleProgress}
               onEnded={ isRepeat ? handleRepeat : handleNextTrack} 
               src={data.audio}>
             </audio>
