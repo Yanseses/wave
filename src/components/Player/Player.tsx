@@ -67,13 +67,13 @@ export const Player: FC = () => {
     dispatch(nextTrack(data.key))
   }, [data, dispatch])
 
-  const handleLoadedAudio = () => {
+  const handleLoadedAudio = useCallback(() => {
     if(audioRef.current){
       setDuration(audioRef.current?.duration)
     }
-  }
+  }, [audioRef])
 
-  const handleProgress = () => {
+  const handleProgress = useCallback(() => {
     if(audioRef.current && progressRef.current){
       const min = Math.floor(audioRef.current.currentTime / 60).toFixed();
       const sec = Math.floor(audioRef.current.currentTime % 60) < 10 ? `0${Math.floor(audioRef.current.currentTime % 60)}` : Math.floor(audioRef.current.currentTime % 60).toFixed();
@@ -91,7 +91,7 @@ export const Player: FC = () => {
       }
       progressRef.current.style.width = `${((audioRef.current?.currentTime) * (100 / audioRef.current.duration)).toFixed(4)}%`
     }
-  }
+  }, [currentTime])
 
 
   useEffect(() => {
@@ -134,7 +134,10 @@ export const Player: FC = () => {
             <div className={styles.about}>
               <Avatar image={data.image} name={data.title} size={68} activeClass={ data.isPlaying ? styles.avatarActive : '' } />
               <div className={styles.aboutWrapper}>
-                <Link to={`/sound/${data.key}`} className={styles.title} state={{ name: data.title }}>
+                <Link to={`/sound/${data.key}`} className={styles.title} state={{ 
+                  name: data.title,
+                  key: data.key
+                }}>
                   { data.title }
                 </Link>
                 { data.artists && data.artists.length > 0 ? (
