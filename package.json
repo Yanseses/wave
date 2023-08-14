@@ -1,7 +1,7 @@
 {
   "name": "wave",
   "version": "0.1.1",
-  "homepage": "/wave/",
+  "homepage": "https://yanseses.github.io/wave/",
   "private": true,
   "proxy": "https://shazam.p.rapidapi.com",
   "dependencies": {
