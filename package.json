@@ -1,8 +1,8 @@
 {
   "name": "wave",
   "version": "0.1.1",
-  "homepage": "https://yanseses.github.io/wave/",
   "private": true,
+  "homepage": "/",
   "proxy": "https://shazam.p.rapidapi.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
