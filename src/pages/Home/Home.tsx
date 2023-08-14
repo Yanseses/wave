@@ -51,7 +51,7 @@ export const Home: FC = () => {
         </main>
       ) : (
         <Loader />
-      ) 
+        ) 
       }
     </>
   )
