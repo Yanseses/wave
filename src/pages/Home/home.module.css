@@ -9,7 +9,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 60px;
+  row-gap: 40px;
   overflow: scroll;
   padding: 40px 0 90px;
 }
@@ -29,10 +29,13 @@
 @media screen and (max-width: 1000px) {
   .home {
     grid-template-columns: 1fr;
+    row-gap: 40px;
     padding-right: 20px;
+    overflow: scroll;
   }
 
   .wrapper {
     padding: 20px 0 0;
+    overflow: initial;
   }
 }

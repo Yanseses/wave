@@ -13,3 +13,22 @@
   overflow: scroll;
   padding: 40px 0 90px;
 }
+
+@media screen and (max-width: 1400px) {
+  .genres {
+    grid-template-columns: auto 275px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .genres {
+    grid-template-columns: 1fr;
+    padding-right: 20px;
+    overflow: scroll;
+  }
+
+  .wrapper {
+    padding: 20px 0 0;
+    overflow: initial;
+  }
+}

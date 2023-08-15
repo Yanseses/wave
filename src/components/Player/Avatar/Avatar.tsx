@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import styles from './avatar.module.css';
+import { Unknown } from '../../../media/Unknown';
 import { FC } from "react";
 
 interface IAvatar {
@@ -18,7 +19,11 @@ export const Avatar: FC<IAvatar> = ({ image, name, size = 58, activeClass }) => 
 
   return (
     <div className={classname}>
-      <img className={styles.image} src={image} alt={name} />
+      { image ? ( 
+        <img className={styles.image} src={image} alt={name} />
+      ) : (
+        <Unknown />
+      ) }
     </div>  
   )
 }
