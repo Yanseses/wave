@@ -1,7 +1,7 @@
 // import axios from "axios"
 // import { apiHeader } from "../../utils/constants";
 import { getCookie } from "../../utils/cookie"
-import { chartList, countryChartRu, countryChartRuDance } from "../../utils/mocks/charts";
+import { chartList, countryChartRu, globalChartGenres } from "../../utils/mocks/charts";
 import { IGenres, ITrackData, TGenresCountry } from "../../utils/types";
 import { getChartListFailed, getChartListRequest, getChartListSuccess, getGenreTracksFailed, getGenreTracksRequest, getGenreTracksSuccess, getGenresCountryFailed, getGenresCountryRequest, getGenresCountrySuccess } from "../actions/main"
 import { AppDispatch } from "../types/types";
@@ -94,6 +94,7 @@ export function getChartTracks(){
 }
 
 export function getGenresTrack(listid: string){
+  console.log(listid.split('-')[3])
   return function(dispatch: AppDispatch){
     dispatch(getGenreTracksRequest())
     // axios.get('https://shazam.p.rapidapi.com/charts/track', {
@@ -122,9 +123,9 @@ export function getGenresTrack(listid: string){
     // })
     setTimeout(async () => {
       return new Promise((resolve, reject) => {
-        resolve(countryChartRuDance)
+        resolve(globalChartGenres[Number(listid.split('-')[3])])
       }).then((req: any) => {
-        const countryChart: ITrackData[] = req.tracks.map((el: any) => ({
+        const countryChart: ITrackData[] = req.map((el: any) => ({
           isPlaying: false,
           key: el.key,
           title: el.title,

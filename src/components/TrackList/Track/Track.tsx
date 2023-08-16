@@ -33,7 +33,7 @@ export const Track: FC<ITrack> = ({ data, index }) => {
         </Text>
         <Avatar name={data.image} image={data.image} activeClass={data.isPlaying ? styles.avatarActive : ''} />
         <Text As={'p'} color='inherit' extraClass={`${data.isPlaying ? styles.active : ''} ${styles.text}`} size={16}>
-          {`${data.title} - ${data.subtitle}`}
+          {`${data.subtitle} - ${data.title}`}
         </Text>
       </div>
       <Button>

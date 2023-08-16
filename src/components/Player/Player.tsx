@@ -9,7 +9,7 @@ import {
   StopIcon, 
   PrevTrackIcon, 
   NextTrackIcon, 
-  RepeatIcon } from "../../media/Icons";  
+  RepeatIcon } from "../../media/Icons";
 import { useDispatch } from "react-redux";
 import { activePlayer, inactivePlayer, nextTrack, prevTrack } from "../../services/actions/main";
 import { Avatar } from "./Avatar/Avatar";
@@ -19,6 +19,7 @@ import { IArtists } from '../../utils/types';
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
+  const data = useSelector(store => store.main.player);
   const [ currentTime, setCurrentTime ] = useState({
     min: '0',
     sec: '00'
@@ -28,7 +29,6 @@ export const Player: FC = () => {
   const [ isMuted, setIsMuted ] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const progressRef = useRef<HTMLDivElement | null>(null);
-  const data = useSelector(store => store.main.player);
 
   const handleSpeaking = useCallback(() => {
     setIsMuted(!isMuted);
