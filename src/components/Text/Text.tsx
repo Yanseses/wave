@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import classnames from 'classnames';
 import styles from './text.module.css';
 
-export type TSize = 8 | 10 | 12 | 14 | 16 | 18 | 20 | 26;
+export type TSize = 8 | 10 | 12 | 14 | 16 | 18 | 20 | 26 | 40;
 export type TColor = 'primary' | 'secondary' | 'inherit';
 
 interface IText {
