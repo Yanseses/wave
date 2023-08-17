@@ -94,7 +94,6 @@ export function getChartTracks(){
 }
 
 export function getGenresTrack(listid: string){
-  console.log(listid.split('-')[3])
   return function(dispatch: AppDispatch){
     dispatch(getGenreTracksRequest())
     // axios.get('https://shazam.p.rapidapi.com/charts/track', {

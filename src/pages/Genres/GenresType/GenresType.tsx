@@ -10,7 +10,7 @@ import { getGenresTrack } from '../../../services/thunks/main';
 export const GenresType: FC = () => {
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const data = useSelector(store => store.main.tracks.data);
+  const { request, failed, data } = useSelector(store => store.main.tracks);
   const { state } = useLocation();
 
   useEffect(() => {
@@ -26,13 +26,16 @@ export const GenresType: FC = () => {
   return (
     <main className={styles.type}>
       <section className={styles.wrapper}>
-      { data && (
-        <>
-          <Text As='h2' size={26}>{ `Genre: ${state && state.name}` }</Text>
-          <TrackList tracks={data} />
-        </>
-        ) 
-      }
+        <Text As='h2' size={26}>{ `Genre: ${state && state.name}` }</Text>
+        { !failed ?
+          !request ? (
+            <TrackList tracks={data} />
+            ) : (
+            <div>Loading...</div>  
+          ) : (
+            <div>Error</div>
+          )
+        }
       </section>
       <Aside />
     </main>

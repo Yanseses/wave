@@ -71,7 +71,9 @@ export const mainReducer = (state: IMainStore = initStore, action: TMainActions)
         ...state,
         chart: {
           ...state.chart,
-          request: true
+          request: true,
+          failed: false,
+          error: ''
         }
       }
     }
@@ -102,7 +104,9 @@ export const mainReducer = (state: IMainStore = initStore, action: TMainActions)
         ...state,
         genres: {
           ...state.genres,
-          request: true
+          request: true,
+          failed: false,
+          error: ''
         }
       }
     }
@@ -133,8 +137,10 @@ export const mainReducer = (state: IMainStore = initStore, action: TMainActions)
       return {
         ...state,
         tracks: {
-          ...state.tracks,
-          request: true
+          request: true,
+          failed: false,
+          error: '',
+          data: null
         }
       }
     }
@@ -152,8 +158,9 @@ export const mainReducer = (state: IMainStore = initStore, action: TMainActions)
       return {
         ...state,
         tracks: {
-          ...state.tracks,
           request: false,
+          failed: false,
+          error: '',
           data: action.payload
         }
       }
