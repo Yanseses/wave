@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { useLocation } from "react-router";
-import { useDispatch } from "../../services/hooks";
+import { useDispatch } from "../../../services/hooks";
 
-export const Sound: FC = () => {
+export const Track: FC = () => {
   const dispatch = useDispatch();
   const location = useLocation();
 

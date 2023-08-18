@@ -13,7 +13,7 @@ export const Aside: FC = () => {
       <Text As='h2' size={20} color={'secondary'}>Top Artists</Text>
       { !request ? (
         <div className={styles.artists}>
-          { data && data.map((el, i) => {
+          { data && data.map((el: any, i: number) => {
             if(i < 6){
               return (
               <Link 
@@ -33,7 +33,7 @@ export const Aside: FC = () => {
         { !failed ? (
           <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Loading...</Text>
           ) : (
-          <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Content is empty1</Text>  
+          <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Content is empty</Text>  
           )
         }
       </div>

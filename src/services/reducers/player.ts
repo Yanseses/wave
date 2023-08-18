@@ -1,13 +1,19 @@
 import { ITrackData } from "../../utils/types"
-import { ADD_TO_PLAYER } from "../actionTypes/player"
+import { ADD_TO_PLAYER, PLAY_PAUSE } from "../actionTypes/player"
 import { TPlayerActions } from "../actions/player"
 
 interface IPlayer {
-  currentSong: null | ITrackData
+  currentSongs: null | ITrackData,
+  activeSong: null | ITrackData,
+  isPlaying: boolean,
+  genreListId: string
 }
 
 const playerState = {
-  currentSong: null
+  currentSongs: null,
+  activeSong: null,
+  isPlaying: false,
+  genreListId: ''
 }
 
 export const playerReducer = (state: IPlayer = playerState, action: TPlayerActions) => {
@@ -15,6 +21,11 @@ export const playerReducer = (state: IPlayer = playerState, action: TPlayerActio
     case ADD_TO_PLAYER: {
       return {
         ...state,
+      }
+    }
+    case PLAY_PAUSE: {
+      return {
+        ...state
       }
     }
     default: {

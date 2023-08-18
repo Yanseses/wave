@@ -3,6 +3,7 @@ import {
   ADD_TO_PLAYER,
   INACTIVE_PLAYER,
   NEXT_TRACK,
+  PLAY_PAUSE,
   PREV_TRACK
 } from "../actionTypes/player"
 
@@ -24,6 +25,10 @@ interface IInactivePlayer {
   payload: string
 }
 
+interface IPlayPause {
+  readonly type: typeof PLAY_PAUSE
+}
+
 interface INextTrack {
   readonly type: typeof NEXT_TRACK,
   payload: string
@@ -39,6 +44,7 @@ export type TPlayerActions = IAddToPlayer
   | IInactivePlayer
   | INextTrack
   | IPrevTrack
+  | IPlayPause
 
 export const addToPlayer = (key: string, list: string): IAddToPlayer => {
   return {
@@ -61,6 +67,12 @@ export const inactivePlayer = (id: string): IInactivePlayer => {
   return {
     type: INACTIVE_PLAYER,
     payload: id
+  }
+}
+
+export const playPause = (): IPlayPause => {
+  return {
+    type: PLAY_PAUSE
   }
 }
 

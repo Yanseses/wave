@@ -3,7 +3,6 @@ import { FC, useEffect } from "react";
 import { Text } from '../../../components/Text/Text';
 import { useLocation, useNavigate } from 'react-router';
 import { TrackList } from '../../../components/TrackList/TrackList';
-import { Aside } from '../../../components/Aside/Aside';
 import { useDispatch, useSelector } from '../../../services/hooks';
 import { getGenresTrack } from '../../../services/thunks/main';
 
@@ -14,14 +13,12 @@ export const GenresType: FC = () => {
   const { state } = useLocation();
 
   useEffect(() => {
-    if(!state){
-      navigator('/home')
+    if(state){
+      dispatch(getGenresTrack(state.listId))
+    } else {
+      navigator('/genres')
     }
-  }, [state, navigator]);
-
-  useEffect(() => {
-    dispatch(getGenresTrack(state.listId))
-  }, [dispatch, state.listId])
+  }, [dispatch, navigator, state])
 
   return (
     <main className={styles.type}>
@@ -37,7 +34,6 @@ export const GenresType: FC = () => {
           )
         }
       </section>
-      <Aside />
     </main>
   )
 }

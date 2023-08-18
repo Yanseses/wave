@@ -134,9 +134,12 @@ export const Player: FC = () => {
             <div className={styles.about}>
               <Avatar image={data.image} name={data.title} size={68} activeClass={ data.isPlaying ? styles.avatarActive : '' } />
               <div className={styles.aboutWrapper}>
-                <Link to={`/sound/${data.key}`} className={styles.title} state={{ 
-                  name: data.title,
-                  key: data.key
+                <Link 
+                  to={`/home/track/${data.key}`}
+                  className={styles.title} 
+                  state={{ 
+                    name: data.title,
+                    key: data.key
                 }}>
                   { data.title }
                 </Link>
@@ -146,7 +149,10 @@ export const Player: FC = () => {
                       const name = decodeURI(el.alias).split('-').join(' ');
                       if((arr.length - 1) === i){
                         return ( 
-                          <Link key={el.adamid} to={`/artists/${el.alias}`} className={styles.artist} state={{ artist: el.alias }}>
+                          <Link 
+                            key={el.adamid} to={`/artists/${el.alias}`} 
+                            className={styles.artist} 
+                            state={{ artist: el.alias }}>
                             { name }
                           </Link>
                         )

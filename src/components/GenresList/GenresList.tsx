@@ -17,7 +17,7 @@ export const GenresList: FC<IGenresList> = ({ genres }) => {
         <Link 
           to={`/genres/${genre.urlPath}`} 
           key={genre.listid}
-          className={styles.item} 
+          className={styles.item}
           style={{ backgroundImage: `url(${coverGenres[genre.name]})` }}
           state={{
             listId: genre.listid,

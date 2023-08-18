@@ -3,7 +3,6 @@ import { FC } from "react";
 import { Text } from '../../../components/Text/Text';
 import { useSelector } from '../../../services/hooks';
 import { GenresList } from '../../../components/GenresList/GenresList';
-import { Aside } from '../../../components/Aside/Aside';
 
 export const GenresMain: FC = () => {
   const genres = useSelector(store => store.main.genres.data);
@@ -17,7 +16,6 @@ export const GenresMain: FC = () => {
           ) 
         }
       </section>
-      <Aside />
     </main>
   )
 }
