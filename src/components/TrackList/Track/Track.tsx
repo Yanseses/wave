@@ -1,44 +1,70 @@
 import styles from './track.module.css';
-import { PlayIcon, StopIcon } from '../../../media/Icons';
+import { BanIcon, PlayIcon, StopIcon } from '../../../media/Icons';
 import { FC, useCallback } from "react";
 import { Text } from '../../Text/Text';
 import { useDispatch } from '../../../services/hooks';
-import { activePlayer, addToPlayer, inactivePlayer } from '../../../services/actions/main';
 import { Avatar } from '../../Player/Avatar/Avatar';
 import { Button } from '../../Button/Button';
 import { ITrackData } from '../../../utils/types';
+import { playPause, setActiveSong } from '../../../services/actions/player';
 
 interface ITrack {
-  index: number
-  data: ITrackData
+  index: number,
+  activeSong: ITrackData,
+  isPlaying: boolean,
+  song: ITrackData,
+  data: ITrackData[]
 }
 
-export const Track: FC<ITrack> = ({ data, index }) => {
+export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) => {
   const dispatch = useDispatch();
 
   const handlePlay = useCallback(() => {
-    if(!data.isPlaying){
-      dispatch(addToPlayer(data.key))
-      dispatch(activePlayer(data.key))
-    } else {
-      dispatch(inactivePlayer(data.key))
+    if(song && song.hub.actions){
+      if(isPlaying){
+        dispatch(playPause(false))
+      } else {
+        dispatch(playPause(true))
+      }
+      dispatch(setActiveSong(song, data, index))
     }
-  }, [data, dispatch]);
+  }, [data, dispatch, index, isPlaying, song]);
   
   return (
-    <li className={styles.track} onClick={handlePlay}>
+    <li 
+      onClick={handlePlay}
+      className={`
+        ${styles.track} 
+        ${ song.hub.actions
+          ? activeSong && song.key === activeSong.key 
+            ? styles.status_selected 
+            : ''
+          : styles.status_inactive
+        }
+      `}>
       <div className={styles.container}>
-        <Text As={'span'} color='inherit' extraClass={data.isPlaying ? styles.active : ''} size={26}>
-          {index >= 9 ? index + 1 : `0${index + 1}`}
+        <Text As={'span'} color='inherit' size={26}>
+          { index >= 9 ? index + 1 : `0${index + 1 }`}
         </Text>
-        <Avatar name={data.image} image={data.image} activeClass={data.isPlaying ? styles.avatarActive : ''} />
-        <Text As={'p'} color='inherit' extraClass={`${data.isPlaying ? styles.active : ''} ${styles.text}`} size={16}>
-          {`${data.subtitle} - ${data.title}`}
+        <Avatar 
+          name={song.share.text} 
+          image={ song.share.avatar ? song.share.avatar : song.share.image } 
+          activeClass={activeSong && activeSong.key === song.key && song.hub.actions ? styles.avatar_active: ''}
+          />
+        <Text As={'p'} color='inherit' extraClass={styles.text} size={16}>
+          {`${song.subtitle} - ${song.title}`}
         </Text>
       </div>
       <Button>
-        { data.isPlaying ? ( <StopIcon size={25} color={'purple'} /> ) : ( <PlayIcon size={25} /> ) }
+        { !song.hub.actions 
+          ? ( <BanIcon size={25} color={ 'grey' } /> )
+          : activeSong 
+            ? song.key === activeSong.key && isPlaying
+              ? ( <StopIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> ) 
+              : ( <PlayIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> )
+            : ( <PlayIcon size={25} color={ 'white' } /> )
+        }
       </Button>
     </li>  
   )
-}
+} 

@@ -15,12 +15,17 @@
   }
 }
 
-.active {
+.status_selected {
   color: var(--background-purple);
 }
 
-.avatarActive {
-  box-shadow: 0 0 2px 2px var(--background-purple);
+.avatar_active {
+  box-shadow: 0 0 1px 2px var(--background-purple);
+}
+
+.status_inactive {
+  color: var(--text-secondary-color);
+  cursor: not-allowed
 }
 
 .container {

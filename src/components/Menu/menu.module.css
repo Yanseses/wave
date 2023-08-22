@@ -27,3 +27,9 @@
   padding-bottom: 13px;
   border-bottom: 1px solid var(--background-purple);
 }
+
+@media screen and (max-width: 700px) {
+  .layout {
+    display: none;
+  }
+}

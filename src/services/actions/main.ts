@@ -1,7 +1,5 @@
 import { IGenres, ITrackData } from "../../utils/types"
 import { 
-  ACTIVE_PLAYER,
-  ADD_TO_PLAYER,
   GET_CHART_LIST_FAILED, 
   GET_CHART_LIST_REQUEST, 
   GET_CHART_LIST_SUCCESS,
@@ -10,10 +8,7 @@ import {
   GET_GENRES_COUNTRY_SUCCESS,
   GET_GENRE_TRACKS_FAILED,
   GET_GENRE_TRACKS_REQUEST,
-  GET_GENRE_TRACKS_SUCCESS,
-  INACTIVE_PLAYER,
-  NEXT_TRACK,
-  PREV_TRACK
+  GET_GENRE_TRACKS_SUCCESS
 } from "../actionTypes/main"
 
 interface IGetChartListRequest {
@@ -58,31 +53,6 @@ interface IGetGenreTracksSuccess {
   payload: ITrackData[]
 }
 
-interface IAddToPlayer {
-  readonly type: typeof ADD_TO_PLAYER,
-  payload: string
-}
-
-interface IActivePlayer {
-  readonly type: typeof ACTIVE_PLAYER,
-  payload: string
-}
-
-interface IInactivePlayer {
-  readonly type: typeof INACTIVE_PLAYER,
-  payload: string
-}
-
-interface INextTrack {
-  readonly type: typeof NEXT_TRACK,
-  payload: string
-}
-
-interface IPrevTrack {
-  readonly type: typeof PREV_TRACK,
-  payload: string
-}
-
 export type TMainActions = IGetChartListRequest
   | IGetChartListFailed
   | IGetChartListSuccess
@@ -92,11 +62,6 @@ export type TMainActions = IGetChartListRequest
   | IGetGenreTracksRequest
   | IGetGenreTracksFailed
   | IGetGenreTracksSuccess
-  | IAddToPlayer
-  | IActivePlayer
-  | IInactivePlayer
-  | INextTrack
-  | IPrevTrack
 
 
 export const getChartListRequest = (): IGetChartListRequest => {
@@ -156,40 +121,5 @@ export const getGenreTracksSuccess = (data: ITrackData[]): IGetGenreTracksSucces
   return {
     type: GET_GENRE_TRACKS_SUCCESS,
     payload: data
-  }
-}
-
-export const addToPlayer = (key: string): IAddToPlayer => {
-  return {
-    type: ADD_TO_PLAYER,
-    payload: key
-  }
-}
-
-export const activePlayer = (id: string): IActivePlayer => {
-  return {
-    type: ACTIVE_PLAYER,
-    payload: id
-  }
-}
-
-export const inactivePlayer = (id: string): IInactivePlayer => {
-  return {
-    type: INACTIVE_PLAYER,
-    payload: id
-  }
-}
-
-export const nextTrack = (id: string): INextTrack => {
-  return {
-    type: NEXT_TRACK,
-    payload: id
-  }
-}
-
-export const prevTrack = (id: string): IPrevTrack => {
-  return {
-    type: PREV_TRACK,
-    payload: id
   }
 }

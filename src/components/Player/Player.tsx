@@ -11,15 +11,16 @@ import {
   NextTrackIcon, 
   RepeatIcon } from "../../media/Icons";
 import { useDispatch } from "react-redux";
-import { activePlayer, inactivePlayer, nextTrack, prevTrack } from "../../services/actions/main";
+import { prevTrack, nextTrack } from '../../services/actions/player';
 import { Avatar } from "./Avatar/Avatar";
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 import { IArtists } from '../../utils/types';
+import { playPause } from '../../services/actions/player';
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
-  const data = useSelector(store => store.main.player);
+  const { isPlaying, currentSongs, activeSong, currentIndex } = useSelector(store => store.player);
   const [ currentTime, setCurrentTime ] = useState({
     min: '0',
     sec: '00'
@@ -39,17 +40,17 @@ export const Player: FC = () => {
         audioRef.current.volume = 1;
       }
     }
-  }, [isMuted]);
+  }, [ isMuted ]);
 
   const handlePlay = useCallback(() => {
     if(audioRef.current){
-      if(data.isPlaying){
-        dispatch(inactivePlayer(data.key))
+      if(isPlaying){
+        dispatch(playPause(false))
       } else {
-        dispatch(activePlayer(data.key))
+        dispatch(playPause(true))
       }
     }
-  }, [dispatch, data]);
+  }, [ isPlaying, dispatch ]);
 
   const handleRepeat = useCallback(() => {
     if(audioRef.current){
@@ -57,21 +58,29 @@ export const Player: FC = () => {
         audioRef.current.play()
       }
     }
-  }, [isRepeat]);
+  }, [ isRepeat ]);
 
-  const handlePrevTrack = useCallback(() => {
-    dispatch(prevTrack(data.key))
-  }, [data, dispatch])
+  const handlePrevTrack = useCallback(() => {    
+    if(currentIndex === 0){
+      dispatch(prevTrack(currentSongs.length - 1))
+    } else {
+      dispatch(prevTrack(currentIndex - 1))
+    }
+  }, [ currentIndex, currentSongs, dispatch ])
 
-  const handleNextTrack = useCallback(() => {
-    dispatch(nextTrack(data.key))
-  }, [data, dispatch])
+  const handleNextTrack = useCallback(() => {    
+    if((currentSongs.length - 1) === currentIndex){
+      dispatch(nextTrack(0))
+    } else {
+      dispatch(nextTrack(currentIndex + 1))
+    }
+  }, [ currentIndex, currentSongs, dispatch ])
 
   const handleLoadedAudio = useCallback(() => {
     if(audioRef.current){
       setDuration(audioRef.current?.duration)
     }
-  }, [audioRef])
+  }, [ audioRef ]);
 
   const handleProgress = useCallback(() => {
     if(audioRef.current && progressRef.current){
@@ -91,22 +100,22 @@ export const Player: FC = () => {
       }
       progressRef.current.style.width = `${((audioRef.current?.currentTime) * (100 / audioRef.current.duration)).toFixed(4)}%`
     }
-  }, [currentTime])
+  }, [ currentTime ])
 
 
   useEffect(() => {
     if(audioRef.current){
-      if(data.isPlaying){
+      if(isPlaying){
         audioRef.current.play();
       } else {
         audioRef.current.pause();
       }
     }
-  }, [data]);
+  }, [ isPlaying, activeSong ]);
 
   return (
     <>
-      { data && (
+      { activeSong && (
         <div className={styles.player}>
           <div className={styles.timeline}>
             <div className={styles.timelineWrapper}>
@@ -124,7 +133,7 @@ export const Player: FC = () => {
                 <PrevTrackIcon />
               </Button>
               <Button onClick={handlePlay}>
-                { data.isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
+                { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
               </Button>
               <Button onClick={handleNextTrack}>
                 <NextTrackIcon />
@@ -132,20 +141,20 @@ export const Player: FC = () => {
             </div>
             
             <div className={styles.about}>
-              <Avatar image={data.image} name={data.title} size={68} activeClass={ data.isPlaying ? styles.avatarActive : '' } />
+              <Avatar image={activeSong.share.avatar ? activeSong.share.avatar : activeSong.share.image} name={activeSong.share.text} size={68} activeClass={ isPlaying ? styles.avatarActive : '' } />
               <div className={styles.aboutWrapper}>
                 <Link 
-                  to={`/home/track/${data.key}`}
+                  to={`/home/track/${activeSong.key}`}
                   className={styles.title} 
                   state={{ 
-                    name: data.title,
-                    key: data.key
+                    name: activeSong.title,
+                    key: activeSong.key
                 }}>
-                  { data.title }
+                  { activeSong.title }
                 </Link>
-                { data.artists && data.artists.length > 0 ? (
+                { activeSong.artists && activeSong.artists.length > 0 ? (
                   <div className={styles.artists}>
-                    { data.artists.map((el: IArtists, i: number, arr: IArtists[]) => {
+                    { activeSong.artists.map((el: IArtists, i: number, arr: IArtists[]) => {
                       const name = decodeURI(el.alias).split('-').join(' ');
                       if((arr.length - 1) === i){
                         return ( 
@@ -168,7 +177,7 @@ export const Player: FC = () => {
                       })
                     }
                   </div>
-                ) : ( <Text As='p' size={12}>{data.subtitle}</Text> ) 
+                ) : ( <Text As='p' size={12}>{activeSong.subtitle}</Text> ) 
                 }
               </div>
             </div>
@@ -186,7 +195,7 @@ export const Player: FC = () => {
               onLoadedMetadata={handleLoadedAudio} 
               onTimeUpdate={handleProgress}
               onEnded={ isRepeat ? handleRepeat : handleNextTrack} 
-              src={data.audio}>
+              src={activeSong && activeSong.hub.actions && activeSong.hub.actions[1].uri}>
             </audio>
           </div>
         </div>

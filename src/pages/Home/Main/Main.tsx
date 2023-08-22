@@ -7,16 +7,16 @@ import { useForm } from '../../../hooks/useForm';
 import { SearchIcon } from '../../../media/Icons/Navigate/SearchIcon';
 import { useSelector } from '../../../services/hooks';
 import { Text } from '../../../components/Text/Text';
+import { HeadsetIcon, NoteIcon } from '../../../media/Icons';
 
 export const Main: FC = () => {
+  const genres = useSelector(store => store.main.genres.data);
   const { values, handleChange } = useForm({
     search: {
       error: false,
       data: ''
     }
   });
-  const chartTracks = useSelector(store => store.main.chart.data);
-  const genres = useSelector(store => store.main.genres.data);
 
   return (
     <section className={styles.wrapper}>
@@ -29,15 +29,21 @@ export const Main: FC = () => {
         Icon={SearchIcon}/>
       { genres && (
         <div className={styles.container}>
-          <Text As={'h2'} size={26}>Discover genre</Text>
-          <GenresList genres={genres.country}/>
+          <Text As={'h2'} size={26} extraClass={styles.heading}>
+            <NoteIcon />
+            Discover genre
+          </Text>
+          <GenresList genres={genres.country.genres}/>
         </div>
         ) 
       }
-      { chartTracks && (
+      { genres && (
         <div className={styles.container}>
-          <Text As="h2" size={26}>Top Charts</Text>
-          <TrackList tracks={chartTracks} />
+          <Text As={'h2'} size={26} extraClass={styles.heading}>
+            <HeadsetIcon />
+            Top Charts
+          </Text>
+          <TrackList />
         </div>
         ) 
       }

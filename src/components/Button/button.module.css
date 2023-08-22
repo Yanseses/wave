@@ -1,6 +1,6 @@
 .button {
   padding: 0;
-  background-color: inherit;
+  background-color: unset;
   border: none;
   cursor: pointer;
 }

@@ -1,7 +1,5 @@
-import { ITrackData, IGenres } from "../../utils/types";
+import { ITrackData, IGenres, IRequest } from "../../utils/types";
 import { 
-  ACTIVE_PLAYER,
-  ADD_TO_PLAYER,
   GET_CHART_LIST_FAILED, 
   GET_CHART_LIST_REQUEST, 
   GET_CHART_LIST_SUCCESS, 
@@ -11,17 +9,8 @@ import {
   GET_GENRE_TRACKS_FAILED,
   GET_GENRE_TRACKS_REQUEST,
   GET_GENRE_TRACKS_SUCCESS,
-  INACTIVE_PLAYER,
-  NEXT_TRACK,
-  PREV_TRACK
 } from "../actionTypes/main"
 import { TMainActions } from "../actions/main";
-
-interface IRequest {
-  request: boolean,
-  failed: boolean,
-  error: string
-}
 
 type TChart = {
   data: ITrackData[] | null
@@ -163,99 +152,6 @@ export const mainReducer = (state: IMainStore = initStore, action: TMainActions)
           error: '',
           data: action.payload
         }
-      }
-    }
-    case ADD_TO_PLAYER: {
-      return {
-        ...state,
-        chart: {
-          ...state.chart,
-          data: state.chart.data!.map((el: ITrackData) => {
-            el.isPlaying = false
-            return el;
-          })
-        },
-        player: state.chart.data!.find((el: ITrackData) => el.key === action.payload)
-      }
-    }
-    case ACTIVE_PLAYER: {
-      return {
-        ...state,
-        chart: {
-          ...state.chart,
-          data: state.chart.data!.map((el: ITrackData) => {
-            if(el.key === action.payload){
-              el.isPlaying = true
-            }
-            return el;
-          })
-        },
-        player: {
-          ...state.player,
-          isPlaying: true
-        }
-      }
-    }
-    case INACTIVE_PLAYER: {
-      return {
-        ...state,
-        chart: {
-          ...state.chart,
-          data: state.chart.data!.map((el: ITrackData) => {
-            el.isPlaying = false
-            return el;
-          })
-        },
-        player: {
-          ...state.player,
-          isPlaying: false
-        }
-      }
-    }
-    case NEXT_TRACK: {
-      let index = state.chart.data!.findIndex((el: ITrackData) => el.key === action.payload);
-      return {
-        ...state,
-        chart: {
-          ...state.chart,
-          data: state.chart.data!.map((el: ITrackData, i: number, arr: ITrackData[]) => {
-            if(arr.length === index){
-              el.isPlaying = false
-            } else {              
-              if((index + 1) === i){
-                el.isPlaying = true
-              } else {
-                el.isPlaying = false
-              }
-            }
-            return el;
-          })
-        },
-        player: index === (state.chart.data!.length - 1)
-          ? state.chart.data![state.chart.data!.length - 1]
-          : state.chart.data![state.chart.data!.findIndex((el: ITrackData) => el.key === action.payload) + 1]
-      }
-    }
-    case PREV_TRACK: {
-      let index = state.chart.data!.findIndex((el: ITrackData) => el.key === action.payload);
-      return {
-        ...state,
-        chart: {
-          ...state.chart,
-          data: state.chart.data!.map((el: ITrackData, i: number) => {
-            if(index > 0){            
-              if((index - 1) === i){
-                el.isPlaying = true
-              } else {
-                el.isPlaying = false
-              }
-            } else {
-              el.isPlaying = false
-            }
-            return el;
-          })
-        },
-        player: index > 0 ? state.chart.data![index - 1] : state.chart.data![0]
       }
     }
     default: {

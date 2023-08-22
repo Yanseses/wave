@@ -21,7 +21,6 @@ export const App: FC = () => {
     <div className={styles.layout}>
       <Menu />
       <Routes>
-        <Route path='/wave' element={ <Navigate to={'home'} /> } />
         <Route path='/' element={ <Navigate to={'/home'} />  }/>
         <Route path='/home/*' element={ <Home /> }/>
         <Route path='/genres/*' element={ <Genres /> }/>

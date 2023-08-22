@@ -20,6 +20,12 @@
   row-gap: 35px;
 }
 
+.heading {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
 @media screen and (max-width: 1200px) {
   .home {
     grid-template-columns: auto 275px;

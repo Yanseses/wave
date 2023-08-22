@@ -11,5 +11,8 @@ import { SpeakerOffIcon } from "./Player/SpeakerOffIcon";
 import { PrevTrackIcon } from "./Player/PrevTrackIcon";
 import { NextTrackIcon } from "./Player/NextTrackIcon";
 import { RepeatIcon } from "./Player/RepeatIcon";
+import { NoteIcon } from "./Navigate/NoteIcon";
+import { HeadsetIcon } from './Navigate/HeadsetIcon';
+import { BanIcon } from "./Player/BanIcon";
 
-export { PrevTrackIcon, NextTrackIcon, RepeatIcon, LikeIcon, HomeIcon, DotsMenuIcon, PlayIcon, PodcastsIcon, WaveIcon, StopIcon, SpeakerOnIcon, SpeakerOffIcon, ArtistsIcon };
+export { PrevTrackIcon, NextTrackIcon, RepeatIcon, NoteIcon, PlayIcon, StopIcon, SpeakerOnIcon, SpeakerOffIcon, HeadsetIcon, BanIcon, ArtistsIcon, LikeIcon, HomeIcon, DotsMenuIcon, PodcastsIcon, WaveIcon };
