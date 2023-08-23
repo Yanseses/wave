@@ -6,12 +6,12 @@ import { Avatar } from "../Player/Avatar/Avatar";
 import { Link } from "react-router-dom";
 
 export const Aside: FC = () => {
-  const { data, request, failed } = useSelector(store => store.main.chart);
+  // const { data, request, failed } = useSelector(store => store.main.chart);
 
   return (
     <aside className={styles.aside}>
       <Text As='h2' size={20} color={'secondary'}>Top Artists</Text>
-      { !request ? (
+      {/* { !request ? (
         <div className={styles.artists}>
           { data && data.map((el: any, i: number) => {
             if(i < 6){
@@ -37,7 +37,7 @@ export const Aside: FC = () => {
           )
         }
       </div>
-      ) }
+      ) } */}
     </aside>
   )
 }

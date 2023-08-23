@@ -10,7 +10,7 @@ import { Text } from '../../../components/Text/Text';
 import { HeadsetIcon, NoteIcon } from '../../../media/Icons';
 
 export const Main: FC = () => {
-  const genres = useSelector(store => store.main.genres.data);
+  const genres = useSelector(store => store.genres.data);
   const { values, handleChange } = useForm({
     search: {
       error: false,

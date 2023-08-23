@@ -4,7 +4,7 @@ import { Unknown } from '../../../media/Unknown';
 import { FC } from "react";
 
 interface IAvatar {
-  image: string,
+  image?: string,
   name: string,
   size?: 58 | 68,
   activeClass?: string

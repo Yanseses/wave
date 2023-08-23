@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { mainReducer } from './main';
 import { playerReducer } from './player';
+import { genresReducer } from './genres';
+import { artistsReducer } from './artists';
 
 export const rootReducer = combineReducers({
-  main: mainReducer,
-  player: playerReducer
+  genres: genresReducer,
+  player: playerReducer,
+  artists: artistsReducer
 });

@@ -6,16 +6,17 @@ import { Menu } from '../Menu/Menu';
 import { Genres, Artists, Home, NotFound } from '../../pages';
 import { Player } from '../Player/Player';
 import { useDispatch } from '../../services/hooks';
-import { getChartGenres, getChartTracks } from '../../services/thunks/main';
+import { getChartGenres } from '../../services/thunks/genres';
+import { getTopArtists } from '../../services/thunks/artists';
 
 export const App: FC = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     setCookie('country', window.navigator.language);
-    dispatch(getChartTracks())
     dispatch(getChartGenres())
-  }, [dispatch]);
+    dispatch(getTopArtists())
+  }, [ dispatch ]);
   
   return (
     <div className={styles.layout}>

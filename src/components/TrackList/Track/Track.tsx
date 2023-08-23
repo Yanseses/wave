@@ -10,7 +10,7 @@ import { playPause, setActiveSong } from '../../../services/actions/player';
 
 interface ITrack {
   index: number,
-  activeSong: ITrackData,
+  activeSong: ITrackData | null,
   isPlaying: boolean,
   song: ITrackData,
   data: ITrackData[]
@@ -21,14 +21,12 @@ export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) 
 
   const handlePlay = useCallback(() => {
     if(song && song.hub.actions){
-      if(isPlaying){
-        dispatch(playPause(false))
-      } else {
-        dispatch(playPause(true))
+      if(activeSong && song.key === activeSong.key){
+        dispatch(playPause(!isPlaying))
       }
       dispatch(setActiveSong(song, data, index))
     }
-  }, [data, dispatch, index, isPlaying, song]);
+  }, [activeSong, data, dispatch, index, isPlaying, song]);
   
   return (
     <li 

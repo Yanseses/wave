@@ -61,7 +61,7 @@ export const Player: FC = () => {
   }, [ isRepeat ]);
 
   const handlePrevTrack = useCallback(() => {    
-    if(currentIndex === 0){
+    if(currentIndex === 0 && currentSongs){
       dispatch(prevTrack(currentSongs.length - 1))
     } else {
       dispatch(prevTrack(currentIndex - 1))
@@ -69,7 +69,7 @@ export const Player: FC = () => {
   }, [ currentIndex, currentSongs, dispatch ])
 
   const handleNextTrack = useCallback(() => {    
-    if((currentSongs.length - 1) === currentIndex){
+    if(currentSongs && (currentSongs.length - 1) === currentIndex){
       dispatch(nextTrack(0))
     } else {
       dispatch(nextTrack(currentIndex + 1))
@@ -161,14 +161,17 @@ export const Player: FC = () => {
                           <Link 
                             key={el.adamid} to={`/artists/${el.alias}`} 
                             className={styles.artist} 
-                            state={{ artist: el.alias }}>
+                            state={{ id: el.adamid }}>
                             { name }
                           </Link>
                         )
                       }
                       return (
                         <span key={el.adamid}>
-                          <Link to={`/artists/${el.alias}`} className={styles.artist} state={{ artist: el.alias }}>
+                          <Link 
+                            to={`/artists/${el.alias}`} 
+                            className={styles.artist} 
+                            state={{ id: el.adamid }}>
                             { name }
                           </Link>
                           <Text As='span' size={12}> & </Text>

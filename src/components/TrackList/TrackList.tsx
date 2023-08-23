@@ -1,18 +1,26 @@
 import styles from './trackList.module.css';
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { Track } from "./Track/Track";
 import { ITrackData } from '../../utils/types';
 import { useGetTracks } from '../../hooks/useGetTracks';
 import { Text } from '../Text/Text';
-import { useSelector } from '../../services/hooks';
+import { useDispatch, useSelector } from '../../services/hooks';
+import { setActiveSong } from '../../services/actions/player';
 
 interface ITrackList {
   listId?: string
 }
 
 export const TrackList: FC<ITrackList> = ({ listId }) => {
+  const dispatch = useDispatch();
   const { data, request, failed, error } = useGetTracks(listId);
   const { isPlaying, activeSong } = useSelector(store => store.player);
+
+  useEffect(() => {
+    if(!activeSong && data){
+      dispatch(setActiveSong(data[0], data, 0))
+    }
+  }, [ data, activeSong, dispatch ])
 
   return (
     <ul className={styles.list}>

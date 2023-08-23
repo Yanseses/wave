@@ -1,3 +1,4 @@
+import { ITrackData } from "../../utils/types"
 import { 
   NEXT_TRACK,
   PLAY_PAUSE,
@@ -8,8 +9,8 @@ import {
 interface ISetActiveSong {
   readonly type: typeof SET_ACTIVE_SONG,
   payload: {
-    song: any,
-    list: any,
+    song: ITrackData,
+    list: ITrackData[],
     index: number
   }
 }
@@ -34,7 +35,7 @@ export type TPlayerActions = ISetActiveSong
   | IPrevTrack
   | INextTrack;
 
-export const setActiveSong = (song: any, list: any, i: number): ISetActiveSong => ({
+export const setActiveSong = (song: ITrackData, list: ITrackData[], i: number): ISetActiveSong => ({
   type: SET_ACTIVE_SONG,
   payload: {
     song: song,

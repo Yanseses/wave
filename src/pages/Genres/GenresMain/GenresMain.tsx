@@ -5,7 +5,7 @@ import { useSelector } from '../../../services/hooks';
 import { GenresList } from '../../../components/GenresList/GenresList';
 
 export const GenresMain: FC = () => {
-  const genres = useSelector(store => store.main.genres.data);
+  const genres = useSelector(store => store.genres.data);
 
   return (
     <main className={styles.genres}>

@@ -4,20 +4,34 @@ import {
   GET_TOP_ARTISTS_SUCCESS 
 } from "../actionTypes/artists"
 
-export const getTopArtistsRequest = () => {
-  return {
-    type: GET_TOP_ARTISTS_REQUEST
-  }
+interface IGetTopArtistsRequest {
+  readonly type: typeof GET_TOP_ARTISTS_REQUEST
 }
 
-export const getTopArtistsFailed = () => {
-  return {
-    type: GET_TOP_ARTISTS_FAILED
-  }
+interface IGetTopArtistsFailed {
+  readonly type: typeof GET_TOP_ARTISTS_FAILED,
+  payload: string
 }
 
-export const getTopArtistsSuccess = () => {
-  return {
-    type: GET_TOP_ARTISTS_SUCCESS
-  }
+interface IGetTopArtistsSuccess {
+  readonly type: typeof GET_TOP_ARTISTS_SUCCESS,
+  payload: any
 }
+
+export type TTopArtists = IGetTopArtistsRequest
+  | IGetTopArtistsFailed
+  | IGetTopArtistsSuccess
+
+export const getTopArtistsRequest = (): IGetTopArtistsRequest => ({
+  type: GET_TOP_ARTISTS_REQUEST
+})
+
+export const getTopArtistsFailed = (err: string): IGetTopArtistsFailed => ({
+  type: GET_TOP_ARTISTS_FAILED,
+  payload: err
+})
+
+export const getTopArtistsSuccess = (data: any): IGetTopArtistsSuccess => ({
+  type: GET_TOP_ARTISTS_SUCCESS,
+  payload: data
+})
