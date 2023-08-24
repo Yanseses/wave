@@ -6,21 +6,22 @@ import { useGetTracks } from '../../hooks/useGetTracks';
 import { Text } from '../Text/Text';
 import { useDispatch, useSelector } from '../../services/hooks';
 import { setActiveSong } from '../../services/actions/player';
+import { getCookie } from '../../utils/cookie';
 
 interface ITrackList {
-  listId?: string
+  listId: string
 }
 
 export const TrackList: FC<ITrackList> = ({ listId }) => {
   const dispatch = useDispatch();
-  const { data, request, failed, error } = useGetTracks(listId);
+  const { data, request, failed, error } = useGetTracks(listId || `ip-country-chart-${getCookie('country')}`);
   const { isPlaying, activeSong } = useSelector(store => store.player);
 
   useEffect(() => {
     if(!activeSong && data){
       dispatch(setActiveSong(data[0], data, 0))
     }
-  }, [ data, activeSong, dispatch ])
+  }, [ data, activeSong, dispatch ]);
 
   return (
     <ul className={styles.list}>
@@ -28,7 +29,7 @@ export const TrackList: FC<ITrackList> = ({ listId }) => {
         <Text As='p' size={20} color='secondary'>Loading...</Text>
       )}
 
-      { failed && (
+      { !request && failed && (
         <Text As='p' size={20} color='secondary'>{ error }</Text> 
       )}
 

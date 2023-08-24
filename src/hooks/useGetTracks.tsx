@@ -9,23 +9,23 @@ interface IUseGetTracks {
   data: null | ITrackData[]
 }
 
-export const useGetTracks = (listId?: string) => {
+export const useGetTracks = (listId: string) => {
   const [ state, setState ] = useState<IUseGetTracks>({
     request: false,
     failed: false,
     error: '',
     data: null
-  })
+  });
 
   useEffect(() => {
     setState({ ...state, request: true })
     setTimeout(async () => {
       return new Promise((resolve, reject) => {
-        resolve(listId ? globalChartGenres[Number(listId.split('-')[3])] : countryChartRu)
+        resolve(listId === 'ip-country-chart-RU' ? countryChartRu : globalChartGenres[Number(listId.split('-')[3])])
       }).then((req: any) => {
         setState({ request: false, error: '', data: req.tracks, failed: false, })
       }).catch((err) => {
-        setState({ ...state, error: 'Failed to fetch', failed: true })
+        setState({ ...state, request: false, error: 'Failed to fetch', failed: true })
       })
     }, 1000)
   }, [ listId ])

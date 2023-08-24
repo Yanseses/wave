@@ -15,11 +15,9 @@ export const GenresType: FC = () => {
   }, [navigator, state])
 
   return (
-    <main className={styles.type}>
-      <section className={styles.wrapper}>
-        <Text As='h2' size={26}>{ `Genre: ${state && state.name}` }</Text>
-        <TrackList listId={ state && state.listId} />
-      </section>
-    </main>
+    <section className={styles.wrapper}>
+      <Text As='h2' size={26}>{ `Genre: ${state && state.name}` }</Text>
+      <TrackList listId={ state && state.listId} />
+    </section>
   )
 }

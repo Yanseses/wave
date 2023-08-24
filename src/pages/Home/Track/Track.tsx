@@ -8,8 +8,8 @@ export const Track: FC = () => {
   const location = useLocation();
 
   return (
-    <main>
+    <section>
       <div>{ location.state.name }</div>
-    </main>
+    </section>
   )
 }

@@ -8,9 +8,9 @@ export const ArtistsMain: FC = () => {
   const { request, failed, error, data } = useSelector(store => store.artists);
 
   return (
-    <main className={styles.main}>
+    <section className={styles.wrapper}>
       <Text As='h2' size={26}>Top Artists</Text>
-      <section className={styles.wrapper}>
+      <div className={styles.list}>
         { request && (
           <div>Loading...</div>
           ) 
@@ -34,7 +34,7 @@ export const ArtistsMain: FC = () => {
             )
           })
         }
-      </section>
-    </main>
+      </div>
+    </section>
   )
 }

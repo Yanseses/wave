@@ -14,7 +14,7 @@ export const ArtistsDetail: FC = () => {
   }, [ location, navigate ]);
 
   return (
-    <main>
+    <section>
       { request && (
         <div>Loading...</div>
         ) 
@@ -29,6 +29,6 @@ export const ArtistsDetail: FC = () => {
         <div>{ data.attributes.name }</div>  
         ) 
       }
-    </main>
+    </section>
   )
 }

@@ -21,8 +21,10 @@ export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) 
 
   const handlePlay = useCallback(() => {
     if(song && song.hub.actions){
-      if(activeSong && song.key === activeSong.key){
+      if(activeSong && activeSong.key === song.key){
         dispatch(playPause(!isPlaying))
+      } else {
+        dispatch(playPause(true))
       }
       dispatch(setActiveSong(song, data, index))
     }

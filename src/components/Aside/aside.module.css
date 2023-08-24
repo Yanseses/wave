@@ -3,7 +3,7 @@
   flex-direction: column;
   row-gap: 40px;
   padding: 40px;
-  box-shadow: 6px 4px 100px 0px var(--shadow-color);
+  box-shadow: -6px 4px 10px 0px var(--shadow-color);
 }
 
 .wrapper {
@@ -41,6 +41,7 @@
 
 @media screen and (max-width: 1000px) {
   .aside {
+    display: none;
     padding: 0 0 80px;
     box-shadow: initial;
   }

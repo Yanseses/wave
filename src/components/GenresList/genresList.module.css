@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   list-style: none;
 }
@@ -30,4 +30,10 @@
   background-color: var(--background-player);
   backdrop-filter: blur(15px);
   padding: 12px 28px;
+}
+
+@media screen and (max-width: 768px) {
+  .genres {
+    grid-template-columns: 1fr;
+  }
 }

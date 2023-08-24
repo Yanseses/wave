@@ -20,33 +20,27 @@ export const Main: FC = () => {
 
   return (
     <section className={styles.wrapper}>
-      <Input 
+      <Input
         value={values.search.data} 
         name={'search'} 
         placeholder='Search music, artist, genre'
         onChange={handleChange}
         error={values.search.error} 
         Icon={SearchIcon}/>
-      { genres && (
-        <div className={styles.container}>
-          <Text As={'h2'} size={26} extraClass={styles.heading}>
-            <NoteIcon />
-            Discover genre
-          </Text>
-          <GenresList genres={genres.country.genres}/>
-        </div>
-        ) 
-      }
-      { genres && (
-        <div className={styles.container}>
-          <Text As={'h2'} size={26} extraClass={styles.heading}>
-            <HeadsetIcon />
-            Top Charts
-          </Text>
-          <TrackList />
-        </div>
-        ) 
-      }
+      <div className={styles.container}>
+        <Text As={'h2'} size={26} extraClass={styles.heading}>
+          <NoteIcon />
+          Discover genre
+        </Text>
+        <GenresList type='country'/>
+      </div>
+      <div className={styles.container}>
+        <Text As={'h2'} size={26} extraClass={styles.heading}>
+          <HeadsetIcon />
+          Top Charts
+        </Text>
+        <TrackList listId={genres && genres.country.listid} />
+      </div>
     </section>
   )
 }

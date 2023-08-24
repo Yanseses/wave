@@ -2,7 +2,6 @@
   position: relative;
   display: grid;
   grid-template-columns: 275px auto;
-  column-gap: 20px;
   height: 100vh;
 }
 

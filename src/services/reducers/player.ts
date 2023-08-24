@@ -25,7 +25,7 @@ export const playerReducer = (state: IPlayer = playerState, action: TPlayerActio
         ...state,
         currentSongs: action.payload.list,
         activeSong: action.payload.song,
-        currentIndex: action.payload.index,
+        currentIndex: action.payload.index
       }
     }
     case PLAY_PAUSE: {

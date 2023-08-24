@@ -1,17 +1,9 @@
-.genres {
-  display: grid;
-  grid-template-columns: auto 375px;
-  column-gap: 35px;
-  height: inherit;
-  overflow: hidden;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 40px;
+  padding-bottom: 90px;
   overflow: scroll;
-  padding: 40px 0 90px;
 }
 
 @media screen and (max-width: 1400px) {
