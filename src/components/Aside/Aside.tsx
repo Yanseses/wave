@@ -6,23 +6,24 @@ import { Avatar } from "../Player/Avatar/Avatar";
 import { Link } from "react-router-dom";
 
 export const Aside: FC = () => {
-  // const { data, request, failed } = useSelector(store => store.main.chart);
+  const { data, request, failed } = useSelector(store => store.artists);
+  console.log(data)
 
   return (
     <aside className={styles.aside}>
       <Text As='h2' size={20} color={'secondary'}>Top Artists</Text>
-      {/* { !request ? (
+      { !request ? (
         <div className={styles.artists}>
           { data && data.map((el: any, i: number) => {
             if(i < 6){
               return (
               <Link 
-                key={el.key}
-                to={`/artists/${el.artists ? el.artists[0].alias : ''}`} 
+                key={el.artist.alias}
+                to={`/artists/${el.artist.alias ? el.artist.alias : ''}`} 
                 className={styles.artist}
-                state={{ artist: el.artists && el.artists[0].alias }}>
-                <Avatar image={el.avatar} name={el.subtitle}/>
-                <Text As="p" size={18}>{el.subtitle.split('&')[0]}</Text>
+                state={{ artist: el.name && el.artist.alias }}>
+                <Avatar image={el.image} name={el.subtitle}/>
+                <Text As="p" size={18}>{el.name.split('&')[0]}</Text>
               </Link>
               )
             }
@@ -37,7 +38,7 @@ export const Aside: FC = () => {
           )
         }
       </div>
-      ) } */}
+      ) }
     </aside>
   )
 }

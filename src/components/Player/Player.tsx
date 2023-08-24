@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 import { IArtists } from '../../utils/types';
 import { playPause } from '../../services/actions/player';
+import { containTrack } from '../../utils/containTrack';
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
@@ -60,20 +61,12 @@ export const Player: FC = () => {
     }
   }, [ isRepeat ]);
 
-  const handlePrevTrack = useCallback(() => {    
-    if(currentIndex === 0 && currentSongs){
-      dispatch(prevTrack(currentSongs.length - 1))
-    } else {
-      dispatch(prevTrack(currentIndex - 1))
-    }
+  const handlePrevTrack = useCallback(() => {
+    dispatch(prevTrack(containTrack(currentIndex, currentSongs, 'prev')))
   }, [ currentIndex, currentSongs, dispatch ])
 
-  const handleNextTrack = useCallback(() => {    
-    if(currentSongs && (currentSongs.length - 1) === currentIndex){
-      dispatch(nextTrack(0))
-    } else {
-      dispatch(nextTrack(currentIndex + 1))
-    }
+  const handleNextTrack = useCallback(() => {  
+    dispatch(nextTrack(containTrack(currentIndex, currentSongs, 'next')))
   }, [ currentIndex, currentSongs, dispatch ])
 
   const handleLoadedAudio = useCallback(() => {
