@@ -11,8 +11,12 @@ export function getChartGenres(){
       return new Promise((resolve, reject) => {
         resolve(chartList)
       }).then((el: any) => {
+        const cookie = getCookie('country') || 'en';
+        const selectedCountry = cookie.length > 2 
+          ? cookie.split('-')[0].toUpperCase() 
+          : cookie.toUpperCase();
         const genres: IGenres = {
-          country: el.countries.find((country: TGenresCountry) => country.id === getCookie('country')?.substring(3, 5)),
+          country: el.countries.find((country: TGenresCountry) => country.id === selectedCountry),
           global: el.global.genres
         }
         dispatch(getGenresCountrySuccess(genres))
