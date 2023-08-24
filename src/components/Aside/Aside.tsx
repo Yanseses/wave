@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 export const Aside: FC = () => {
   const { data, request, failed } = useSelector(store => store.artists);
-  console.log(data)
 
   return (
     <aside className={styles.aside}>
