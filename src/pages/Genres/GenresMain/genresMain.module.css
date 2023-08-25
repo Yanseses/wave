@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-  padding-bottom: 90px;
+  padding: 20px 0 90px;
   overflow: scroll;
 }
 

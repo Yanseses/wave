@@ -11,7 +11,7 @@
   flex-direction: column;
   row-gap: 40px;
   overflow: scroll;
-  padding: 40px 0 90px;
+  padding: 20px 0 90px;
 }
 
 .container {

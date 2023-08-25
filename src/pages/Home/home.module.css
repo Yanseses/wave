@@ -1,6 +1,6 @@
 .home {
   display: grid;
-  grid-template-columns: auto 375px;
+  grid-template-columns: auto 25%;
   column-gap: 35px;
   padding-left: 20px;
   height: inherit;
