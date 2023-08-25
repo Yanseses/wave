@@ -3,6 +3,7 @@
   backdrop-filter: blur(5px);
   position: fixed;
   bottom: 0;
+  animation: .5s linear swipeTablet;
 }
 
 .wrapper {
@@ -98,12 +99,22 @@
   }
 }
 
+@keyframes swipeTablet {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .player {
     width: -webkit-fill-available;
     backdrop-filter: blur(5px);
     position: fixed;
     bottom: 88px;
+    animation: none;
   }
 
   .wrapper {
