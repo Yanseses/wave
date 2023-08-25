@@ -7,6 +7,7 @@ import { Avatar } from '../../Player/Avatar/Avatar';
 import { Button } from '../../Button/Button';
 import { ITrackData } from '../../../utils/types';
 import { playPause, setActiveSong } from '../../../services/actions/player';
+import classNames from 'classnames';
 
 interface ITrack {
   index: number,
@@ -18,6 +19,12 @@ interface ITrack {
 
 export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) => {
   const dispatch = useDispatch();
+  const classes = classNames(
+    styles.track,
+    song.hub.actions 
+      ? song.key === activeSong?.key && styles.status_selected
+      : styles.status_inactive
+  )
 
   const handlePlay = useCallback(() => {
     if(song && song.hub.actions){
@@ -33,15 +40,7 @@ export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) 
   return (
     <li 
       onClick={handlePlay}
-      className={`
-        ${styles.track} 
-        ${ song.hub.actions
-          ? activeSong && song.key === activeSong.key 
-            ? styles.status_selected 
-            : ''
-          : styles.status_inactive
-        }
-      `}>
+      className={classes}>
       <div className={styles.container}>
         <Text As={'span'} color='inherit' size={26}>
           { index >= 9 ? index + 1 : `0${index + 1 }`}

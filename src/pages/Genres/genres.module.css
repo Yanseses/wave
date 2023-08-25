@@ -1,5 +1,7 @@
 .genres {
   display: grid;
   height: inherit;
-  overflow: hidden;
+  overflow: scroll;
+  grid-template-columns: 95%;
+  justify-content: center;
 }

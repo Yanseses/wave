@@ -130,6 +130,6 @@
 
   .controls {
     order: 2;
-    flex-direction: column;
+    justify-content: flex-end;
   }
 }
