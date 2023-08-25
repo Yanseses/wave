@@ -18,9 +18,11 @@ import { Button } from "../Button/Button";
 import { IArtists } from '../../utils/types';
 import { playPause } from '../../services/actions/player';
 import { containTrack } from '../../utils/containTrack';
+import { useMediaQuery } from 'react-responsive';
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' });
   const { isPlaying, currentSongs, activeSong, currentIndex } = useSelector(store => store.player);
   const [ currentTime, setCurrentTime ] = useState({
     min: '0',
@@ -110,40 +112,54 @@ export const Player: FC = () => {
     <>
       { activeSong && (
         <div className={styles.player}>
-          <div className={styles.timeline}>
-            <div className={styles.timelineWrapper}>
-              <div ref={progressRef} className={styles.progress}></div>
+          { !isMobile && (            
+            <div className={styles.timeline}>
+              <div className={styles.timelineWrapper}>
+                <div ref={progressRef} className={styles.progress}></div>
+              </div>
+              <div className={styles.timelineText}>
+                <Text As="p" size={12}>{ `${currentTime.min}:${currentTime.sec}` }</Text>
+                <Text As="p" size={12}>{ `${Math.floor(duration / 60)}:${Math.floor(duration % 60)}` }</Text>
+              </div>
             </div>
-            <div className={styles.timelineText}>
-              <Text As="p" size={12}>{ `${currentTime.min}:${currentTime.sec}` }</Text>
-              <Text As="p" size={12}>{ `${Math.floor(duration / 60)}:${Math.floor(duration % 60)}` }</Text>
-            </div>
-          </div>
+            ) 
+          }
 
           <div className={styles.wrapper}>
             <div className={styles.controls}>
-              <Button onClick={handlePrevTrack}>
-                <PrevTrackIcon />
-              </Button>
-              <Button onClick={handlePlay}>
-                { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
-              </Button>
-              <Button onClick={handleNextTrack}>
-                <NextTrackIcon />
-              </Button>
+              { isMobile ? (
+                <Button onClick={handlePlay}>
+                  { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
+                </Button>
+                ) : (
+                <>
+                  <Button onClick={handlePrevTrack}>
+                    <PrevTrackIcon />
+                  </Button>
+                  <Button onClick={handlePlay}>
+                    { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
+                  </Button>
+                  <Button onClick={handleNextTrack}>
+                    <NextTrackIcon />
+                  </Button>
+                </>
+                )
+              }
+
             </div>
             
             <div className={styles.about}>
-              <Avatar image={activeSong.share.avatar ? activeSong.share.avatar : activeSong.share.image} name={activeSong.share.text} size={68} activeClass={ isPlaying ? styles.avatarActive : '' } />
+              <Avatar image={activeSong.share.avatar ? activeSong.share.avatar : activeSong.share.image} name={activeSong.share.text} size={ isMobile ? 48 : 68 } activeClass={ isPlaying ? styles.avatarActive : '' } />
               <div className={styles.aboutWrapper}>
                 <Link 
                   to={`/home/track/${activeSong.key}`}
-                  className={styles.title} 
                   state={{ 
                     name: activeSong.title,
                     key: activeSong.key
                 }}>
-                  { activeSong.title }
+                  <Text As='span' size={ isMobile ? 14 : 20 } extraClass={styles.title}>
+                    { activeSong.title }
+                  </Text>
                 </Link>
                 { activeSong.artists && activeSong.artists.length > 0 ? (
                   <div className={styles.artists}>

@@ -6,7 +6,7 @@ import { FC } from "react";
 interface IAvatar {
   image?: string,
   name: string,
-  size?: 58 | 68,
+  size?: 48 | 58 | 68,
   activeClass?: string
 }
 

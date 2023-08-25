@@ -16,7 +16,6 @@
 }
 
 .title {
-  font-size: 20px;
   &:hover {
     color: var(--background-purple);
   }
@@ -96,5 +95,41 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .player {
+    width: -webkit-fill-available;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    bottom: 88px;
+  }
+
+  .wrapper {
+    padding: 6px 12px;
+    grid-template-columns: auto auto;
+    column-gap: 0;
+  }
+
+  .aboutWrapper {
+    row-gap: 4px;
+  }
+
+  .timeline {
+    display: none;
+  }
+
+  .additionally {
+    display: none;
+  }
+
+  .about {
+    order: 1;
+  }
+
+  .controls {
+    order: 2;
+    flex-direction: column;
   }
 }

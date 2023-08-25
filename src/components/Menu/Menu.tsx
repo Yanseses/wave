@@ -15,7 +15,7 @@ export const Menu: FC = () => {
 
   return (
     <nav className={styles.layout}>
-      <Link to='/home'>
+      <Link to='/home' className={styles.logo}>
         <Logo />
       </Link>
       <div className={styles.wrapper}>

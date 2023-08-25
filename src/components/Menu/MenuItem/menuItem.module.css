@@ -11,3 +11,11 @@
 .active {
   background: linear-gradient(136deg, var(--background-purple) 0%, var(--background-violet) 100%);
 }
+
+@media screen and (max-width: 700px) {
+  .item {
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 2px;
+  }
+}
