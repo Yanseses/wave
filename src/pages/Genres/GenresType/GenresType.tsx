@@ -3,6 +3,7 @@ import { FC, useEffect } from "react";
 import { Text } from '../../../components/Text/Text';
 import { useLocation, useNavigate } from 'react-router';
 import { TrackList } from '../../../components/TrackList/TrackList';
+import { Wrapper } from '../../../components/Wrapper/Wrapper';
 
 export const GenresType: FC = () => {
   const navigator = useNavigate();
@@ -12,12 +13,12 @@ export const GenresType: FC = () => {
     if(!state){
       navigator('/genres')
     }
-  }, [navigator, state])
+  }, [navigator, state]);
 
   return (
-    <section className={styles.wrapper}>
+    <Wrapper As='section' extraClass={styles.wrapper}>
       <Text As='h2' size={26}>{ `Genre: ${state && state.name}` }</Text>
       <TrackList listId={ state && state.listId} />
-    </section>
+    </Wrapper>
   )
 }

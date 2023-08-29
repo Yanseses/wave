@@ -1,24 +1,24 @@
 export const sound = {
   "layout": "5",
   "type": "MUSIC",
-  "key": "672896647",
-  "title": "Automotivo Bibi Fogosa",
-  "subtitle": "Bibi Babydoll & Dj Brunin XM",
+  "key": "667312288",
+  "title": "(It Goes Like) Nanana (Edit)",
+  "subtitle": "Peggy Gou",
   "images": {
-    "background": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/06/0f/6c/060f6c52-6e50-fb66-851a-4c381c0c3333/pr_source.png/800x800cc.jpg",
-    "coverart": "https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/f4/bf/69/f4bf69e5-915e-b1ed-a141-3e93d1fb77ed/0.jpg/400x400cc.jpg",
-    "coverarthq": "https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/f4/bf/69/f4bf69e5-915e-b1ed-a141-3e93d1fb77ed/0.jpg/400x400cc.jpg",
-    "joecolor": "b:02060bp:faae8as:faa575t:c88c70q:c98560"
+    "background": "https://is2-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/3a/de/39/3ade39e8-6de7-ee82-9c02-b9da415205b5/70ea60b1-f26f-4c7d-baa1-c7f969418a03_ami-identity-31a954c200a5c5c449bf5faedb6bd2b7-2023-06-16T08-51-47.675Z_cropped.png/800x800cc.jpg",
+    "coverart": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/a7/a7/96/a7a79669-7b20-9026-cb8e-773b1a9d31e3/191404137420.png/400x400cc.jpg",
+    "coverarthq": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/a7/a7/96/a7a79669-7b20-9026-cb8e-773b1a9d31e3/191404137420.png/400x400cc.jpg",
+    "joecolor": "b:c8c17bp:12151bs:281f21t:37372eq:483f33"
   },
   "share": {
-    "subject": "Automotivo Bibi Fogosa - Bibi Babydoll & Dj Brunin XM",
-    "text": "Automotivo Bibi Fogosa by Bibi Babydoll & Dj Brunin XM",
-    "href": "https://www.shazam.com/track/672896647/automotivo-bibi-fogosa",
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/f4/bf/69/f4bf69e5-915e-b1ed-a141-3e93d1fb77ed/0.jpg/400x400cc.jpg",
-    "twitter": "I used @Shazam to discover Automotivo Bibi Fogosa by Bibi Babydoll & Dj Brunin XM.",
-    "html": "https://www.shazam.com/snippets/email-share/672896647?lang=en-US&country=US",
-    "avatar": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/06/0f/6c/060f6c52-6e50-fb66-851a-4c381c0c3333/pr_source.png/800x800cc.jpg",
-    "snapchat": "https://www.shazam.com/partner/sc/track/672896647"
+    "subject": "(It Goes Like) Nanana (Edit) - Peggy Gou",
+    "text": "(It Goes Like) Nanana (Edit) by Peggy Gou",
+    "href": "https://www.shazam.com/track/667312288/it-goes-like-nanana-edit",
+    "image": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/a7/a7/96/a7a79669-7b20-9026-cb8e-773b1a9d31e3/191404137420.png/400x400cc.jpg",
+    "twitter": "I used @Shazam to discover (It Goes Like) Nanana (Edit) by Peggy Gou.",
+    "html": "https://www.shazam.com/snippets/email-share/667312288?lang=en-US&country=US",
+    "avatar": "https://is2-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/3a/de/39/3ade39e8-6de7-ee82-9c02-b9da415205b5/70ea60b1-f26f-4c7d-baa1-c7f969418a03_ami-identity-31a954c200a5c5c449bf5faedb6bd2b7-2023-06-16T08-51-47.675Z_cropped.png/800x800cc.jpg",
+    "snapchat": "https://www.shazam.com/partner/sc/track/667312288"
   },
   "hub": {
     "type": "APPLEMUSIC",
@@ -27,12 +27,12 @@ export const sound = {
       {
         "name": "apple",
         "type": "applemusicplay",
-        "id": "1698730743"
+        "id": "1689088958"
       },
       {
         "name": "apple",
         "type": "uri",
-        "uri": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/ea/e8/cc/eae8cc54-860e-4fa2-3983-8979b5755196/mzaf_14063721080490270451.plus.aac.p.m4a"
+        "uri": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/6a/a1/29/6aa129cb-d7d9-3f66-d2c3-b9aff26705a3/mzaf_4261627486215746711.plus.aac.ep.m4a"
       }
     ],
     "options": [
@@ -42,12 +42,12 @@ export const sound = {
           {
             "name": "hub:applemusic:deeplink",
             "type": "applemusicopen",
-            "uri": "https://music.apple.com/us/album/automotivo-bibi-fogosa/1698730742?i=1698730743&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+            "uri": "https://music.apple.com/us/album/it-goes-like-nanana-edit/1689088940?i=1689088958&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
           },
           {
             "name": "hub:applemusic:deeplink",
             "type": "uri",
-            "uri": "https://music.apple.com/us/album/automotivo-bibi-fogosa/1698730742?i=1698730743&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+            "uri": "https://music.apple.com/us/album/it-goes-like-nanana-edit/1689088940?i=1689088958&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
           }
         ],
         "beacondata": {
@@ -66,7 +66,7 @@ export const sound = {
         "actions": [
           {
             "type": "uri",
-            "uri": "https://itunes.apple.com/us/album/automotivo-bibi-fogosa/1698730742?i=1698730743&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=itunes&itsct=Shazam_ios"
+            "uri": "https://itunes.apple.com/us/album/it-goes-like-nanana-edit/1689088940?i=1689088958&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=itunes&itsct=Shazam_ios"
           }
         ],
         "beacondata": {
@@ -92,7 +92,7 @@ export const sound = {
           {
             "name": "hub:spotify:searchdeeplink",
             "type": "uri",
-            "uri": "spotify:search:Automotivo%20Bibi%20Fogosa%20Bibi%20Babydoll"
+            "uri": "spotify:search:%28It%20Goes%20Like%29%20Nanana%20%28Edit%29%20Peggy%20Gou"
           }
         ],
         "type": "SPOTIFY"
@@ -107,29 +107,29 @@ export const sound = {
           {
             "name": "hub:deezer:searchdeeplink",
             "type": "uri",
-            "uri": "deezer-query://www.deezer.com/play?query=%7Btrack%3A%27Automotivo+Bibi+Fogosa%27%20artist%3A%27Bibi+Babydoll++Dj+Brunin+XM%27%7D"
+            "uri": "deezer-query://www.deezer.com/play?query=%7Btrack%3A%27%28It+Goes+Like%29+Nanana+%28Edit%29%27%20artist%3A%27Peggy+Gou%27%7D"
           }
         ],
         "type": "DEEZER"
       }
     ],
-    "explicit": true,
+    "explicit": false,
     "displayname": "APPLE MUSIC"
   },
-  "url": "https://www.shazam.com/track/672896647/automotivo-bibi-fogosa",
+  "url": "https://www.shazam.com/track/667312288/it-goes-like-nanana-edit",
   "artists": [
     {
       "id": "42",
-      "adamid": "1539387357"
+      "adamid": "1068912248"
     }
   ],
-  "isrc": "QZMZ92361338",
+  "isrc": "GBBKS2300123",
   "genres": {
-    "primary": "Baile Funk"
+    "primary": "Dance"
   },
   "urlparams": {
-    "{tracktitle}": "Automotivo+Bibi+Fogosa",
-    "{trackartist}": "Bibi+Babydoll+%26+Dj+Brunin+XM"
+    "{tracktitle}": "%28It+Goes+Like%29+Nanana+%28Edit%29",
+    "{trackartist}": "Peggy+Gou"
   },
   "myshazam": {
     "apple": {
@@ -137,34 +137,34 @@ export const sound = {
         {
           "name": "myshazam:apple",
           "type": "uri",
-          "uri": "https://music.apple.com/us/album/automotivo-bibi-fogosa/1698730742?i=1698730743&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+          "uri": "https://music.apple.com/us/album/it-goes-like-nanana-edit/1689088940?i=1689088958&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
         }
       ]
     }
   },
-  "albumadamid": "1698730742",
+  "albumadamid": "1689088940",
   "sections": [
     {
       "type": "SONG",
       "metapages": [
         {
-          "image": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/06/0f/6c/060f6c52-6e50-fb66-851a-4c381c0c3333/pr_source.png/800x800cc.jpg",
-          "caption": "Bibi Babydoll"
+          "image": "https://is2-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/3a/de/39/3ade39e8-6de7-ee82-9c02-b9da415205b5/70ea60b1-f26f-4c7d-baa1-c7f969418a03_ami-identity-31a954c200a5c5c449bf5faedb6bd2b7-2023-06-16T08-51-47.675Z_cropped.png/800x800cc.jpg",
+          "caption": "Peggy Gou"
         },
         {
-          "image": "https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/f4/bf/69/f4bf69e5-915e-b1ed-a141-3e93d1fb77ed/0.jpg/400x400cc.jpg",
-          "caption": "Automotivo Bibi Fogosa"
+          "image": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/a7/a7/96/a7a79669-7b20-9026-cb8e-773b1a9d31e3/191404137420.png/400x400cc.jpg",
+          "caption": "(It Goes Like) Nanana (Edit)"
         }
       ],
       "tabname": "Song",
       "metadata": [
         {
           "title": "Album",
-          "text": "Automotivo Bibi Fogosa - Single"
+          "text": "(It Goes Like) Nanana [Edit] - Single"
         },
         {
           "title": "Label",
-          "text": "Bibi Babydoll"
+          "text": "XL Recordings"
         },
         {
           "title": "Released",
@@ -176,29 +176,29 @@ export const sound = {
       "type": "VIDEO",
       "tabname": "Video",
       "youtubeurl": {
-        "caption": "Bibi Babydoll e DJ Brunin XM - Automotivo Bibi Fogosa (Clipe Oficial)",
+        "caption": "Peggy Gou - (It Goes Like) Nanana",
         "image": {
           "dimensions": {
             "width": 1280,
             "height": 720
           },
-          "url": "https://i.ytimg.com/vi/PgF29M69QXg/maxresdefault.jpg"
+          "url": "https://i.ytimg.com/vi/KnBdf559ofQ/maxresdefault.jpg"
         },
         "actions": [
           {
             "name": "video:youtube",
             "type": "webview",
             "share": {
-              "subject": "Automotivo Bibi Fogosa - Bibi Babydoll & Dj Brunin XM",
-              "text": "Automotivo Bibi Fogosa by Bibi Babydoll & Dj Brunin XM",
-              "href": "https://www.shazam.com/track/672896647/automotivo-bibi-fogosa",
-              "image": "https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/f4/bf/69/f4bf69e5-915e-b1ed-a141-3e93d1fb77ed/0.jpg/400x400cc.jpg",
-              "twitter": "I used @Shazam to discover Automotivo Bibi Fogosa by Bibi Babydoll & Dj Brunin XM.",
-              "html": "https://www.shazam.com/snippets/email-share/672896647?lang=-&country=US",
-              "avatar": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/06/0f/6c/060f6c52-6e50-fb66-851a-4c381c0c3333/pr_source.png/800x800cc.jpg",
-              "snapchat": "https://www.shazam.com/partner/sc/track/672896647"
+              "subject": "(It Goes Like) Nanana (Edit) - Peggy Gou",
+              "text": "(It Goes Like) Nanana (Edit) by Peggy Gou",
+              "href": "https://www.shazam.com/track/667312288/it-goes-like-nanana-edit",
+              "image": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/a7/a7/96/a7a79669-7b20-9026-cb8e-773b1a9d31e3/191404137420.png/400x400cc.jpg",
+              "twitter": "I used @Shazam to discover (It Goes Like) Nanana (Edit) by Peggy Gou.",
+              "html": "https://www.shazam.com/snippets/email-share/667312288?lang=-&country=US",
+              "avatar": "https://is2-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/3a/de/39/3ade39e8-6de7-ee82-9c02-b9da415205b5/70ea60b1-f26f-4c7d-baa1-c7f969418a03_ami-identity-31a954c200a5c5c449bf5faedb6bd2b7-2023-06-16T08-51-47.675Z_cropped.png/800x800cc.jpg",
+              "snapchat": "https://www.shazam.com/partner/sc/track/667312288"
             },
-            "uri": "https://youtu.be/PgF29M69QXg?autoplay=1"
+            "uri": "https://youtu.be/KnBdf559ofQ?autoplay=1"
           }
         ]
       }
@@ -209,3 +209,4 @@ export const sound = {
     }
   ]
 }
+

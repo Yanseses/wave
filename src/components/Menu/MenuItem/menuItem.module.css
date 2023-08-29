@@ -16,6 +16,9 @@
   .item {
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 2px;
+
+    & > span {
+      display: none;
+    }
   }
 }

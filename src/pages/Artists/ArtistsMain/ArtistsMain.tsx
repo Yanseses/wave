@@ -3,12 +3,13 @@ import { FC } from "react";
 import { useSelector } from "../../../services/hooks";
 import { Text } from '../../../components/Text/Text';
 import { Link } from 'react-router-dom';
+import { Wrapper } from '../../../components/Wrapper/Wrapper';
 
 export const ArtistsMain: FC = () => {
   const { request, failed, error, data } = useSelector(store => store.artists);
 
   return (
-    <section className={styles.wrapper}>
+    <Wrapper As='section' extraClass={styles.wrapper}>
       <Text As='h2' size={26}>Top Artists</Text>
       <div className={styles.list}>
         { request && (
@@ -35,6 +36,6 @@ export const ArtistsMain: FC = () => {
           })
         }
       </div>
-    </section>
+    </Wrapper>
   )
 }

@@ -97,7 +97,6 @@ export const Player: FC = () => {
     }
   }, [ currentTime ])
 
-
   useEffect(() => {
     if(audioRef.current){
       if(isPlaying){
@@ -113,7 +112,7 @@ export const Player: FC = () => {
       { activeSong && (
         <div className={styles.player}>
           { !isMobile && (            
-            <div className={styles.timeline}>
+            <div className={styles.timeline} data-played-time={1}>
               <div className={styles.timelineWrapper}>
                 <div ref={progressRef} className={styles.progress}></div>
               </div>
@@ -151,12 +150,7 @@ export const Player: FC = () => {
             <div className={styles.about}>
               <Avatar image={activeSong.share.avatar ? activeSong.share.avatar : activeSong.share.image} name={activeSong.share.text} size={ isMobile ? 48 : 68 } activeClass={ isPlaying ? styles.avatarActive : '' } />
               <div className={styles.aboutWrapper}>
-                <Link 
-                  to={`/home/track/${activeSong.key}`}
-                  state={{ 
-                    name: activeSong.title,
-                    key: activeSong.key
-                }}>
+                <Link to={`/home/track/${activeSong.key}`} state={{ key: activeSong.key }}>
                   <Text As='span' size={ isMobile ? 14 : 20 } extraClass={styles.title}>
                     { activeSong.title }
                   </Text>

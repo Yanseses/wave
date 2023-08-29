@@ -1,8 +1,5 @@
 .artists {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 20px;
-  column-gap: 35px;
   height: inherit;
-  overflow: hidden;
 }

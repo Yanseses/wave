@@ -1,0 +1,36 @@
+.track {
+  display: grid;
+  grid-template-columns: 300px auto;
+  column-gap: 40px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .track {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% auto;
+    row-gap: 20px;
+    justify-items: center;
+  }
+
+  .img {
+    width: auto;
+    height: 100%;
+  }
+}

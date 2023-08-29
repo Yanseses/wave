@@ -1,9 +1,5 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
   row-gap: 40px;
-  padding: 20px 0 90px;
-  overflow: scroll;
 }
 
 @media screen and (max-width: 1200px) {
