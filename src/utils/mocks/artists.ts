@@ -604,2576 +604,1792 @@ export const lastestRelease = {
 }
 
 export const getSummary = {
-  "data": [
-    {
-      "id": "567072",
-      "type": "artists"
-    }
-  ],
-  "resources": {
-    "artists": {
-      "567072": {
-        "id": "567072",
-        "type": "artists",
-        "attributes": {
-          "genreNames": [
-            "Alternative"
-          ],
-          "name": "Gorillaz",
-          "editorialNotes": {
-            "name": "Gorillaz",
-            "standard": "Laconic trip-hop beats skate beneath ex-Blur frontman Damon Albarn’s distinctive Brit vocals on the animated foursome’s debut album. Nods to hip-hop futurism on “New Genius (Brother)” and dub swagger on “Slow Country” are fused together by Kid Koala’s skittering scratching and Dan \"The Automator\" Nakamura’s sizzling electronics.",
-            "short": "Laconic trip-hop beats and sizzling electronics from Albarn and co."
+  "data": {
+      "data": [
+          {
+              "id": "1068912248",
+              "type": "artists"
+          }
+      ],
+      "resources": {
+          "artists": {
+              "1068912248": {
+                  "id": "1068912248",
+                  "type": "artists",
+                  "attributes": {
+                      "genreNames": [
+                          "Электроника"
+                      ],
+                      "name": "Peggy Gou",
+                      "artwork": {
+                          "width": 1926,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/3a/de/39/3ade39e8-6de7-ee82-9c02-b9da415205b5/70ea60b1-f26f-4c7d-baa1-c7f969418a03_ami-identity-31a954c200a5c5c449bf5faedb6bd2b7-2023-06-16T08-51-47.675Z_cropped.png/{w}x{h}bb.jpg",
+                          "height": 1926,
+                          "textColor3": "e6bca8",
+                          "textColor2": "fabe7e",
+                          "textColor4": "e6a56d",
+                          "textColor1": "fadac8",
+                          "bgColor": "954328",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/artist/peggy-gou/1068912248"
+                  },
+                  "relationships": {
+                      "albums": {
+                          "data": [
+                              {
+                                  "id": "1461471084",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1336528225",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1543950276",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1155391559",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1689088940",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1462082729",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1624154167",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1675974427",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1443878493",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1592681357",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1350842586",
+                                  "type": "albums"
+                              },
+                              {
+                                  "id": "1335982351",
+                                  "type": "albums"
+                              }
+                          ]
+                      }
+                  },
+                  "views": {
+                      "latest-release": {
+                          "attributes": {
+                              "title": "Последний релиз"
+                          },
+                          "data": [
+                              {
+                                  "id": "1689088940",
+                                  "type": "albums"
+                              }
+                          ]
+                      },
+                      "top-songs": {
+                          "attributes": {
+                              "title": "Топ-песни"
+                          },
+                          "data": [
+                              {
+                                  "id": "1689088958",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1624154317",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1335982354",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1335982355",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1350843179",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1336528421",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1624154174",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1336528239",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1443878500",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1461471222",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1695659078",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1155391790",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1462082730",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1336528240",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1463405458",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1155391792",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1350843178",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1592681358",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1155391791",
+                                  "type": "songs"
+                              },
+                              {
+                                  "id": "1637743386",
+                                  "type": "songs"
+                              }
+                          ]
+                      }
+                  },
+                  "meta": {
+                      "views": {
+                          "order": [
+                              "latest-release",
+                              "top-songs"
+                          ]
+                      }
+                  }
+              }
           },
-          "artwork": {
-            "width": 2400,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/59/be/e9/59bee9e3-0ea3-1d4b-155e-ff68455e9fcc/mza_13609771773827278092.png/{w}x{h}bb.jpg",
-            "height": 2400,
-            "textColor3": "311e2f",
-            "textColor2": "221a1d",
-            "textColor4": "442c3b",
-            "textColor1": "0b0a0d",
-            "bgColor": "ca70b5",
-            "hasP3": false
+          "songs": {
+              "1155391790": {
+                  "id": "1155391790",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Seek for Maktoop - EP",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка",
+                          "Рок"
+                      ],
+                      "trackNumber": 1,
+                      "releaseDate": "2016-09-21",
+                      "durationInMillis": 346544,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1605500",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/e2/2e/ec/e22eece8-ea9c-b930-1400-90b9803a11ff/5054429006414.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "1f1f20",
+                          "textColor2": "1b1e1f",
+                          "textColor4": "363739",
+                          "textColor1": "000000",
+                          "bgColor": "9f9ea3",
+                          "hasP3": false
+                      },
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/gou-talk/1155391559?i=1155391790",
+                      "playParams": {
+                          "id": "1155391790",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Gou Talk",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1b/4a/79/1b4a793c-039c-cac9-c825-82968a6c7a9b/mzaf_10179129125024473502.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1155391791": {
+                  "id": "1155391791",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Seek for Maktoop - EP",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка",
+                          "Рок"
+                      ],
+                      "trackNumber": 2,
+                      "releaseDate": "2016-10-11",
+                      "durationInMillis": 474824,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1605501",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/e2/2e/ec/e22eece8-ea9c-b930-1400-90b9803a11ff/5054429006414.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "1f1f20",
+                          "textColor2": "1b1e1f",
+                          "textColor4": "363739",
+                          "textColor1": "000000",
+                          "bgColor": "9f9ea3",
+                          "hasP3": false
+                      },
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/maktoop/1155391559?i=1155391791",
+                      "playParams": {
+                          "id": "1155391791",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Maktoop",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fb/37/33/fb3733c3-3e27-fbb3-2033-993f4c7790c4/mzaf_11999572118549881425.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1155391792": {
+                  "id": "1155391792",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Seek for Maktoop - EP",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка",
+                          "Рок"
+                      ],
+                      "trackNumber": 3,
+                      "releaseDate": "2016-10-14",
+                      "durationInMillis": 464863,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1605502",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/e2/2e/ec/e22eece8-ea9c-b930-1400-90b9803a11ff/5054429006414.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "1f1f20",
+                          "textColor2": "1b1e1f",
+                          "textColor4": "363739",
+                          "textColor1": "000000",
+                          "bgColor": "9f9ea3",
+                          "hasP3": false
+                      },
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/rose/1155391559?i=1155391792",
+                      "playParams": {
+                          "id": "1155391792",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Rose",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f6/09/18/f60918a2-7aab-68b2-acca-175ff8e050d7/mzaf_5761327277518250301.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1335982354": {
+                  "id": "1335982354",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "It Makes You Forget (Itgehane) - Single",
+                      "hasTimeSyncedLyrics": true,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 1,
+                      "releaseDate": "2018-01-23",
+                      "durationInMillis": 236160,
+                      "isVocalAttenuationAllowed": true,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1800001",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2f/da/a4/2fdaa47d-0101-ffce-8b4f-fcb01feb2bd0/5054429132472.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "ko",
+                      "url": "https://music.apple.com/ru/album/it-makes-you-forget-itgehane-edit/1335982351?i=1335982354",
+                      "playParams": {
+                          "id": "1335982354",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": true,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "It Makes You Forget (Itgehane) [Edit]",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/94/7c/52/947c52b7-770c-e235-c855-58e09592d7fa/mzaf_1410882818169817113.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1335982355": {
+                  "id": "1335982355",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "It Makes You Forget (Itgehane) - Single",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 2,
+                      "releaseDate": "2018-01-23",
+                      "durationInMillis": 395416,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1700575",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2f/da/a4/2fdaa47d-0101-ffce-8b4f-fcb01feb2bd0/5054429132472.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/it-makes-you-forget-itgehane/1335982351?i=1335982355",
+                      "playParams": {
+                          "id": "1335982355",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "It Makes You Forget (Itgehane)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/07/37/54/07375439-bc30-5e35-f23b-a94a1c229a2e/mzaf_9186310277017084489.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1336528239": {
+                  "id": "1336528239",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Once - EP",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 1,
+                      "releaseDate": "2018-01-23",
+                      "durationInMillis": 395416,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1700575",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/f5/c7/65f5c72b-a797-48d5-e2dc-107dd38f5338/5054429132205.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/it-makes-you-forget-itgehane/1336528225?i=1336528239",
+                      "playParams": {
+                          "id": "1336528239",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "It Makes You Forget (Itgehane)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/42/c9/cf/42c9cfca-0780-afdf-2709-fc86a2ec0695/mzaf_1378378288313115008.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1336528240": {
+                  "id": "1336528240",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Once - EP",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 2,
+                      "durationInMillis": 416014,
+                      "releaseDate": "2018-03-02",
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1700576",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/f5/c7/65f5c72b-a797-48d5-e2dc-107dd38f5338/5054429132205.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/hundres-times/1336528225?i=1336528240",
+                      "playParams": {
+                          "id": "1336528240",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Hundres Times",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ee/66/36/ee66368a-261f-fa75-5d2a-256f041b802f/mzaf_16262901331999640588.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1336528421": {
+                  "id": "1336528421",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Once - EP",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 3,
+                      "releaseDate": "2018-02-26",
+                      "durationInMillis": 381239,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1700577",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/f5/c7/65f5c72b-a797-48d5-e2dc-107dd38f5338/5054429132205.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/han-jan/1336528225?i=1336528421",
+                      "playParams": {
+                          "id": "1336528421",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Han Jan",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/bf/3b/4c/bf3b4cbb-f07e-7971-e98c-bdc2976a5390/mzaf_6237045988221896797.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1350843178": {
+                  "id": "1350843178",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Han Jan - Single",
+                      "hasTimeSyncedLyrics": true,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 1,
+                      "durationInMillis": 242983,
+                      "releaseDate": "2018-02-26",
+                      "isVocalAttenuationAllowed": true,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1800075",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/c1/5d/d3/c15dd34a-66ba-6944-f88b-b4e0142f8a6a/5054429133257.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "en-US",
+                      "url": "https://music.apple.com/ru/album/han-jan-edit/1350842586?i=1350843178",
+                      "playParams": {
+                          "id": "1350843178",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": true,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Han Jan (Edit)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/aa/d4/f1/aad4f11a-3ab6-6139-7c47-993e1145e65e/mzaf_18174277876524791096.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1350843179": {
+                  "id": "1350843179",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Han Jan - Single",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 2,
+                      "releaseDate": "2018-02-26",
+                      "durationInMillis": 381239,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1700577",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/c1/5d/d3/c15dd34a-66ba-6944-f88b-b4e0142f8a6a/5054429133257.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/han-jan/1350842586?i=1350843179",
+                      "playParams": {
+                          "id": "1350843179",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Han Jan",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5b/2d/ef/5b2defa6-6cba-ef1a-bcba-5b8c503408f1/mzaf_6373564739977835505.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1443878500": {
+                  "id": "1443878500",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "It Makes You Forget (Itgehane) [Remixes] - Single",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 2,
+                      "durationInMillis": 401721,
+                      "releaseDate": "2018-11-28",
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCFB1800262",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/91/33/51/9133513c-4be1-3d8a-39f8-dd4ed482e764/dj.allvherz.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "333333",
+                          "textColor2": "12252d",
+                          "textColor4": "425157",
+                          "textColor1": "000000",
+                          "bgColor": "ffffff",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/it-makes-you-forget-itgehane-i-cube-remix/1443878493?i=1443878500",
+                      "playParams": {
+                          "id": "1443878500",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "It Makes You Forget (Itgehane) [I:Cube Remix]",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a5/8f/8c/a58f8c8a-8192-f03f-af9f-d9f337df26bd/mzaf_7754335540945238931.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1461471222": {
+                  "id": "1461471222",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "DJ-Kicks (DJ Mix)",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка",
+                          "Танцевальная"
+                      ],
+                      "trackNumber": 2,
+                      "releaseDate": "2019-06-28",
+                      "durationInMillis": 257355,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "DEG931992250",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/59/9b/99/599b9924-d407-7c2b-2837-ac77cba57ede/0730003738241_3000.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "a9a6b1",
+                          "textColor2": "c5c1ce",
+                          "textColor4": "a49ea7",
+                          "textColor1": "ccccdb",
+                          "bgColor": "1e0f0a",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/hungboo-dj-kicks-mixed/1461471084?i=1461471222",
+                      "playParams": {
+                          "id": "1461471222",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Hungboo (DJ-Kicks) [Mixed]",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/f1/34/e5f134fd-9877-9780-eed2-abac3cd46221/mzaf_12246572520290725833.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1462082730": {
+                  "id": "1462082730",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "DJ-Kicks EP",
+                      "hasTimeSyncedLyrics": true,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 1,
+                      "releaseDate": "2019-05-31",
+                      "durationInMillis": 275534,
+                      "isVocalAttenuationAllowed": true,
+                      "isMasteredForItunes": false,
+                      "isrc": "DEG931992224",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4f/06/94/4f0694e3-c028-77ef-b01d-98e33b6f14c2/0730003738258_3000.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "a9a6b1",
+                          "textColor2": "c5c1ce",
+                          "textColor4": "a49ea7",
+                          "textColor1": "ccccdb",
+                          "bgColor": "1e0f0a",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "ko",
+                      "url": "https://music.apple.com/ru/album/hungboo-dj-kicks/1462082729?i=1462082730",
+                      "playParams": {
+                          "id": "1462082730",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": true,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Hungboo (DJ-Kicks)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/21/4a/1e/214a1e5e-3d9c-e900-2a47-af3a27d658da/mzaf_13009119878860750620.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1463405458": {
+                  "id": "1463405458",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Defected Radio Episode 154 (hosted by Sam Divine)",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Танцевальная",
+                          "Музыка",
+                          "Поп"
+                      ],
+                      "trackNumber": 5,
+                      "releaseDate": "2019-05-24",
+                      "durationInMillis": 170899,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBCPZ1915846",
+                      "artwork": {
+                          "width": 4000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e1/c8/4b/e1c84b8b-78f5-42e5-da17-da69653856c2/826194446994.jpg/{w}x{h}bb.jpg",
+                          "height": 4000,
+                          "textColor3": "cfcfcf",
+                          "textColor2": "6074fb",
+                          "textColor4": "5161cd",
+                          "textColor1": "ffffff",
+                          "bgColor": "141414",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/starry-night-mixed/1463405299?i=1463405458",
+                      "playParams": {
+                          "id": "1463405458",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Starry Night (Mixed)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fd/81/00/fd810081-3c89-05bc-6e61-76eab0c81a2a/mzaf_17201737949736401683.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1592681358": {
+                  "id": "1592681358",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Needs 004 - Single",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "trackNumber": 1,
+                      "durationInMillis": 402838,
+                      "releaseDate": "2018-06-25",
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBKQU1856591",
+                      "artwork": {
+                          "width": 2400,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3a/fe/15/3afe154a-17c9-3e90-d333-be4c62650681/5054283705959.png/{w}x{h}bb.jpg",
+                          "height": 2400,
+                          "textColor3": "3c3e3e",
+                          "textColor2": "262626",
+                          "textColor4": "515151",
+                          "textColor1": "0c0e0d",
+                          "bgColor": "ffffff",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/shero/1592681357?i=1592681358",
+                      "playParams": {
+                          "id": "1592681358",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Shero",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/f9/a6/1b/f9a61bf6-c128-cd05-c075-89186a506c14/mzaf_1372645573664828173.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1624154174": {
+                  "id": "1624154174",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Boiler Room: Peggy Gou, Streaming From Isolation, Apr 27, 2020 (DJ Mix)",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Хаус",
+                          "Музыка",
+                          "Танцевальная",
+                          "Техно"
+                      ],
+                      "trackNumber": 3,
+                      "releaseDate": "2020-04-27",
+                      "durationInMillis": 383987,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "US23A5001398",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4c/4f/0c/4c4f0c2a-9152-83fe-be50-1ebb786be5b8/peggygou_SFI.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "b69dcb",
+                          "textColor2": "e7c3f1",
+                          "textColor4": "b89cc1",
+                          "textColor1": "e3c5ff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/jigoo-mixed/1624154167?i=1624154174",
+                      "playParams": {
+                          "id": "1624154174",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Jigoo (Mixed)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/f1/a3/44/f1a3444e-a0c1-33e8-fba7-90ac255fbdc1/mzaf_17977230097071901293.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou & Maurice Fulton"
+                  }
+              },
+              "1624154317": {
+                  "id": "1624154317",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Boiler Room: Peggy Gou, Streaming From Isolation, Apr 27, 2020 (DJ Mix)",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Хаус",
+                          "Музыка",
+                          "Танцевальная",
+                          "Техно"
+                      ],
+                      "trackNumber": 20,
+                      "releaseDate": "2020-04-27",
+                      "durationInMillis": 366207,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "US23A5001415",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4c/4f/0c/4c4f0c2a-9152-83fe-be50-1ebb786be5b8/peggygou_SFI.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "b69dcb",
+                          "textColor2": "e7c3f1",
+                          "textColor4": "b89cc1",
+                          "textColor1": "e3c5ff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "audioLocale": "zxx",
+                      "url": "https://music.apple.com/ru/album/starry-night-mixed/1624154167?i=1624154317",
+                      "playParams": {
+                          "id": "1624154317",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Starry Night (Mixed)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/d8/5b/c8/d85bc86f-6a22-0c22-e1e6-41ba6b391e18/mzaf_398773310932914595.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1637743386": {
+                  "id": "1637743386",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Café Del Mar XXVIII, Vol. 28",
+                      "hasTimeSyncedLyrics": false,
+                      "genreNames": [
+                          "Даунтемпо",
+                          "Музыка",
+                          "Электроника",
+                          "Танцевальная"
+                      ],
+                      "trackNumber": 4,
+                      "releaseDate": "2022-08-19",
+                      "durationInMillis": 232915,
+                      "isVocalAttenuationAllowed": false,
+                      "isMasteredForItunes": false,
+                      "isrc": "GBJX32175007",
+                      "artwork": {
+                          "width": 1604,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/1a/ee/f1/1aeef1e7-07ac-f06d-9d0e-4458d7a4be9d/8431042029308.png/{w}x{h}bb.jpg",
+                          "height": 1604,
+                          "textColor3": "2e241b",
+                          "textColor2": "3d2827",
+                          "textColor4": "604439",
+                          "textColor1": "000000",
+                          "bgColor": "eab885",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou, OHHYUK & Maktopp",
+                      "audioLocale": "ja",
+                      "url": "https://music.apple.com/ru/album/nabi-feat-ohhyuk/1637743381?i=1637743386",
+                      "playParams": {
+                          "id": "1637743386",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": false,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Nabi (feat. OHHYUK)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/3d/07/5c/3d075cf1-a2d4-f1ed-fc31-4bc218be1066/mzaf_17610912711090747048.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1689088958": {
+                  "id": "1689088958",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "(It Goes Like) Nanana [Edit] - Single",
+                      "hasTimeSyncedLyrics": true,
+                      "genreNames": [
+                          "Танцевальная",
+                          "Музыка"
+                      ],
+                      "trackNumber": 1,
+                      "releaseDate": "2023-06-15",
+                      "durationInMillis": 231545,
+                      "isVocalAttenuationAllowed": true,
+                      "isMasteredForItunes": true,
+                      "isrc": "GBBKS2300123",
+                      "artwork": {
+                          "width": 4000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a7/a7/96/a7a79669-7b20-9026-cb8e-773b1a9d31e3/191404137420.png/{w}x{h}bb.jpg",
+                          "height": 4000,
+                          "textColor3": "37372e",
+                          "textColor2": "281f21",
+                          "textColor4": "483f33",
+                          "textColor1": "12151b",
+                          "bgColor": "c8c17b",
+                          "hasP3": false
+                      },
+                      "composerName": "Peggy Gou",
+                      "audioLocale": "en-US",
+                      "url": "https://music.apple.com/ru/album/it-goes-like-nanana-edit/1689088940?i=1689088958",
+                      "playParams": {
+                          "id": "1689088958",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": true,
+                      "isAppleDigitalMaster": true,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "(It Goes Like) Nanana (Edit)",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/6a/a1/29/6aa129cb-d7d9-3f66-d2c3-b9aff26705a3/mzaf_4261627486215746711.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              },
+              "1695659078": {
+                  "id": "1695659078",
+                  "type": "songs",
+                  "attributes": {
+                      "albumName": "Today's Hits: July 2023 (DJ Mix)",
+                      "hasTimeSyncedLyrics": true,
+                      "genreNames": [
+                          "Танцевальная",
+                          "Музыка",
+                          "Поп"
+                      ],
+                      "trackNumber": 19,
+                      "durationInMillis": 221533,
+                      "releaseDate": "2023-07-07",
+                      "isVocalAttenuationAllowed": true,
+                      "isMasteredForItunes": false,
+                      "isrc": "US23A8016929",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/cb/1e/68/cb1e6870-08fc-26d1-0b46-7b5afbcc86a6/dj.cdnlkaux.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "2e2e2d",
+                          "textColor2": "29190a",
+                          "textColor4": "4f4236",
+                          "textColor1": "000000",
+                          "bgColor": "e7e7e5",
+                          "hasP3": true
+                      },
+                      "audioLocale": "en-US",
+                      "url": "https://music.apple.com/ru/album/nanana-it-goes-like-edit-mixed/1695659058?i=1695659078",
+                      "playParams": {
+                          "id": "1695659078",
+                          "kind": "song"
+                      },
+                      "discNumber": 1,
+                      "hasCredits": false,
+                      "hasLyrics": true,
+                      "isAppleDigitalMaster": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "name": "Nanana (It Goes Like) (Edit) [Mixed]",
+                      "previews": [
+                          {
+                              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/db/64/54/db645432-642d-b03c-022e-6f3c9775b753/mzaf_4225151317235117112.plus.aac.ep.m4a"
+                          }
+                      ],
+                      "artistName": "Peggy Gou"
+                  }
+              }
           },
-          "url": "https://music.apple.com/us/artist/gorillaz/567072"
-        },
-        "relationships": {
           "albums": {
-            "data": [
-              {
-                "id": "850571319",
-                "type": "albums"
+              "1155391559": {
+                  "id": "1155391559",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2016 Technicolour",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка",
+                          "Рок"
+                      ],
+                      "releaseDate": "2016-10-14",
+                      "upc": "5054429006414",
+                      "isMasteredForItunes": false,
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/e2/2e/ec/e22eece8-ea9c-b930-1400-90b9803a11ff/5054429006414.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "1f1f20",
+                          "textColor2": "1b1e1f",
+                          "textColor4": "363739",
+                          "textColor1": "000000",
+                          "bgColor": "9f9ea3",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/seek-for-maktoop-ep/1155391559",
+                      "playParams": {
+                          "id": "1155391559",
+                          "kind": "album"
+                      },
+                      "recordLabel": "Technicolour",
+                      "trackCount": 3,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "Seek for Maktoop - EP",
+                      "artistName": "Peggy Gou",
+                      "isComplete": true
+                  }
               },
-              {
-                "id": "1217911994",
-                "type": "albums"
+              "1335982351": {
+                  "id": "1335982351",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2018 Ninja Tune",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "releaseDate": "2018-01-23",
+                      "isMasteredForItunes": false,
+                      "upc": "5054429132472",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2f/da/a4/2fdaa47d-0101-ffce-8b4f-fcb01feb2bd0/5054429132472.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/it-makes-you-forget-itgehane-single/1335982351",
+                      "playParams": {
+                          "id": "1335982351",
+                          "kind": "album"
+                      },
+                      "recordLabel": "Ninja Tune",
+                      "trackCount": 2,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "It Makes You Forget (Itgehane) - Single",
+                      "artistName": "Peggy Gou",
+                      "isComplete": true
+                  }
               },
-              {
-                "id": "1387814084",
-                "type": "albums"
+              "1336528225": {
+                  "id": "1336528225",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2018 Ninja Tune",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "releaseDate": "2018-03-02",
+                      "upc": "5054429132205",
+                      "isMasteredForItunes": false,
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/f5/c7/65f5c72b-a797-48d5-e2dc-107dd38f5338/5054429132205.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/once-ep/1336528225",
+                      "playParams": {
+                          "id": "1336528225",
+                          "kind": "album"
+                      },
+                      "recordLabel": "Ninja Tune",
+                      "trackCount": 3,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "Once - EP",
+                      "artistName": "Peggy Gou",
+                      "isComplete": true
+                  }
               },
-              {
-                "id": "850576570",
-                "type": "albums"
+              "1350842586": {
+                  "id": "1350842586",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2018 Ninja Tune",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "releaseDate": "2018-02-26",
+                      "isMasteredForItunes": false,
+                      "upc": "5054429133257",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/c1/5d/d3/c15dd34a-66ba-6944-f88b-b4e0142f8a6a/5054429133257.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "cbcbcb",
+                          "textColor2": "ffd5d7",
+                          "textColor4": "cbaaab",
+                          "textColor1": "ffffff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/han-jan-single/1350842586",
+                      "playParams": {
+                          "id": "1350842586",
+                          "kind": "album"
+                      },
+                      "recordLabel": "Ninja Tune",
+                      "trackCount": 2,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "Han Jan - Single",
+                      "artistName": "Peggy Gou",
+                      "isComplete": true
+                  }
               },
-              {
-                "id": "859841880",
-                "type": "albums"
+              "1443878493": {
+                  "id": "1443878493",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2018 Ninja Tune",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "releaseDate": "2018-11-28",
+                      "upc": "5054429136272",
+                      "isMasteredForItunes": false,
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/91/33/51/9133513c-4be1-3d8a-39f8-dd4ed482e764/dj.allvherz.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "333333",
+                          "textColor2": "12252d",
+                          "textColor4": "425157",
+                          "textColor1": "000000",
+                          "bgColor": "ffffff",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/it-makes-you-forget-itgehane-remixes-single/1443878493",
+                      "playParams": {
+                          "id": "1443878493",
+                          "kind": "album"
+                      },
+                      "recordLabel": "Ninja Tune",
+                      "trackCount": 4,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "It Makes You Forget (Itgehane) [Remixes] - Single",
+                      "artistName": "Peggy Gou",
+                      "isComplete": true
+                  }
               },
-              {
-                "id": "1641561652",
-                "type": "albums"
+              "1461471084": {
+                  "id": "1461471084",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2019 !K7 Music",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка",
+                          "Танцевальная"
+                      ],
+                      "releaseDate": "2019-06-28",
+                      "isMasteredForItunes": false,
+                      "upc": "0730003738241",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/59/9b/99/599b9924-d407-7c2b-2837-ac77cba57ede/0730003738241_3000.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "a9a6b1",
+                          "textColor2": "c5c1ce",
+                          "textColor4": "a49ea7",
+                          "textColor1": "ccccdb",
+                          "bgColor": "1e0f0a",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/dj-kicks-dj-mix/1461471084",
+                      "playParams": {
+                          "id": "1461471084",
+                          "kind": "album"
+                      },
+                      "recordLabel": "!K7 Records",
+                      "trackCount": 19,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "DJ-Kicks (DJ Mix)",
+                      "artistName": "Peggy Gou",
+                      "editorialNotes": {
+                          "short": "Главные треки в жизни и карьере международной звезды техно."
+                      },
+                      "isComplete": true
+                  }
               },
-              {
-                "id": "1530812327",
-                "type": "albums"
+              "1462082729": {
+                  "id": "1462082729",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2019 !K7 Music",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "releaseDate": "2019-05-31",
+                      "isMasteredForItunes": false,
+                      "upc": "0730003738258",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4f/06/94/4f0694e3-c028-77ef-b01d-98e33b6f14c2/0730003738258_3000.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "a9a6b1",
+                          "textColor2": "c5c1ce",
+                          "textColor4": "a49ea7",
+                          "textColor1": "ccccdb",
+                          "bgColor": "1e0f0a",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/dj-kicks-ep/1462082729",
+                      "playParams": {
+                          "id": "1462082729",
+                          "kind": "album"
+                      },
+                      "recordLabel": "!K7 Records",
+                      "trackCount": 3,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "DJ-Kicks EP",
+                      "artistName": "Peggy Gou",
+                      "isComplete": false
+                  }
               },
-              {
-                "id": "1673502694",
-                "type": "albums"
+              "1543950276": {
+                  "id": "1543950276",
+                  "type": "albums",
+                  "attributes": {
+                      "genreNames": [
+                          "Танцевальная",
+                          "Музыка",
+                          "Электроника"
+                      ],
+                      "releaseDate": "2020-12-23",
+                      "isMasteredForItunes": false,
+                      "upc": "5056381807917",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/27/03/78/270378fa-369f-1527-c5c3-a12aad7f9141/mza_9690256718332432201.png/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "363534",
+                          "textColor2": "1d1d1c",
+                          "textColor4": "484846",
+                          "textColor1": "060605",
+                          "bgColor": "f5f3ed",
+                          "hasP3": true
+                      },
+                      "url": "https://music.apple.com/ru/album/nye-2021-dj-mix/1543950276",
+                      "playParams": {
+                          "id": "1543950276",
+                          "kind": "album"
+                      },
+                      "trackCount": 14,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "NYE 2021 (DJ Mix)",
+                      "artistName": "Peggy Gou",
+                      "contentRating": "explicit",
+                      "isComplete": false
+                  }
               },
-              {
-                "id": "850569437",
-                "type": "albums"
+              "1592681357": {
+                  "id": "1592681357",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2018 Needs - Not For Profit",
+                      "genreNames": [
+                          "Электроника",
+                          "Музыка"
+                      ],
+                      "releaseDate": "2018-06-25",
+                      "upc": "5054283705959",
+                      "isMasteredForItunes": false,
+                      "artwork": {
+                          "width": 2400,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3a/fe/15/3afe154a-17c9-3e90-d333-be4c62650681/5054283705959.png/{w}x{h}bb.jpg",
+                          "height": 2400,
+                          "textColor3": "3c3e3e",
+                          "textColor2": "262626",
+                          "textColor4": "515151",
+                          "textColor1": "0c0e0d",
+                          "bgColor": "ffffff",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/needs-004-single/1592681357",
+                      "playParams": {
+                          "id": "1592681357",
+                          "kind": "album"
+                      },
+                      "recordLabel": "Needs (not-for-profit)",
+                      "trackCount": 2,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "Needs 004 - Single",
+                      "artistName": "Peggy Gou & Juju & Jordash",
+                      "isComplete": true
+                  }
               },
-              {
-                "id": "850583573",
-                "type": "albums"
+              "1624154167": {
+                  "id": "1624154167",
+                  "type": "albums",
+                  "attributes": {
+                      "genreNames": [
+                          "Хаус",
+                          "Музыка",
+                          "Танцевальная",
+                          "Техно"
+                      ],
+                      "releaseDate": "2020-04-27",
+                      "isMasteredForItunes": false,
+                      "upc": "5056381825324",
+                      "artwork": {
+                          "width": 3000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4c/4f/0c/4c4f0c2a-9152-83fe-be50-1ebb786be5b8/peggygou_SFI.jpg/{w}x{h}bb.jpg",
+                          "height": 3000,
+                          "textColor3": "b69dcb",
+                          "textColor2": "e7c3f1",
+                          "textColor4": "b89cc1",
+                          "textColor1": "e3c5ff",
+                          "bgColor": "000000",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/boiler-room-peggy-gou-streaming-from-isolation-apr/1624154167",
+                      "playParams": {
+                          "id": "1624154167",
+                          "kind": "album"
+                      },
+                      "trackCount": 20,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "Boiler Room: Peggy Gou, Streaming From Isolation, Apr 27, 2020 (DJ Mix)",
+                      "artistName": "Peggy Gou",
+                      "isComplete": false
+                  }
               },
-              {
-                "id": "850585388",
-                "type": "albums"
+              "1675974427": {
+                  "id": "1675974427",
+                  "type": "albums",
+                  "attributes": {
+                      "genreNames": [
+                          "Техно",
+                          "Музыка",
+                          "Танцевальная",
+                          "Хаус"
+                      ],
+                      "releaseDate": "2023-03-13",
+                      "upc": "5056381861698",
+                      "isMasteredForItunes": false,
+                      "artwork": {
+                          "width": 2000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/55/d4/9a/55d49a0a-07d9-c305-8a87-e06e63e5f22f/b80dd0bf-7566-4db8-b3a9-7c1800da8f8e.jpg/{w}x{h}bb.jpg",
+                          "height": 2000,
+                          "textColor3": "47543e",
+                          "textColor2": "312e16",
+                          "textColor4": "5a5743",
+                          "textColor1": "1a2b10",
+                          "bgColor": "fdfcf8",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/gudu-mix-010-peggy-gou-dj-mix/1675974427",
+                      "playParams": {
+                          "id": "1675974427",
+                          "kind": "album"
+                      },
+                      "trackCount": 14,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": false,
+                      "name": "GUDU Mix 010: Peggy Gou (DJ Mix)",
+                      "artistName": "Peggy Gou",
+                      "isComplete": false
+                  }
               },
-              {
-                "id": "1580441749",
-                "type": "albums"
-              },
-              {
-                "id": "726389588",
-                "type": "albums"
-              },
-              {
-                "id": "699724514",
-                "type": "albums"
-              },
-              {
-                "id": "884147414",
-                "type": "albums"
-              },
-              {
-                "id": "693778034",
-                "type": "albums"
-              },
-              {
-                "id": "1496308962",
-                "type": "albums"
-              },
-              {
-                "id": "1247590076",
-                "type": "albums"
-              },
-              {
-                "id": "865449454",
-                "type": "albums"
-              },
-              {
-                "id": "1525571302",
-                "type": "albums"
-              },
-              {
-                "id": "1437420708",
-                "type": "albums"
-              },
-              {
-                "id": "693620734",
-                "type": "albums"
-              },
-              {
-                "id": "1496311774",
-                "type": "albums"
-              },
-              {
-                "id": "699909905",
-                "type": "albums"
-              },
-              {
-                "id": "1300105773",
-                "type": "albums"
+              "1689088940": {
+                  "id": "1689088940",
+                  "type": "albums",
+                  "attributes": {
+                      "copyright": "℗ 2023 XL Recordings Ltd",
+                      "genreNames": [
+                          "Танцевальная",
+                          "Музыка"
+                      ],
+                      "releaseDate": "2023-06-15",
+                      "upc": "191404137420",
+                      "isMasteredForItunes": true,
+                      "artwork": {
+                          "width": 4000,
+                          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a7/a7/96/a7a79669-7b20-9026-cb8e-773b1a9d31e3/191404137420.png/{w}x{h}bb.jpg",
+                          "height": 4000,
+                          "textColor3": "37372e",
+                          "textColor2": "281f21",
+                          "textColor4": "483f33",
+                          "textColor1": "12151b",
+                          "bgColor": "c8c17b",
+                          "hasP3": false
+                      },
+                      "url": "https://music.apple.com/ru/album/it-goes-like-nanana-edit-single/1689088940",
+                      "playParams": {
+                          "id": "1689088940",
+                          "kind": "album"
+                      },
+                      "recordLabel": "XL Recordings",
+                      "trackCount": 1,
+                      "isCompilation": false,
+                      "isPrerelease": false,
+                      "audioTraits": [
+                          "lossless",
+                          "lossy-stereo"
+                      ],
+                      "isSingle": true,
+                      "name": "(It Goes Like) Nanana [Edit] - Single",
+                      "artistName": "Peggy Gou",
+                      "isComplete": true
+                  }
               }
-            ]
           }
-        },
-        "views": {
-          "top-songs": {
-            "attributes": {
-              "title": "Top Songs"
-            },
-            "data": [
-              {
-                "id": "850571371",
-                "type": "songs"
-              },
-              {
-                "id": "850576665",
-                "type": "songs"
-              },
-              {
-                "id": "850571388",
-                "type": "songs"
-              },
-              {
-                "id": "859844939",
-                "type": "songs"
-              },
-              {
-                "id": "850571369",
-                "type": "songs"
-              },
-              {
-                "id": "850569466",
-                "type": "songs"
-              },
-              {
-                "id": "1217912011",
-                "type": "songs"
-              },
-              {
-                "id": "1217912253",
-                "type": "songs"
-              },
-              {
-                "id": "1217912232",
-                "type": "songs"
-              },
-              {
-                "id": "1217912009",
-                "type": "songs"
-              },
-              {
-                "id": "1387814980",
-                "type": "songs"
-              },
-              {
-                "id": "850571367",
-                "type": "songs"
-              },
-              {
-                "id": "850576709",
-                "type": "songs"
-              },
-              {
-                "id": "850569480",
-                "type": "songs"
-              },
-              {
-                "id": "1641561672",
-                "type": "songs"
-              },
-              {
-                "id": "859844936",
-                "type": "songs"
-              },
-              {
-                "id": "859844933",
-                "type": "songs"
-              },
-              {
-                "id": "1641561742",
-                "type": "songs"
-              },
-              {
-                "id": "850571377",
-                "type": "songs"
-              },
-              {
-                "id": "859844934",
-                "type": "songs"
-              }
-            ]
-          },
-          "latest-release": {
-            "attributes": {
-              "title": "Latest Release"
-            },
-            "data": [
-              {
-                "id": "1673502694",
-                "type": "albums"
-              }
-            ]
-          }
-        },
-        "meta": {
-          "views": {
-            "order": [
-              "latest-release",
-              "top-songs"
-            ]
-          }
-        }
       }
-    },
-    "albums": {
-      "693620734": {
-        "id": "693620734",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2006 Parlophone Records Ltd, a Warner Music Group Company",
-          "genreNames": [
-            "Pop",
-            "Music",
-            "Rock",
-            "Adult Alternative",
-            "Hip-Hop/Rap",
-            "Rap"
-          ],
-          "releaseDate": "2005-05-09",
-          "upc": "0094635559453",
-          "isMasteredForItunes": false,
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/be/1b/01/be1b0107-3c4f-e111-915a-a61da7c4b7af/0094635559453_1500x1500_300dpi.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "1a262e",
-            "textColor2": "12202d",
-            "textColor4": "293e51",
-            "textColor1": "000201",
-            "bgColor": "85b8e2",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/feel-good-inc-ep/693620734",
-          "playParams": {
-            "id": "693620734",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 4,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Feel Good Inc - EP",
-          "artistName": "Gorillaz",
-          "isComplete": true
-        }
+  },
+  "status": 200,
+  "statusText": "",
+  "headers": {
+      "access-control-allow-credentials": "true",
+      "access-control-allow-headers": "ver",
+      "access-control-allow-methods": "GET, POST",
+      "access-control-allow-origin": "*",
+      "content-type": "application/json",
+      "date": "Tue, 05 Sep 2023 13:21:52 GMT",
+      "server": "RapidAPI-1.2.8",
+      "x-rapidapi-region": "AWS - eu-central-1",
+      "x-rapidapi-version": "1.2.8",
+      "x-ratelimit-requests-limit": "500",
+      "x-ratelimit-requests-remaining": "412",
+      "x-ratelimit-requests-reset": "1030280"
+  },
+  "config": {
+      "transitional": {
+          "silentJSONParsing": true,
+          "forcedJSONParsing": true,
+          "clarifyTimeoutError": false
       },
-      "693778034": {
-        "id": "693778034",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2010 Parlophone Records Ltd, a Warner Music Group Company",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2010-10-22",
-          "upc": "5099994732054",
-          "isMasteredForItunes": false,
-          "artwork": {
-            "width": 600,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/17/2b/27/172b27d5-1d4e-8ade-cb2b-a4ff47aca407/mza_8524132254078437865.jpg/{w}x{h}bb.jpg",
-            "height": 600,
-            "textColor3": "bdbdbd",
-            "textColor2": "d9d9a8",
-            "textColor4": "adad87",
-            "textColor1": "ececec",
-            "bgColor": "000000",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/itunes-session/693778034",
-          "playParams": {
-            "id": "693778034",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 9,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "iTunes Session",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "isComplete": true
-        }
+      "adapter": [
+          "xhr",
+          "http"
+      ],
+      "transformRequest": [
+          null
+      ],
+      "transformResponse": [
+          null
+      ],
+      "timeout": 0,
+      "xsrfCookieName": "XSRF-TOKEN",
+      "xsrfHeaderName": "X-XSRF-TOKEN",
+      "maxContentLength": -1,
+      "maxBodyLength": -1,
+      "env": {},
+      "headers": {
+          "Accept": "application/json, text/plain, */*",
+          "X-RapidAPI-Key": "dc47e195a2mshece2bedd874ecf3p1669cajsn7399e7e3acd4",
+          "X-RapidAPI-Host": "shazam.p.rapidapi.com"
       },
-      "699724514": {
-        "id": "699724514",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2002 Parlophone Records Ltd, a Warner Music Group Company",
-          "genreNames": [
-            "Rap",
-            "Music",
-            "Hip-Hop/Rap",
-            "Rock",
-            "Adult Alternative",
-            "Reggae",
-            "Dub",
-            "Alternative Rap"
-          ],
-          "releaseDate": "2002-07-01",
-          "upc": "0724353998257",
-          "isMasteredForItunes": false,
-          "artwork": {
-            "width": 1490,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/4b/6e/c8/4b6ec8f1-db4c-9c7e-fea5-fc4e4d70a3dd/dj.urytwimk.jpg/{w}x{h}bb.jpg",
-            "height": 1490,
-            "textColor3": "c9d1d2",
-            "textColor2": "b7c3d6",
-            "textColor4": "94a2b6",
-            "textColor1": "fafffa",
-            "bgColor": "061c33",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/laika-come-home/699724514",
-          "playParams": {
-            "id": "699724514",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 12,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Laika Come Home",
-          "artistName": "Gorillaz & Space Monkeyz",
-          "isComplete": true
-        }
+      "params": {
+          "id": "1068912248",
+          "l": "ru-RU"
       },
-      "699909905": {
-        "id": "699909905",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2010 Parlophone Records Ltd, a Warner Music Group Company",
-          "genreNames": [
-            "Rap",
-            "Music",
-            "Hip-Hop/Rap",
-            "Rock",
-            "Adult Alternative",
-            "Alternative"
-          ],
-          "releaseDate": "2010-11-21",
-          "isMasteredForItunes": false,
-          "upc": "5099994787955",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/f6/93/9f/f6939f90-423e-2ac1-8db5-f3ca803e2f18/5099994787955_1500x1500_300dpi.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "2e2c28",
-            "textColor2": "680000",
-            "textColor4": "822b28",
-            "textColor1": "000100",
-            "bgColor": "e7dac9",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/doncamatic-feat-daley-ep/699909905",
-          "playParams": {
-            "id": "699909905",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "isCompilation": false,
-          "trackCount": 3,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Doncamatic (feat. Daley) - EP",
-          "artistName": "Gorillaz",
-          "isComplete": true
-        }
-      },
-      "726389588": {
-        "id": "726389588",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2007 Parlophone Records Ltd, a Warner Music Group Company",
-          "genreNames": [
-            "Worldwide",
-            "Music"
-          ],
-          "releaseDate": "2007-11-19",
-          "upc": "5099951289157",
-          "isMasteredForItunes": false,
-          "artwork": {
-            "width": 1535,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/e1/28/0d/e1280d84-5d99-22d4-a36c-3efdd345eb56/dj.oymknlim.jpg/{w}x{h}bb.jpg",
-            "height": 1535,
-            "textColor3": "b8989a",
-            "textColor2": "d87e88",
-            "textColor4": "af656d",
-            "textColor1": "e4bfc0",
-            "bgColor": "0a0000",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/d-sides-special-edition/726389588",
-          "playParams": {
-            "id": "726389588",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 23,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "D-Sides (Special Edition)",
-          "artistName": "Gorillaz",
-          "isComplete": true
-        }
-      },
-      "850569437": {
-        "id": "850569437",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2014 Parlophone Records Limited, a Warner Music Group company.",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap",
-            "Rap",
-            "Pop"
-          ],
-          "releaseDate": "2010-03-03",
-          "isMasteredForItunes": true,
-          "upc": "825646291038",
-          "artwork": {
-            "width": 1418,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/b8/f9/b9/b8f9b9f8-a609-bde2-0302-349436ffc508/825646291038.jpg/{w}x{h}bb.jpg",
-            "height": 1418,
-            "textColor3": "ccd6e1",
-            "textColor2": "b7ccd9",
-            "textColor4": "92aec3",
-            "textColor1": "ffffff",
-            "bgColor": "00366a",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/plastic-beach/850569437",
-          "playParams": {
-            "id": "850569437",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 16,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Plastic Beach",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "name": "Gorillaz",
-            "standard": "With its sultry, throbbing bassline, genre-defying melodic turns and surprising guests, “Stylo” arguably represents Gorillaz' entire sonic approach in microcosm. But while this hypnotic blast of future-soul—propelled by guest vocals from Mos Def and Bobby Womack—is an undoubted high point, it’s by no means the only rich pleasure on this epic, dizzyingly collaborative third album. Inspired by experimentation with opera and bolstered by more fantasy cameos (including Lou Reed), it’s the virtual band’s boldest statement yet.",
-            "short": "Hewlett and Albarn marshal a starry, high-concept opera."
-          },
-          "isComplete": true
-        }
-      },
-      "850571319": {
-        "id": "850571319",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2014 Parlophone Records Limited, a Warner Music Group company.",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap"
-          ],
-          "releaseDate": "2005-05-11",
-          "upc": "825646291045",
-          "isMasteredForItunes": true,
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "cbcfd2",
-            "textColor2": "cad69b",
-            "textColor4": "a1af82",
-            "textColor1": "fefeff",
-            "bgColor": "001621",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/demon-days/850571319",
-          "playParams": {
-            "id": "850571319",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 15,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Demon Days",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "name": "Demon Days",
-            "standard": "If Gorillaz began life as a playful comment on artificiality in music (and a way for Damon Albarn to escape the shadow of Britpop) then <i>Demon Days</i> is their coming of age. Laden with A-grade guests—ranging from Roots Manuva to Dennis Hopper—and expansive in its scope, this second record delivers everything from off-kilter hip hop (“Dirty Harry” and De La Soul feature “Feel Good Inc.”) to neo-rave bangers (Shaun Ryder assist “Dare”) without putting a foot wrong.",
-            "short": "A-list guests and King Kong-sized hits: Gorillaz get serious."
-          },
-          "isComplete": true
-        }
-      },
-      "850576570": {
-        "id": "850576570",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2014 Parlophone Records Limited, a Warner Music Group company.",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap",
-            "Rap"
-          ],
-          "releaseDate": "2001-03-26",
-          "upc": "825646290703",
-          "isMasteredForItunes": true,
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5b/8d/47/5b8d47da-71ea-93ab-dffc-733f11332659/825646290703.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "363837",
-            "textColor2": "172b18",
-            "textColor4": "455546",
-            "textColor1": "040705",
-            "bgColor": "ffffff",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/gorillaz/850576570",
-          "playParams": {
-            "id": "850576570",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 17,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Gorillaz",
-          "contentRating": "explicit",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "standard": "The traditional origin story says Damon Albarn and Jamie Hewlett conceived Gorillaz as a comment on the soullessness and artifice of pop at the turn of the millennium. However, the concept of a virtual band had another appeal for Blur frontman Albarn: It allowed him to disappear. Even as Blur’s increasingly intrepid music distanced them from the creeping conservatism of Britpop during the late ’90s, Albarn had creative urges that couldn’t be satisfied within one of Britain’s biggest guitar bands. Retreating behind comic-book creator Hewlett’s animations gave him a new freedom to experiment. After all, who was a more convincing front for otherworldly adventures in dub, trip-hop, punk, rap Westerns, and bolero sounds? A man inexorably tied to Britpop with Union Jack bunting? Or Noodle, 2D, Russel, and Murdoc, a motley gang of vaguely apocalyptic animations?<br />\nAlbarn originally planned to be an anonymous part of the project, but that was a futile notion by the time this debut album arrived in March 2001. There’s no mistaking the careworn voice carried by rolling hip-hop beats on opener “Re-Hash.” Other Albarn identifiers run through the record—the sharpness of melody, the air of melancholy that hangs around even the brightest moments—but he calls on collaborators to help frame them in new, divergent ways. Co-producer Dan the Automator injects an astral glimmer and rib-shaking bottom end throughout, assisted by Jamaican bass legend Junior Dan, who leads bittersweet dub odysseys “Starshine” and “Slow Country.” Listen closely and you’ll hear Tom Tom Club adding finger snaps and backing vocals to the wonky euphoria of “19-2000,” before Buena Vista Social Club’s Ibrahim Ferrer brings stately elegance and wisdom to proceedings on “Latin Simone (Que Pasa Contigo).”<br />\nRarely had Albarn achieved such a fine balance of adventure and directness. Gorillaz was dismissed as “music for 12-year-olds” by Albarn’s old adversary Noel Gallagher, but that wasn’t the insult he thought it was. Albarn wanted Gorillaz to be for everyone—a mainstream catalyst for exploring all corners of music. The album’s reach was certainly broad—selling seven million copies worldwide—and its impact is still audible. By scuffing away genre boundaries while they helicoptered collaborators in and out, Gorillaz anticipated the pop of today. But the greatest testament to the strength of Albarn and Hewlett’s vision arrives when you play 2017 single “We Got the Power” and realize which Britpop legend is singing backing vocals. It took nearly two decades, but even Noel Gallagher came round in the end.",
-            "short": "Toon in, turn on: Gorillaz reset pop’s possibilities on their 2001 debut."
-          },
-          "isComplete": true
-        }
-      },
-      "850583573": {
-        "id": "850583573",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2014 Parlophone Records Limited, a Warner Music Group company.",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Rock",
-            "Hip-Hop/Rap",
-            "Rap",
-            "Underground Rap",
-            "Adult Alternative",
-            "Alternative Rap"
-          ],
-          "releaseDate": "2011-11-28",
-          "upc": "825646290994",
-          "isMasteredForItunes": true,
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/41/b0/4a/41b04abc-ebea-f7ae-93ff-eb55a454daf3/825646290994.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "b6b4c0",
-            "textColor2": "edcab3",
-            "textColor4": "bea394",
-            "textColor1": "e4e0ea",
-            "bgColor": "000418",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/the-singles-collection-2001-2011/850583573",
-          "playParams": {
-            "id": "850583573",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 15,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "The Singles Collection 2001-2011",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "editorialNotes": {
-            "standard": "Genre-mashing floor-fillers (“Dare”), wistful, synth-driven ballads (“On Melancholy Hill”) candy-coated surrealist rap (“Superfast Jellyfish”): there’s hardly a patch of musical terrain that isn’t covered in this punchy edit of the cartoon quartet’s decade-long recording career. Nestled next to each other—and packaged with Daley hook-up “Doncamatic”—there’s detectable growth, and boundless invention, across Jamie Hewlett and Damon Albarn’s three records. But there’s surprising cohesion too and it all amounts to a peerless collection of shape-shifting, collaborative pop.",
-            "short": "A decade of shape-shifting pop supremacy."
-          },
-          "isComplete": true
-        }
-      },
-      "850585388": {
-        "id": "850585388",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2014 Parlophone Records Limited, a Warner Music Group company.",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Underground Rap",
-            "Rock",
-            "Adult Alternative",
-            "Rap",
-            "Alternative Rap"
-          ],
-          "releaseDate": "2010-12-25",
-          "upc": "825646291007",
-          "isMasteredForItunes": true,
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/4b/aa/d4/4baad4eb-dba2-6190-9bd7-7d415ad518ad/825646291007.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "d7cccc",
-            "textColor2": "ebb59d",
-            "textColor4": "c7917e",
-            "textColor1": "ffffff",
-            "bgColor": "390101",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/the-fall/850585388",
-          "playParams": {
-            "id": "850585388",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 15,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "The Fall",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "name": "Gorillaz",
-            "standard": "Life on tour becomes a funkified odyssey—recorded on an iPad. <i>The Fall</i> moves with the hypnotic rhythm of the road, squelchy beats and loops veering wide of the yellow line. Over hazy layers of synths and guitar, Damon Albarn's wearied croons swerve between staring-out-the-window reflection and stir-crazy delirium.",
-            "short": "A musician’s life on tour becomes a funkified odyssey."
-          },
-          "isComplete": true
-        }
-      },
-      "859841880": {
-        "id": "859841880",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2010 Parlophone Records Ltd, a Warner Music Group Company",
-          "genreNames": [
-            "Pop",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Underground Rap",
-            "Rock",
-            "Adult Alternative",
-            "Rap"
-          ],
-          "releaseDate": "2010-03-03",
-          "isMasteredForItunes": false,
-          "upc": "5099962829359",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7e/69/1f/7e691f10-3cc1-67ec-5dc3-df3d8df68fa7/5099962829359.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "d1d1d4",
-            "textColor2": "9ad6ea",
-            "textColor4": "81b1c4",
-            "textColor1": "ffffff",
-            "bgColor": "1c1d2d",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/plastic-beach-deluxe-version/859841880",
-          "playParams": {
-            "id": "859841880",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "isCompilation": false,
-          "trackCount": 19,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Plastic Beach (Deluxe Version)",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "standard": "With its sultry, throbbing bassline, genre-defying melodic turns and surprising guests, “Stylo” arguably represents Gorillaz' entire sonic approach in microcosm. But while this hypnotic blast of future-soul—propelled by guest vocals from Mos Def and Bobby Womack—is an undoubted high point, it’s by no means the only rich pleasure on this epic, dizzyingly collaborative third album. Inspired by experimentation with opera and bolstered by more fantasy cameos (including Lou Reed), it’s the virtual band’s boldest statement yet.",
-            "short": "Hewlett and Albarn marshal a starry, high-concept opera."
-          },
-          "isComplete": true
-        }
-      },
-      "865449454": {
-        "id": "865449454",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2014 Parlophone Records Ltd, a Warner Music Group Company.",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Rock",
-            "Adult Alternative",
-            "Worldwide",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Britpop",
-            "Rap"
-          ],
-          "releaseDate": "2007-11-19",
-          "isMasteredForItunes": true,
-          "upc": "825646284337",
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/81/fc/fc/81fcfc0b-e48d-b1d0-e3a7-2d9f97b0b9c5/825646284337.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "b89595",
-            "textColor2": "d87f89",
-            "textColor4": "af666e",
-            "textColor1": "e4baba",
-            "bgColor": "0a0101",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/d-sides/865449454",
-          "playParams": {
-            "id": "865449454",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 22,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "D-Sides",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "standard": "You could argue that Gorillaz very existence is testament to the surfeit of sonic ideas and hummable choruses clogging Damon Albarn’s mind. That spirit of overbrimming creativity (just see the chuggingly anthemic “We Are Happy Landfill”) carries over into this bumper collection of B-sides, rarities, and remixes culled from the <i>Demon Days</i> sessions. “Bill Murray” enlists The Bees for a woozy ska workout, and Jamie T’s take on “Kids With Guns” may be the pick of the reimaginings.",
-            "short": "Remixes, oddities, and deep cuts: <i>Demon Days</i> is reborn."
-          },
-          "isComplete": true
-        }
-      },
-      "884147414": {
-        "id": "884147414",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2014 Parlophone Records Ltd, a Warner Music Group Company.",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rock",
-            "Adult Alternative",
-            "Pop",
-            "Britpop",
-            "Rap"
-          ],
-          "releaseDate": "2001-12-12",
-          "isMasteredForItunes": true,
-          "upc": "825646264261",
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/76/fc/e7/76fce783-7be6-2dcd-7b54-1306c7d872ea/825646264261.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "cccbcb",
-            "textColor2": "b9d7fa",
-            "textColor4": "94acc8",
-            "textColor1": "ffffff",
-            "bgColor": "010000",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/g-sides/884147414",
-          "playParams": {
-            "id": "884147414",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 10,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "G Sides",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "standard": "Whether it’s through their embrace of electronica or use of innovative digital avatars, futurism has always been a key cog in the Gorillaz machine. So it’s doubly impressive that this collection sees them revitalize something as outwardly old school as the B-side compilation. Whipping restlessly from the caffeinated bounce of “19-2000” (Soulchild Remix) to the twitchy blues of first ever recording “Ghost Train”, <i>G Sides</i> is an experimental snapshot of a collective with creativity to burn.",
-            "short": "Early remixes and prime offcuts from the virtual outcasts."
-          },
-          "isComplete": true
-        }
-      },
-      "1217911994": {
-        "id": "1217911994",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2017 Parlophone Records Limited, a Warner Music Group Company",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Rock",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rap",
-            "Adult Alternative",
-            "Underground Rap",
-            "Electronic"
-          ],
-          "releaseDate": "2017-04-28",
-          "isMasteredForItunes": true,
-          "upc": "190295824822",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ad/f6/74/adf6743c-1aa7-c254-a503-b4d343be2d03/190295824822.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "ccbf62",
-            "textColor2": "f6615c",
-            "textColor4": "c8514c",
-            "textColor1": "fbeb78",
-            "bgColor": "13120d",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/humanz-deluxe/1217911994",
-          "playParams": {
-            "id": "1217911994",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 26,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Humanz (Deluxe)",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "editorialNotes": {
-            "standard": "Uncertain times and an unruly squad of new collaborators set the table for the most dazzling Gorillaz album yet. It’s a white-knuckle joyride that sees Damon Albarn and Jamie Hewlett’s virtual band dart down fresh electronic avenues—tracks are darker, lyrics explicitly politicized and the collaborators more inspired. Arming “Let Me Out” with Mavis Staples and Pusha T provides an electrifying highlight, Savages’ Jehnny Beth lends a fluorescent rallying cry to “We Got the Power”, while Benjamin Clementine is a legitimately haunting presence on the hymnal “Hallelujah Money”.",
-            "short": "A dark and dazzling white-knuckle joyride."
-          },
-          "isComplete": true
-        }
-      },
-      "1247590076": {
-        "id": "1247590076",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2017 Parlophone Records Limited, a Warner Music Group Company",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Rock"
-          ],
-          "releaseDate": "2017-06-08",
-          "isMasteredForItunes": false,
-          "upc": "190295773427",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/17/38/72/173872e7-68f0-6cea-3128-48173db58d48/190295773427.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "bb916f",
-            "textColor2": "f35d5c",
-            "textColor4": "c64e4c",
-            "textColor1": "e6b187",
-            "bgColor": "13120d",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/sleeping-powder-single/1247590076",
-          "playParams": {
-            "id": "1247590076",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 1,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": true,
-          "name": "Sleeping Powder - Single",
-          "artistName": "Gorillaz",
-          "isComplete": true
-        }
-      },
-      "1300105773": {
-        "id": "1300105773",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2017 Parlophone Records Limited, a Warner Music Group Company",
-          "genreNames": [
-            "Dance",
-            "Music",
-            "Electronic"
-          ],
-          "releaseDate": "2017-10-31",
-          "upc": "190295718855",
-          "isMasteredForItunes": false,
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/c4/54/8b/c4548b78-8f6f-2cca-1620-d249ba722665/190295718855.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "45d306",
-            "textColor2": "6efa23",
-            "textColor4": "5bcf23",
-            "textColor1": "53ff00",
-            "bgColor": "0d2422",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/garage-palace-feat-little-simz-single/1300105773",
-          "playParams": {
-            "id": "1300105773",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 1,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": true,
-          "name": "Garage Palace (feat. Little Simz) - Single",
-          "contentRating": "explicit",
-          "artistName": "Gorillaz",
-          "isComplete": true
-        }
-      },
-      "1387814084": {
-        "id": "1387814084",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2018 Parlophone Records Limited, a Warner Music Group Company",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Hip-Hop/Rap",
-            "Rap",
-            "Rock",
-            "Alternative Rap",
-            "Underground Rap",
-            "Electronic",
-            "Adult Alternative"
-          ],
-          "releaseDate": "2018-06-29",
-          "isMasteredForItunes": true,
-          "upc": "190295620660",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/a2/c0/c8a2c0cc-28e9-c0c6-f425-f6aaf13191f4/190295620660.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "092f2e",
-            "textColor2": "30312d",
-            "textColor4": "305652",
-            "textColor1": "000000",
-            "bgColor": "30ebe8",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/the-now-now/1387814084",
-          "playParams": {
-            "id": "1387814084",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 11,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "The Now Now",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "editorialNotes": {
-            "standard": "In February 2018, Gorillaz won the BRIT Award for Best British Group, bestowed on the back of 2017’s <i>Humanz</i>. As Damon Albarn made a drunken, Brexit-bashing acceptance speech, he’d already consigned that album to history. By then, the restlessly inventive songwriter had almost finished this follow-up, intent on having new material for festival season. Binding hip-hop, synth-pop, folk, techno, and funk together with lovely melodies, these songs are immediate enough to reach far corners of main-stage fields. But, conceived by Albarn in lonely hotel rooms while Gorillaz toured the U.S., they contemplate the state of the world with absorbing melancholy. The result is adventurous yet intimate—proof that beyond the cartoons and collaborators (George Benson, Snoop Dogg, and Jamie Principle here), one man’s mournful heart and insatiable creative spirit drives Gorillaz.",
-            "short": "Another triumph for Damon Albarn’s mournful heart and creative spirit."
-          },
-          "isComplete": true
-        }
-      },
-      "1437420708": {
-        "id": "1437420708",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2018 Parlophone Records Limited, a Warner Music Group",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2018-09-28",
-          "isMasteredForItunes": false,
-          "upc": "190295536404",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/fa/5c/e0/fa5ce084-1d2f-f3a2-ed8f-5f649cc81b5c/190295536404.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "cbcbcb",
-            "textColor2": "ff1300",
-            "textColor4": "cb0f00",
-            "textColor1": "ffffff",
-            "bgColor": "000000",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/tranz-pot%C3%A9-remix-single/1437420708",
-          "playParams": {
-            "id": "1437420708",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 1,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": true,
-          "name": "Tranz (Poté Remix) - Single",
-          "artistName": "Gorillaz",
-          "isComplete": true
-        }
-      },
-      "1496308962": {
-        "id": "1496308962",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2020 Gorillaz Partnership under exclusive licence to Parlophone Records Limited, a Warner Music Group Company",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2020-01-30",
-          "isMasteredForItunes": false,
-          "upc": "190295275754",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/39/d0/70/39d07009-da7f-6af0-6082-a2cd101fb934/190295275754.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "dedfc7",
-            "textColor2": "feefb5",
-            "textColor4": "e1d2a0",
-            "textColor1": "faffe6",
-            "bgColor": "70614b",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/song-machine-episode-1-ep/1496308962",
-          "playParams": {
-            "id": "1496308962",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 4,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Song Machine Episode 1 – EP",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "isComplete": true
-        }
-      },
-      "1496311774": {
-        "id": "1496311774",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2020 Gorillaz Partnership under exclusive licence to Parlophone Records Limited, a Warner Music Group Company",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2020-01-30",
-          "upc": "190295275747",
-          "isMasteredForItunes": false,
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/22/51/89/22518993-4d97-0ddc-4414-ec28970f322f/190295275747.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "dedfc7",
-            "textColor2": "feefb5",
-            "textColor4": "e1d2a0",
-            "textColor1": "faffe6",
-            "bgColor": "70614b",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/song-machine-episode-1-ep/1496311774",
-          "playParams": {
-            "id": "1496311774",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 4,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Song Machine Episode 1 – EP",
-          "contentRating": "clean",
-          "artistName": "Gorillaz",
-          "isComplete": true
-        }
-      },
-      "1525571302": {
-        "id": "1525571302",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2020 Gorillaz Partnership under exclusive licence to Parlophone Records Limited.",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2020-07-31",
-          "isMasteredForItunes": false,
-          "upc": "190295174279",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ef/30/5e/ef305e62-2dc8-f79b-b0d9-5d3c1a3750c6/190295174279.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "d0bb85",
-            "textColor2": "f6501e",
-            "textColor4": "ce441b",
-            "textColor1": "f9e4a3",
-            "bgColor": "2c180f",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/song-machine-episode-5-ep/1525571302",
-          "playParams": {
-            "id": "1525571302",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "isCompilation": false,
-          "trackCount": 4,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Song Machine Episode 5 - EP",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "isComplete": true
-        }
-      },
-      "1530812327": {
-        "id": "1530812327",
-        "type": "albums",
-        "attributes": {
-          "copyright": "Under exclusive licence to Parlophone Records Limited., ℗ 2020 Gorillaz Partnership",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2020-10-23",
-          "isMasteredForItunes": true,
-          "upc": "190295143152",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/01/d6/6e/01d66e09-0bcc-c560-469b-f6f3af6124b6/190295143152.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "d0e1c1",
-            "textColor2": "f8cce8",
-            "textColor4": "cbbad1",
-            "textColor1": "fffdd4",
-            "bgColor": "177178",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/song-machine-season-one-strange-timez-deluxe/1530812327",
-          "playParams": {
-            "id": "1530812327",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "isCompilation": false,
-          "trackCount": 17,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Song Machine, Season One: Strange Timez (Deluxe)",
-          "contentRating": "explicit",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "standard": "Gorillaz began making their seventh studio album with the specific intention of not making an album. Instead, the Song Machine project was conceived as a series of monthly stand-alone singles that would be created in the moment, without the constraints or concepts that come with shaping an album. “That’s the definition of contemporary, isn’t it?” Remi Kabaka Jr.—producer, drummer, percussionist, and Gorillaz’s third member alongside Damon Albarn, and Jamie Hewlett—tells Apple Music. “It’s more interesting working in this episodic format because it’s easier to respond to a moment than trying to remember your response to the moment. You are a bulletin—a responder in the moment, not a reporter of the moment.”<br />\nSongs were forged in intensive bursts, as quickly as ideas and collaborators could be brought together. The series launched with “Momentary Bliss,” a linkup with the insurrectionary voices of slowthai and Slaves, in January 2020 before lockdown changed the cadence of releases to every few weeks. Nevertheless, work continued across all available forms of communication and the music kept coming. “I don’t know if [lockdown] changed the process of making songs, I think it changed the subject matter,” says Kabaka. “You like an artist, you play them a track whether it’s online or IRL, if they like it, you’ll work together. Technology is just a music delivery system; it hasn’t radically changed the creative process for Gorillaz. If you can get in touch with someone and you have something to write about, then boom! You just go from there.” The list of collaborators is as rich and as stellar as it’s ever been on a Gorillaz project, with Elton John, The Cure’s Robert Smith, Georgia, 6LACK, and Malian singer-songwriter Fatoumata Diawara all drawn into the band’s orbit. “Song Machine is a universe of sound, and I think there is more university of sound than there ever was,” says Kabaka. “In a way, Song Machine as a whole has become more cellular.”<br />\nGorillaz’s magic is to fuse those various cells together into a new, cohesive whole. Collaborators were chosen for the way they could inspire or evolve a song as much as how they might fit ideas that were already brewing. “The music can loudly choose the artist, <i>or</i> the artists can choose the idea you hadn’t actually thought of,” he says. “You have to have multiple ideas and options; you can’t be scared of losing an idea. That’s part of being agile and in the moment—you have to go in with as little preconception as possible, and as much possibility as you can. You have to respond to the needs of the artist—they’re the ones with the master plan. Surprise is why we invited them. You have to hope they can surprise you.” The results are still unmistakably Gorillaz: off-kilter pop that’s playful, melancholy, worldly, and tethered to sharp melodies. <br />\nIt eventually became clear that there was a very good album to be pieced together from these free-standing songs. And it’s one that reflects the turbulence and trauma of 2020. On “The Valley of the Pagans,” Beck sends strutting dispatches from a “land of the permanent sun/Where the flowers are melted and the future is fun.” ScHoolboy Q bounds across the spongy funk of “Pac-Man,” asking, “How can I trust truth?” And, with customary edginess, The Cure’s Robert Smith alludes to our “surgical glove world” in the title track—a song that manages to be both a call to the dance floor and the sound of humanity locked in an ominously downward spiral. But there’s plenty of optimism and positive energy too, running from the yearning trilingual pop of “Désolé” to the certain assertion that “We could do so much better than this” on “Momentary Bliss.” “Strange isn’t bad, it’s just weird,” says Kabaka. “We’re intelligent enough to recognize that mutation changes how the world develops, and change is good.” In the 20 years between this album and Gorillaz’s first EP, <i>Tomorrow Comes Today</i>, the world has mutated in unimaginable ways. Gorillaz, though, remain a vibrant and inventive bulletin of their times. “The essence [of Gorillaz] is the same as it’s always been,” says Kabaka. “It’s still weird and it’s still wonderful. But maybe we have changed.”",
-            "short": "“The essence of Gorillaz is the same as always. It’s still weird, still wonderful.”"
-          },
-          "isComplete": true
-        }
-      },
-      "1580441749": {
-        "id": "1580441749",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2021 Parlophone Records Limited.",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2021-08-26",
-          "upc": "190296495748",
-          "isMasteredForItunes": true,
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a9/07/6b/a9076b44-81d7-e348-263c-b598020aeffd/190296495748.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "aaa57f",
-            "textColor2": "f8978b",
-            "textColor4": "ce7a71",
-            "textColor1": "cbcd9c",
-            "bgColor": "280809",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/meanwhile-ep/1580441749",
-          "playParams": {
-            "id": "1580441749",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "trackCount": 3,
-          "isCompilation": false,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Meanwhile - EP",
-          "contentRating": "explicit",
-          "artistName": "Gorillaz",
-          "editorialNotes": {
-            "standard": "Since moving to West London at the start of the ’90s, Damon Albarn has enjoyed the traditions and revelry of Notting Hill Carnival which pass by his doorstep every August bank holiday. It’s seeped into his music before—2014 solo track “You & Me” traces ghostly vibrations of energy that linger on the streets days after the sound systems have powered down—but never as explicitly as on this EP.<br />\nWith the pandemic thwarting the event for a second consecutive year in 2021, <i>Meanwhile</i> arrived on what should have been the eve of Carnival, and these three tracks offer portraits of what might have been—and what still is. While love song “Déjà Vu” taps into the weekend’s spirit of celebration, with dancehall star Alicaì Harley as sure-footed amid the steel pans and island rhythms as Albarn is groggily unsteady, the Blur man and his collaborators cast their eyes beyond the festivities. Blending a sticky dub bounce, rattling guitars, and AJ Tracey’s day-in-the-life bars, “Jimmy Jimmy” evokes the local heritage of The Clash as well as lives currently being etched out every day in W10 and W11. And on “Meanwhile,” rising singer/rapper Jelani Blackman finds that the champagne and Red Stripe harbor bittersweet tangs as he reflects on his grandfather’s past in the area and the changing landscape around him.",
-            "short": "In Carnival mood, Damon and pals take a tour of West London life."
-          },
-          "isComplete": true
-        }
-      },
-      "1641561652": {
-        "id": "1641561652",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2023 Parlophone Records Limited.",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2023-02-24",
-          "isMasteredForItunes": false,
-          "upc": "5054197315893",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b3/b9/bb/b3b9bbdf-8d38-661e-f70b-2eb5e9765bb7/5054197315893.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "b7a8a5",
-            "textColor2": "f2c8bd",
-            "textColor4": "c3a29b",
-            "textColor1": "e3ceca",
-            "bgColor": "060e11",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/cracker-island/1641561652",
-          "playParams": {
-            "id": "1641561652",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "isCompilation": false,
-          "trackCount": 11,
-          "isPrerelease": false,
-          "audioTraits": [
-            "atmos",
-            "lossless",
-            "lossy-stereo",
-            "spatial"
-          ],
-          "isSingle": false,
-          "name": "Cracker Island",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "editorialNotes": {
-            "standard": "As the headquarters of a producer/songwriter who’s won Grammys for his work with Adele, Beck, Foo Fighters, and more, Greg Kurstin’s LA studio is well appointed. “It’s a museum of ’80s synths and weird instruments,” Kurstin tells Apple Music. “Everything’s patched in and ready to go.” Damon Albarn discovered as much when he arrived during a trip to meet prospective producers for the eighth Gorillaz album. Tired and, by his own admission, uncertain about recruiting a “pop” producer, Albarn quietly explored the equipment, occasionally unfurling melodies on the piano which Kurstin would join in with on his Mellotron—two musicians feeling each other out, seeking moments of creative accord. After two or three hours, Kurstin felt happy enough, but Albarn’s manager was concerned. “She goes, ‘Damon just likes to float around. He’s not going to tell you to start doing something, you should just start recording,’” says Kurstin. “That gave me a kick to get down to business.” He opened up the input and added drums while Albarn built a synth part. Before the day was done, they had “Silent Running.” “Damon seemed energized,” says Kurstin. “He was excited about how the song progressed from the demo. I was thrilled too. He gave me a big hug and that was it: We were off and running.” \n\nDiscovering a mutual love for The Clash, The Specials, De La Soul, and ’80s synth-pop, the pair took just 11 days during early 2022 to craft an album from Albarn’s iPad demos (give or take Bad Bunny collaboration “Tormenta,” which had already been recorded with long-standing Gorillaz producer Remi Kabaka Jr.). They valued spontaneity over preplanning and discussion, forging hydraulic disco-funk (the Thundercat-starring “Cracker Island”) and yearning synth-pop (“Oil” with Stevie Nicks), plus—in the short space of “Skinny Ape”—folk, electro, and punk. As with so much of Albarn’s best music, it’s all anchored to absorbing wistfulness. “I gravitate towards the melancholy, even in a fun song,” says Kurstin. “And Damon really brings that in his ideas. When I first heard Gorillaz, I was thinking, ‘Oh, he gets me and all the music that I love.’ I always felt that connection. It’s what you look for—your people.” Here, Kurstin talks us through several of the songs they created together.\n\n<b>“Cracker Island” (feat. Thundercat)</b>\n“Bringing in Thundercat was a really fun flavor to bring to the album. This wild, sort of uptempo disco song. I had just been working with Thundercat and we had become friends. I texted him and he said, ‘Yes, definitely, I’ll do it.’ It was very fun to watch him work on it and to hear him write his melody parts. He sang a lot of what Damon sang and then added his own thing and the harmonies. It’s always fun to witness him play, because he’s absolutely amazing on the bass.”\n\n<b>“Oil” (feat. Stevie Nicks)</b>\n“That contrast of hearing Stevie’s voice over a Gorillaz track is amazing. I think my wife, who’s also my manager, had come up with the idea. We’d have these conversations with Damon: Who could we bring in to this project? Who does he know? Who do I know? I had been working with Stevie and become really good friends with her. Damon was very excited, he couldn’t even believe that was a possibility. I think Stevie was just very moved by it. She loved the lyrics and she took it very seriously, really wanted to do the best job. Stevie’s just so cool. She’s always listening to new music, she’s in touch with everything that’s happening and just so brilliant as a person. I love her dearly.”\n\n<b>“Silent Running” (feat. Adeleye Omotayo)</b>\n“‘Silent Running’ really was the North Star for me, might’ve been for Damon, too. It just started the whole process for us: ‘Here’s the bar, this is what we can do, and let’s try to see if we can even beat it.’ I think we knocked out ‘Silent Running’ in two or three hours. That was the fun part about it, just this whirlwind of throwing things against the wall and then recording them—and I’m kind of mixing as I’m going as well. By the end of the day, it sounded like the finished product did.”\n\n<b>“New Gold” (feat. Bootie Brown & Tame Impala)</b>\n“Kevin Parker’s just great. I was really excited to be involved with something that he was involved with. Damon had started this with Kevin and was a bit stuck, mostly because it was in an odd time signature, this kind of 6/4. It’s a little bit of a twisted and lopsided groove. It was sort of put off forever and maybe nothing was going to happen with it. It needed Damon to get in there and get excited about it. I think he liked how it was started, but finishing it was just too overwhelming. I thought, ‘OK, let me just try to piece this together in the form of a song that is very clear.’ That sort of started the ball rolling again. Damon heard it and then he worked on it a bit and evened out the time signature.”\n\n<b>“Baby Queen”</b>\n“Only Damon could come up with such a wild concept for a song. [In Bangkok in 1997, Albarn met a crown princess who crowd-surfed at a Blur gig; while writing songs for <i>Cracker Island</i>, he dreamed about meeting her as she is today.] When I heard the demo, it was just brilliant. I loved it. As a producer, I was just trying to bring in this kind of dreamy feel to the track. It has a floating quality, and that’s something I was leaning into, trying to put a soundtrack to that dream.”\n\n<b>“Skinny Ape”</b>\n“There’s something mad and crazy about ‘Skinny Ape,’ how it took shape. I felt on the edge of my seat, out of control. I didn’t know what was happening and how it was going to evolve. It was a lot of happy accidents, like throwing the weirdest, wildest sound at the track and then muting four other things and then all of a sudden, ‘Wow, that’s a cool texture.’ Playing drums in that sort of double-time punk rock section was really fun, and Damon was excited watching me play that part. That feeling of being out of control when I’m working is exciting because it’s very unpredictable and brings out things of myself I never would have imagined I would’ve done.”\n\n<b>“Possession Island” (feat. Beck)</b>\n“I feel like the best of me when I work with Beck, and I feel the same with Damon. I feel pushed by their presence and their body of work, searching into places that I never looked before—deep, dark corners, sonically. What can I do that’s different than I might do with most people? It’s very easy to fall into comfort zones and what’s easy when you’re making music. Working with Damon really awakened some creative part of my brain that was sleeping a little bit. I need to work with these people to keep these things going. Damon had been playing that piano part during his shows [<i>The Nearer the Fountain, More Pure the Stream Flows</i> tour]. That melody was something he would play every time he’d sit down. I started playing the nylon string guitar, and then it became a little bit more of a flamenco influence, and even a mariachi sound with the Mellotron trumpet. I love hearing Damon and Beck singing and interacting with each other that way, these Walker Brothers-sounding harmonies.”",
-            "short": "“Working with Damon really awakened a creative part of my brain.”",
-            "tagline": "New Album + Interview"
-          },
-          "isComplete": true
-        }
-      },
-      "1673502694": {
-        "id": "1673502694",
-        "type": "albums",
-        "attributes": {
-          "copyright": "℗ 2023 Parlophone Records Limited.",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "releaseDate": "2023-02-27",
-          "isMasteredForItunes": false,
-          "upc": "5054197567001",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/61/45/59/61455969-fe99-89f2-10ab-ea114e1ed5bd/5054197567001.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "b7a8a5",
-            "textColor2": "f2c8bd",
-            "textColor4": "c3a29b",
-            "textColor1": "e3ceca",
-            "bgColor": "060e11",
-            "hasP3": false
-          },
-          "url": "https://music.apple.com/us/album/cracker-island-deluxe/1673502694",
-          "playParams": {
-            "id": "1673502694",
-            "kind": "album"
-          },
-          "recordLabel": "Parlophone UK",
-          "isCompilation": false,
-          "trackCount": 15,
-          "isPrerelease": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "isSingle": false,
-          "name": "Cracker Island (Deluxe)",
-          "artistName": "Gorillaz",
-          "contentRating": "explicit",
-          "editorialNotes": {
-            "standard": "As the headquarters of a producer/songwriter who’s won Grammys for his work with Adele, Beck, Foo Fighters, and more, Greg Kurstin’s LA studio is well appointed. “It’s a museum of ’80s synths and weird instruments,” Kurstin tells Apple Music. “Everything’s patched in and ready to go.” Damon Albarn discovered as much when he arrived during a trip to meet prospective producers for the eighth Gorillaz album. Tired and, by his own admission, uncertain about recruiting a “pop” producer, Albarn quietly explored the equipment, occasionally unfurling melodies on the piano which Kurstin would join in with on his Mellotron—two musicians feeling each other out, seeking moments of creative accord. After two or three hours, Kurstin felt happy enough, but Albarn’s manager was concerned. “She goes, ‘Damon just likes to float around. He’s not going to tell you to start doing something, you should just start recording,’” says Kurstin. “That gave me a kick to get down to business.” He opened up the input and added drums while Albarn built a synth part. Before the day was done, they had “Silent Running.” “Damon seemed energized,” says Kurstin. “He was excited about how the song progressed from the demo. I was thrilled too. He gave me a big hug and that was it: We were off and running.” \n\nDiscovering a mutual love for The Clash, The Specials, De La Soul, and ’80s synth-pop, the pair took just 11 days during early 2022 to craft an album from Albarn’s iPad demos (give or take Bad Bunny collaboration “Tormenta,” which had already been recorded with long-standing Gorillaz producer Remi Kabaka Jr.). They valued spontaneity over preplanning and discussion, forging hydraulic disco-funk (the Thundercat-starring “Cracker Island”) and yearning synth-pop (“Oil” with Stevie Nicks), plus—in the short space of “Skinny Ape”—folk, electro, and punk. As with so much of Albarn’s best music, it’s all anchored to absorbing wistfulness. “I gravitate towards the melancholy, even in a fun song,” says Kurstin. “And Damon really brings that in his ideas. When I first heard Gorillaz, I was thinking, ‘Oh, he gets me and all the music that I love.’ I always felt that connection. It’s what you look for—your people.” Here, Kurstin talks us through several of the songs they created together.\n\n<b>“Cracker Island” (feat. Thundercat)</b>\n“Bringing in Thundercat was a really fun flavor to bring to the album. This wild, sort of uptempo disco song. I had just been working with Thundercat and we had become friends. I texted him and he said, ‘Yes, definitely, I’ll do it.’ It was very fun to watch him work on it and to hear him write his melody parts. He sang a lot of what Damon sang and then added his own thing and the harmonies. It’s always fun to witness him play, because he’s absolutely amazing on the bass.”\n\n<b>“Oil” (feat. Stevie Nicks)</b>\n“That contrast of hearing Stevie’s voice over a Gorillaz track is amazing. I think my wife, who’s also my manager, had come up with the idea. We’d have these conversations with Damon: Who could we bring in to this project? Who does he know? Who do I know? I had been working with Stevie and become really good friends with her. Damon was very excited, he couldn’t even believe that was a possibility. I think Stevie was just very moved by it. She loved the lyrics and she took it very seriously, really wanted to do the best job. Stevie’s just so cool. She’s always listening to new music, she’s in touch with everything that’s happening and just so brilliant as a person. I love her dearly.”\n\n<b>“Silent Running” (feat. Adeleye Omotayo)</b>\n“‘Silent Running’ really was the North Star for me, might’ve been for Damon, too. It just started the whole process for us: ‘Here’s the bar, this is what we can do, and let’s try to see if we can even beat it.’ I think we knocked out ‘Silent Running’ in two or three hours. That was the fun part about it, just this whirlwind of throwing things against the wall and then recording them—and I’m kind of mixing as I’m going as well. By the end of the day, it sounded like the finished product did.”\n\n<b>“New Gold” (feat. Bootie Brown & Tame Impala)</b>\n“Kevin Parker’s just great. I was really excited to be involved with something that he was involved with. Damon had started this with Kevin and was a bit stuck, mostly because it was in an odd time signature, this kind of 6/4. It’s a little bit of a twisted and lopsided groove. It was sort of put off forever and maybe nothing was going to happen with it. It needed Damon to get in there and get excited about it. I think he liked how it was started, but finishing it was just too overwhelming. I thought, ‘OK, let me just try to piece this together in the form of a song that is very clear.’ That sort of started the ball rolling again. Damon heard it and then he worked on it a bit and evened out the time signature.”\n\n<b>“Baby Queen”</b>\n“Only Damon could come up with such a wild concept for a song. [In Bangkok in 1997, Albarn met a crown princess who crowd-surfed at a Blur gig; while writing songs for <i>Cracker Island</i>, he dreamed about meeting her as she is today.] When I heard the demo, it was just brilliant. I loved it. As a producer, I was just trying to bring in this kind of dreamy feel to the track. It has a floating quality, and that’s something I was leaning into, trying to put a soundtrack to that dream.”\n\n<b>“Skinny Ape”</b>\n“There’s something mad and crazy about ‘Skinny Ape,’ how it took shape. I felt on the edge of my seat, out of control. I didn’t know what was happening and how it was going to evolve. It was a lot of happy accidents, like throwing the weirdest, wildest sound at the track and then muting four other things and then all of a sudden, ‘Wow, that’s a cool texture.’ Playing drums in that sort of double-time punk rock section was really fun, and Damon was excited watching me play that part. That feeling of being out of control when I’m working is exciting because it’s very unpredictable and brings out things of myself I never would have imagined I would’ve done.”\n\n<b>“Possession Island” (feat. Beck)</b>\n“I feel like the best of me when I work with Beck, and I feel the same with Damon. I feel pushed by their presence and their body of work, searching into places that I never looked before—deep, dark corners, sonically. What can I do that’s different than I might do with most people? It’s very easy to fall into comfort zones and what’s easy when you’re making music. Working with Damon really awakened some creative part of my brain that was sleeping a little bit. I need to work with these people to keep these things going. Damon had been playing that piano part during his shows [<i>The Nearer the Fountain, More Pure the Stream Flows</i> tour]. That melody was something he would play every time he’d sit down. I started playing the nylon string guitar, and then it became a little bit more of a flamenco influence, and even a mariachi sound with the Mellotron trumpet. I love hearing Damon and Beck singing and interacting with each other that way, these Walker Brothers-sounding harmonies.”",
-            "short": "“Working with Damon really awakened a creative part of my brain.”",
-            "tagline": "New Album + Interview"
-          },
-          "isComplete": true
-        }
-      }
-    },
-    "songs": {
-      "850569466": {
-        "id": "850569466",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Plastic Beach",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap",
-            "Rap",
-            "Pop"
-          ],
-          "trackNumber": 4,
-          "releaseDate": "2010-03-03",
-          "durationInMillis": 200173,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400435",
-          "artwork": {
-            "width": 1418,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/b8/f9/b9/b8f9b9f8-a609-bde2-0302-349436ffc508/825646291038.jpg/{w}x{h}bb.jpg",
-            "height": 1418,
-            "textColor3": "ccd6e1",
-            "textColor2": "b7ccd9",
-            "textColor4": "92aec3",
-            "textColor1": "ffffff",
-            "bgColor": "00366a",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn",
-          "url": "https://music.apple.com/us/album/rhinestone-eyes/850569437?i=850569466",
-          "playParams": {
-            "id": "850569466",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Rhinestone Eyes",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/10/69/1d/10691ddc-3431-cbe1-1d7f-905c929ac7c2/mzaf_7110813523466899580.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "850569480": {
-        "id": "850569480",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Plastic Beach",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap",
-            "Rap",
-            "Pop"
-          ],
-          "trackNumber": 10,
-          "durationInMillis": 233867,
-          "releaseDate": "2010-03-03",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400441",
-          "artwork": {
-            "width": 1418,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/b8/f9/b9/b8f9b9f8-a609-bde2-0302-349436ffc508/825646291038.jpg/{w}x{h}bb.jpg",
-            "height": 1418,
-            "textColor3": "ccd6e1",
-            "textColor2": "b7ccd9",
-            "textColor4": "92aec3",
-            "textColor1": "ffffff",
-            "bgColor": "00366a",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn",
-          "url": "https://music.apple.com/us/album/on-melancholy-hill/850569437?i=850569480",
-          "playParams": {
-            "id": "850569480",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "On Melancholy Hill",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/25/2e/a1/252ea138-558c-5cf6-907a-1ebba3ba3f09/mzaf_7946501283848074229.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "850571367": {
-        "id": "850571367",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Demon Days",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap"
-          ],
-          "trackNumber": 3,
-          "releaseDate": "2005-05-11",
-          "durationInMillis": 225840,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400419",
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "cbcfd2",
-            "textColor2": "cad69b",
-            "textColor4": "a1af82",
-            "textColor1": "fefeff",
-            "bgColor": "001621",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Brian Burton, Damon Albarn & Jamie Hewlett",
-          "url": "https://music.apple.com/us/album/kids-with-guns/850571319?i=850571367",
-          "playParams": {
-            "id": "850571367",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Kids With Guns",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7a/7e/9a/7a7e9a7b-c875-ef00-1b27-288c9f759cda/mzaf_1656036008461211668.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "850571369": {
-        "id": "850571369",
-        "type": "songs",
-        "attributes": {
-          "albumName": "Demon Days",
-          "hasTimeSyncedLyrics": true,
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap"
-          ],
-          "trackNumber": 5,
-          "durationInMillis": 223800,
-          "releaseDate": "2005-05-11",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400421",
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "cbcfd2",
-            "textColor2": "cad69b",
-            "textColor4": "a1af82",
-            "textColor1": "fefeff",
-            "bgColor": "001621",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Brian Burton, Damon Albarn & Romye Robinson",
-          "url": "https://music.apple.com/us/album/dirty-harry/850571319?i=850571369",
-          "playParams": {
-            "id": "850571369",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Dirty Harry",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/29/44/53/2944538e-7e90-efe2-2f49-83aeb192fa71/mzaf_4780739406221462663.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "850571371": {
-        "id": "850571371",
-        "type": "songs",
-        "attributes": {
-          "albumName": "Demon Days",
-          "hasTimeSyncedLyrics": true,
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap"
-          ],
-          "trackNumber": 6,
-          "durationInMillis": 221173,
-          "releaseDate": "2005-05-09",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400422",
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "cbcfd2",
-            "textColor2": "cad69b",
-            "textColor4": "a1af82",
-            "textColor1": "fefeff",
-            "bgColor": "001621",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "David Jolicoeur, Brian Burton, Damon Albarn & Jamie Hewlett",
-          "url": "https://music.apple.com/us/album/feel-good-inc/850571319?i=850571371",
-          "playParams": {
-            "id": "850571371",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Feel Good Inc.",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3e/d9/5f/3ed95f77-3df4-db27-6147-d7cd49a77a5b/mzaf_15696408187123049121.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "850571377": {
-        "id": "850571377",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Demon Days",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap"
-          ],
-          "trackNumber": 7,
-          "releaseDate": "2005-05-11",
-          "durationInMillis": 230027,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400423",
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "cbcfd2",
-            "textColor2": "cad69b",
-            "textColor4": "a1af82",
-            "textColor1": "fefeff",
-            "bgColor": "001621",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Brian Burton, Damon Albarn & Jamie Hewlett",
-          "url": "https://music.apple.com/us/album/el-ma%C3%B1ana/850571319?i=850571377",
-          "playParams": {
-            "id": "850571377",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "El Mañana",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d5/21/4a/d5214ad9-9867-7449-dc1b-306586c2d4ed/mzaf_8759632887969212010.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "850571388": {
-        "id": "850571388",
-        "type": "songs",
-        "attributes": {
-          "albumName": "Demon Days",
-          "hasTimeSyncedLyrics": true,
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Rap",
-            "Rock",
-            "Adult Alternative",
-            "Underground Rap"
-          ],
-          "trackNumber": 12,
-          "releaseDate": "2005-05-11",
-          "durationInMillis": 244307,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400428",
-          "artwork": {
-            "width": 1425,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/{w}x{h}bb.jpg",
-            "height": 1425,
-            "textColor3": "cbcfd2",
-            "textColor2": "cad69b",
-            "textColor4": "a1af82",
-            "textColor1": "fefeff",
-            "bgColor": "001621",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn, Jamie Hewlett & Brian Burton",
-          "url": "https://music.apple.com/us/album/dare/850571319?i=850571388",
-          "playParams": {
-            "id": "850571388",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Dare",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6d/13/67/6d1367b4-bcdf-dfc8-fa98-1efc68d0c5f2/mzaf_16133727010415638257.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "850576665": {
-        "id": "850576665",
-        "type": "songs",
-        "attributes": {
-          "albumName": "Gorillaz",
-          "hasTimeSyncedLyrics": true,
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop"
-          ],
-          "trackNumber": 5,
-          "durationInMillis": 342560,
-          "releaseDate": "2001-03-05",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400468",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5b/8d/47/5b8d47da-71ea-93ab-dffc-733f11332659/825646290703.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "363837",
-            "textColor2": "172b18",
-            "textColor4": "455546",
-            "textColor1": "040705",
-            "bgColor": "ffffff",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn & Teren Jones",
-          "url": "https://music.apple.com/us/album/clint-eastwood/850576570?i=850576665",
-          "playParams": {
-            "id": "850576665",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Clint Eastwood",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/90/22/95/902295fa-d5e5-4ea9-dfd6-26a5417d42b0/mzaf_13068135983766007631.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz",
-          "contentRating": "explicit"
-        }
-      },
-      "850576709": {
-        "id": "850576709",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Gorillaz",
-          "genreNames": [
-            "Alternative",
-            "Music",
-            "Pop"
-          ],
-          "trackNumber": 11,
-          "releaseDate": "2001-03-26",
-          "durationInMillis": 207853,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1400474",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5b/8d/47/5b8d47da-71ea-93ab-dffc-733f11332659/825646290703.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "363837",
-            "textColor2": "172b18",
-            "textColor4": "455546",
-            "textColor1": "040705",
-            "bgColor": "ffffff",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn",
-          "url": "https://music.apple.com/us/album/19-2000/850576570?i=850576709",
-          "playParams": {
-            "id": "850576709",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "19-2000",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9e/68/12/9e6812d3-415a-136f-b345-5f7f599d2a9b/mzaf_18389616047952056711.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "859844933": {
-        "id": "859844933",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Plastic Beach",
-          "genreNames": [
-            "Pop",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Underground Rap",
-            "Rock",
-            "Adult Alternative",
-            "Rap"
-          ],
-          "trackNumber": 4,
-          "durationInMillis": 200173,
-          "releaseDate": "2010-03-03",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": false,
-          "isrc": "GBAYE1000017",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7e/69/1f/7e691f10-3cc1-67ec-5dc3-df3d8df68fa7/5099962829359.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "d1d1d4",
-            "textColor2": "9ad6ea",
-            "textColor4": "81b1c4",
-            "textColor1": "ffffff",
-            "bgColor": "1c1d2d",
-            "hasP3": false
-          },
-          "composerName": "Damon Albarn",
-          "audioLocale": "en-US",
-          "url": "https://music.apple.com/us/album/rhinestone-eyes/859841880?i=859844933",
-          "playParams": {
-            "id": "859844933",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Rhinestone Eyes",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a0/2d/d5/a02dd510-fd60-2bc2-674d-f2537eb8aee1/mzaf_16225203901530824029.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "859844934": {
-        "id": "859844934",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Plastic Beach",
-          "genreNames": [
-            "Pop",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Underground Rap",
-            "Rock",
-            "Adult Alternative",
-            "Rap"
-          ],
-          "trackNumber": 5,
-          "releaseDate": "2010-01-26",
-          "durationInMillis": 270520,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": false,
-          "isrc": "GBAYE0903021",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7e/69/1f/7e691f10-3cc1-67ec-5dc3-df3d8df68fa7/5099962829359.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "d1d1d4",
-            "textColor2": "9ad6ea",
-            "textColor4": "81b1c4",
-            "textColor1": "ffffff",
-            "bgColor": "1c1d2d",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn & Mos Def",
-          "url": "https://music.apple.com/us/album/stylo-feat-mos-def-and-bobby-womack/859841880?i=859844934",
-          "playParams": {
-            "id": "859844934",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Stylo (feat. Mos Def and Bobby Womack)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/28/33/a8/2833a856-9c6f-7bb8-1b87-d4dce57e565c/mzaf_7970197079491096665.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "859844936": {
-        "id": "859844936",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Plastic Beach",
-          "genreNames": [
-            "Pop",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Underground Rap",
-            "Rock",
-            "Adult Alternative",
-            "Rap"
-          ],
-          "trackNumber": 7,
-          "durationInMillis": 283573,
-          "releaseDate": "2010-03-03",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": false,
-          "isrc": "GBAYE1000007",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7e/69/1f/7e691f10-3cc1-67ec-5dc3-df3d8df68fa7/5099962829359.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "d1d1d4",
-            "textColor2": "9ad6ea",
-            "textColor4": "81b1c4",
-            "textColor1": "ffffff",
-            "bgColor": "1c1d2d",
-            "hasP3": false
-          },
-          "composerName": "Damon Albarn, Erik Bodin, Fredrick Wallin, Hakan Wirenstrand, Jamie Hewlett & Yukimi Nagano",
-          "audioLocale": "en-US",
-          "url": "https://music.apple.com/us/album/empire-ants-feat-little-dragon/859841880?i=859844936",
-          "playParams": {
-            "id": "859844936",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Empire Ants (feat. Little Dragon)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/51/79/f2/5179f2f5-2a32-97ac-498f-befc2e0cbced/mzaf_14185175292722702536.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "859844939": {
-        "id": "859844939",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Plastic Beach",
-          "genreNames": [
-            "Pop",
-            "Music",
-            "Hip-Hop/Rap",
-            "Alternative Rap",
-            "Underground Rap",
-            "Rock",
-            "Adult Alternative",
-            "Rap"
-          ],
-          "trackNumber": 10,
-          "releaseDate": "2010-03-03",
-          "durationInMillis": 233867,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": false,
-          "isrc": "GBAYE1000010",
-          "artwork": {
-            "width": 1500,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7e/69/1f/7e691f10-3cc1-67ec-5dc3-df3d8df68fa7/5099962829359.jpg/{w}x{h}bb.jpg",
-            "height": 1500,
-            "textColor3": "d1d1d4",
-            "textColor2": "9ad6ea",
-            "textColor4": "81b1c4",
-            "textColor1": "ffffff",
-            "bgColor": "1c1d2d",
-            "hasP3": false
-          },
-          "composerName": "Damon Albarn",
-          "audioLocale": "en-US",
-          "url": "https://music.apple.com/us/album/on-melancholy-hill/859841880?i=859844939",
-          "playParams": {
-            "id": "859844939",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": false,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "On Melancholy Hill",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/36/24/4e/36244e17-80a8-fd17-cd5d-b95edda16d46/mzaf_15230370691708222631.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "1217912009": {
-        "id": "1217912009",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Humanz (Deluxe)",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "trackNumber": 2,
-          "releaseDate": "2017-03-23",
-          "durationInMillis": 155973,
-          "isVocalAttenuationAllowed": false,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1700864",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ad/f6/74/adf6743c-1aa7-c254-a503-b4d343be2d03/190295824822.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "ccbf62",
-            "textColor2": "f6615c",
-            "textColor4": "c8514c",
-            "textColor1": "fbeb78",
-            "bgColor": "13120d",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Anthony Khan, Damon Albarn & Vince Staples",
-          "url": "https://music.apple.com/us/album/ascension-feat-vince-staples/1217911994?i=1217912009",
-          "playParams": {
-            "id": "1217912009",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Ascension (feat. Vince Staples)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/cf/c9/f7/cfc9f7e4-7ffb-fa07-ed2e-09db3d1bb9eb/mzaf_7525191766978965746.plus.aac.ep.m4a"
-            }
-          ],
-          "contentRating": "explicit",
-          "artistName": "Gorillaz"
-        }
-      },
-      "1217912011": {
-        "id": "1217912011",
-        "type": "songs",
-        "attributes": {
-          "albumName": "Humanz (Deluxe)",
-          "hasTimeSyncedLyrics": true,
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "trackNumber": 4,
-          "durationInMillis": 181907,
-          "releaseDate": "2017-03-23",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1700866",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ad/f6/74/adf6743c-1aa7-c254-a503-b4d343be2d03/190295824822.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "ccbf62",
-            "textColor2": "f6615c",
-            "textColor4": "c8514c",
-            "textColor1": "fbeb78",
-            "bgColor": "13120d",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "ANDRE SUTHERLAND & Damon Albarn",
-          "url": "https://music.apple.com/us/album/saturnz-barz-feat-popcaan/1217911994?i=1217912011",
-          "playParams": {
-            "id": "1217912011",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Saturnz Barz (feat. Popcaan)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/96/3e/9a/963e9a4c-0854-1baf-e163-d9380b2369a7/mzaf_6200251390312353119.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "1217912232": {
-        "id": "1217912232",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Humanz (Deluxe)",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "trackNumber": 10,
-          "releaseDate": "2017-03-23",
-          "durationInMillis": 197547,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1700872",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ad/f6/74/adf6743c-1aa7-c254-a503-b4d343be2d03/190295824822.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "ccbf62",
-            "textColor2": "f6615c",
-            "textColor4": "c8514c",
-            "textColor1": "fbeb78",
-            "bgColor": "13120d",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn & Shelley Massenburg-Smith",
-          "url": "https://music.apple.com/us/album/andromeda-feat-dram/1217911994?i=1217912232",
-          "playParams": {
-            "id": "1217912232",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Andromeda (feat. DRAM)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/40/4e/0d/404e0d9e-77e1-a722-caa7-cba84dbef841/mzaf_8732535623130673237.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "1217912253": {
-        "id": "1217912253",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Humanz (Deluxe)",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "trackNumber": 17,
-          "releaseDate": "2017-04-28",
-          "durationInMillis": 209560,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1700879",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ad/f6/74/adf6743c-1aa7-c254-a503-b4d343be2d03/190295824822.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "ccbf62",
-            "textColor2": "f6615c",
-            "textColor4": "c8514c",
-            "textColor1": "fbeb78",
-            "bgColor": "13120d",
-            "hasP3": false
-          },
-          "composerName": "Damon Albarn & Kali Uchis",
-          "audioLocale": "en-US",
-          "url": "https://music.apple.com/us/album/shes-my-collar-feat-kali-uchis/1217911994?i=1217912253",
-          "playParams": {
-            "id": "1217912253",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "She's My Collar (feat. Kali Uchis)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/90/29/47/902947bc-24e7-ca6d-1266-aa3c83198fcd/mzaf_18000574086564585337.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "1387814980": {
-        "id": "1387814980",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "The Now Now",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "trackNumber": 1,
-          "releaseDate": "2018-05-31",
-          "durationInMillis": 197933,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": true,
-          "isrc": "GBAYE1800456",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/a2/c0/c8a2c0cc-28e9-c0c6-f425-f6aaf13191f4/190295620660.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "092f2e",
-            "textColor2": "30312d",
-            "textColor4": "305652",
-            "textColor1": "000000",
-            "bgColor": "30ebe8",
-            "hasP3": false
-          },
-          "audioLocale": "en-US",
-          "composerName": "Damon Albarn, George Benson, James Ford & Remi Kabaka",
-          "url": "https://music.apple.com/us/album/humility-feat-george-benson/1387814084?i=1387814980",
-          "playParams": {
-            "id": "1387814980",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": true,
-          "audioTraits": [
-            "lossless",
-            "lossy-stereo"
-          ],
-          "name": "Humility (feat. George Benson)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/3d/ec/98/3dec9886-0a0b-9ad6-55e6-20b24ed8a5b4/mzaf_10511208110108708424.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz"
-        }
-      },
-      "1641561672": {
-        "id": "1641561672",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Cracker Island",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "trackNumber": 5,
-          "durationInMillis": 215150,
-          "releaseDate": "2022-08-31",
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": false,
-          "isrc": "GBAYE2200462",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b3/b9/bb/b3b9bbdf-8d38-661e-f70b-2eb5e9765bb7/5054197315893.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "b7a8a5",
-            "textColor2": "f2c8bd",
-            "textColor4": "c3a29b",
-            "textColor1": "e3ceca",
-            "bgColor": "060e11",
-            "hasP3": false
-          },
-          "composerName": "D. Albarn, G. Kurstin, K. Parker & R. Robinson",
-          "audioLocale": "en-US",
-          "url": "https://music.apple.com/us/album/new-gold-feat-bootie-brown-tame-impala/1641561652?i=1641561672",
-          "playParams": {
-            "id": "1641561672",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": false,
-          "audioTraits": [
-            "atmos",
-            "lossless",
-            "lossy-stereo",
-            "spatial"
-          ],
-          "name": "New Gold (feat. Bootie Brown & Tame Impala)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/6f/06/e0/6f06e05f-23eb-cefa-e5f8-eeda4b31e2f3/mzaf_17445223922042847492.plus.aac.ep.m4a"
-            }
-          ],
-          "contentRating": "explicit",
-          "artistName": "Gorillaz"
-        }
-      },
-      "1641561742": {
-        "id": "1641561742",
-        "type": "songs",
-        "attributes": {
-          "hasTimeSyncedLyrics": true,
-          "albumName": "Cracker Island",
-          "genreNames": [
-            "Alternative",
-            "Music"
-          ],
-          "trackNumber": 8,
-          "releaseDate": "2023-02-24",
-          "durationInMillis": 193464,
-          "isVocalAttenuationAllowed": true,
-          "isMasteredForItunes": false,
-          "isrc": "GBAYE2200465",
-          "artwork": {
-            "width": 4000,
-            "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b3/b9/bb/b3b9bbdf-8d38-661e-f70b-2eb5e9765bb7/5054197315893.jpg/{w}x{h}bb.jpg",
-            "height": 4000,
-            "textColor3": "b7a8a5",
-            "textColor2": "f2c8bd",
-            "textColor4": "c3a29b",
-            "textColor1": "e3ceca",
-            "bgColor": "060e11",
-            "hasP3": false
-          },
-          "audioLocale": "es-ES",
-          "composerName": "B. Martínez, D. Albarn & R. Kabaka Jr.",
-          "url": "https://music.apple.com/us/album/tormenta-feat-bad-bunny/1641561652?i=1641561742",
-          "playParams": {
-            "id": "1641561742",
-            "kind": "song"
-          },
-          "discNumber": 1,
-          "hasCredits": false,
-          "hasLyrics": true,
-          "isAppleDigitalMaster": false,
-          "audioTraits": [
-            "atmos",
-            "lossless",
-            "lossy-stereo",
-            "spatial"
-          ],
-          "name": "Tormenta (feat. Bad Bunny)",
-          "previews": [
-            {
-              "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/56/61/40/566140d2-c2ab-09d8-b040-7dcdc1582bfe/mzaf_12955913116121324694.plus.aac.ep.m4a"
-            }
-          ],
-          "artistName": "Gorillaz",
-          "contentRating": "explicit"
-        }
-      }
-    }
-  }
+      "method": "get",
+      "url": "https://shazam.p.rapidapi.com/artists/get-summary"
+  },
+  "request": {}
 }
 
 export const getDetails = {

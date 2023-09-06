@@ -4,7 +4,7 @@ import { sound } from "../utils/mocks/sound"
 import { apiHeader } from "../utils/constants";
 import { getCookie } from "../utils/cookie";
 
-export const useGetSound = (soundId: string) => {
+export const useGetSoundQuery = (soundId: string) => {
   const [ state, setState ] = useState<any>({
     request: false,
     failed: false,

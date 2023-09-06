@@ -1,4 +1,4 @@
-import { ITrackData } from "./types"
+import { ITrackData } from "../hooks/useGetTracks";
 
 export const containTrack  = (currntIndex: number, currentSongs: ITrackData[] | null, type: string): number => {
   let index = type === 'prev' ? currntIndex - 1 : currntIndex + 1;

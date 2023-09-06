@@ -2,15 +2,13 @@ import styles from './track.module.css';
 import { FC } from "react";
 import { useLocation } from "react-router";
 import { Wrapper } from "../../../components/Wrapper/Wrapper";
-import { useGetSound } from "../../../hooks/useGetSound";
+import { useGetSoundQuery } from "../../../hooks/useGetSoundQuery";
 import { Text } from "../../../components/Text/Text";
 import { Link } from 'react-router-dom';
 
 export const Track: FC = () => {
   const location = useLocation();
-  const { request, failed, error, data } = useGetSound(location.state.key);
-
-  console.log(data)
+  const { request, failed, error, data } = useGetSoundQuery(location.state.key);
 
   return (
     <Wrapper>

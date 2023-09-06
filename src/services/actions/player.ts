@@ -1,4 +1,4 @@
-import { ITrackData } from "../../utils/types"
+import { ITrackData } from "../../hooks/useGetTracks"
 import { 
   NEXT_TRACK,
   PLAY_PAUSE,

@@ -1,13 +1,13 @@
-import { IGenres, IRequest } from "../../utils/types";
+import { IRequest } from "../../utils/types";
 import {
   GET_GENRES_COUNTRY_FAILED, 
   GET_GENRES_COUNTRY_REQUEST,
   GET_GENRES_COUNTRY_SUCCESS
 } from "../actionTypes/genres"
-import { TGenresActions } from "../actions/genres";
+import { IGenres, TGenresActions } from "../actions/genres";
 
 type TGenres = {
-  data: IGenres[] | null
+  data: IGenres | null
 } & IRequest;
 
 const genreStore = {

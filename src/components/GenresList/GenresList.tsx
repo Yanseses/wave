@@ -4,7 +4,7 @@ import { coverGenres } from "../../utils/coverGenres";
 import { Text } from '../Text/Text';
 import { PlayIcon } from '../../media/Icons/Navigate/PlayIcon';
 import { Link } from 'react-router-dom';
-import { TGenresCountry } from '../../utils/types';
+import { IGenresGlobal, TGenresItem } from '../../services/actions/genres';
 import { useSelector } from '../../services/hooks';
 
 interface IGenresList {
@@ -12,7 +12,7 @@ interface IGenresList {
 }
 
 export const GenresList: FC<IGenresList> = ({ type }) => {
-  const [ genres, setGenres ] = useState<any>();
+  const [ genres, setGenres ] = useState<TGenresItem[] | IGenresGlobal[]>();
   const { request, failed, error, data } = useSelector(store => store.genres);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const GenresList: FC<IGenresList> = ({ type }) => {
   }, [data, type])
 
   return (
-    <div className={styles.genres}>
+    <section className={styles.section}>
       { request && (
         <Text As='p' size={20} color='secondary'>Loading...</Text>
         ) 
@@ -45,7 +45,7 @@ export const GenresList: FC<IGenresList> = ({ type }) => {
         ) 
       }
 
-      { !request && !failed && data && genres && genres.map((genre: TGenresCountry) => (
+      { !request && !failed && data && genres && genres.map((genre: TGenresItem | IGenresGlobal) => (
         <Link 
           to={`/genres/${genre.urlPath}`} 
           key={genre.listid}
@@ -64,6 +64,6 @@ export const GenresList: FC<IGenresList> = ({ type }) => {
         </Link>
         )) 
       }
-    </div>
+    </section>
   )
 }

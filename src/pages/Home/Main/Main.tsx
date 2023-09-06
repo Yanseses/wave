@@ -18,7 +18,7 @@ export const Main: FC = () => {
           <HeadsetIcon />
           Top Charts
         </Text>
-        <TrackList listId={genres && genres.country.listid} />
+        <TrackList listId={genres ? genres.country.listid : ''} />
       </section>
     </Wrapper>
   )

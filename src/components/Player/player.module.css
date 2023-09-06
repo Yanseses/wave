@@ -1,31 +1,18 @@
-.player {
+.main {
   width: -webkit-fill-available;
   backdrop-filter: blur(5px);
   position: fixed;
   bottom: 0;
+  z-index: 1000;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  column-gap: 46px;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   background-color: var(--background-player);
   padding: 6px 26px;
   width: -webkit-fill-available;
-}
-
-.title {
-  &:hover {
-    color: var(--background-purple);
-  }
-}
-
-.artist {
-  font-size: 14px;
-  &:hover {
-    color: var(--background-purple);
-  }
 }
 
 .about {
@@ -35,58 +22,14 @@
   align-items: center;
 }
 
-.aboutWrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-}
-
-.additionally {
-  display: flex;
-  column-gap: 32px;
-}
-
 .controls {
   display: flex;
   justify-content: center;
   column-gap: 25px;
 }
 
-.timeline {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  row-gap: 4px;
-}
-
-.timelineWrapper {
-  width: 100%;
-  height: 15px;
-  background-color: #464646;
-}
-
-.timelineText {
-  display: flex;
-  position: absolute;
-  left: 5px;
-  right: 5px;
-  width: -webkit-fill-available;
-  justify-content: space-between;
-}
-
 .avatarActive {
   animation: 5s linear infinite rotate;
-}
-
-.progress {
-  width: 0%;
-  height: inherit;
-  background: linear-gradient(136deg, var(--background-purple) 0%, var(--background-violet) 100%);
-  border-radius: 0 20px 20px 0;
-  transition: all .4s linear 0s;
 }
 
 @keyframes rotate {
@@ -99,7 +42,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  .player {
+  .main {
     width: -webkit-fill-available;
     backdrop-filter: blur(5px);
     position: fixed;
@@ -111,18 +54,6 @@
     padding: 6px 12px;
     grid-template-columns: auto auto;
     column-gap: 0;
-  }
-
-  .aboutWrapper {
-    row-gap: 4px;
-  }
-
-  .timeline {
-    display: none;
-  }
-
-  .additionally {
-    display: none;
   }
 
   .about {

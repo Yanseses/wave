@@ -1,8 +1,7 @@
 import styles from './trackList.module.css';
 import { FC, useEffect } from "react";
 import { Track } from "./Track/Track";
-import { ITrackData } from '../../utils/types';
-import { useGetTracks } from '../../hooks/useGetTracks';
+import { ITrackData, useGetTracks } from '../../hooks/useGetTracks';
 import { Text } from '../Text/Text';
 import { useDispatch, useSelector } from '../../services/hooks';
 import { setActiveSong } from '../../services/actions/player';

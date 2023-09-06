@@ -5,9 +5,9 @@ import { Text } from '../../Text/Text';
 import { useDispatch } from '../../../services/hooks';
 import { Avatar } from '../../Player/Avatar/Avatar';
 import { Button } from '../../Button/Button';
-import { ITrackData } from '../../../utils/types';
 import { playPause, setActiveSong } from '../../../services/actions/player';
 import classNames from 'classnames';
+import { ITrackData } from '../../../hooks/useGetTracks';
 
 interface ITrack {
   index: number,

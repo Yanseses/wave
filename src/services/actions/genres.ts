@@ -1,9 +1,34 @@
-import { IGenres } from "../../utils/types"
 import { 
   GET_GENRES_COUNTRY_FAILED,
   GET_GENRES_COUNTRY_REQUEST,
   GET_GENRES_COUNTRY_SUCCESS
-} from "../actionTypes/genres"
+} from "../actionTypes/genres";
+
+export interface IGenres {
+  country: IGenresCountry,
+  global: IGenresGlobal[]
+}
+
+export interface IGenresGlobal {
+  count: number,
+  id: string,
+  listid: string,
+  name: string
+  urlPath: string
+}
+
+export interface IGenresCountry {
+  cities: any,
+  genres: TGenresItem[],
+  id: string,
+  listid: string,
+  momentum_listid: string,
+  name: string 
+}
+
+export type TGenresItem = {
+  countryId: string
+} & IGenresGlobal
 
 interface IGetGenresCountryRequest {
   readonly type: typeof GET_GENRES_COUNTRY_REQUEST,
@@ -16,7 +41,7 @@ interface IGetGenresCountryFailed {
 
 interface IGetGenresCountrySuccess {
   readonly type: typeof GET_GENRES_COUNTRY_SUCCESS,
-  payload: any
+  payload: IGenres
 }
 
 export type TGenresActions = IGetGenresCountryRequest
