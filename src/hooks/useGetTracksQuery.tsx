@@ -63,7 +63,7 @@ interface IUseGetTracks {
   data: null | ITrackData[]
 }
 
-export const useGetTracks = (listId: string) => {
+export const useGetTracksQuery = (listId: string) => {
   const [ state, setState ] = useState<IUseGetTracks>({
     request: false,
     failed: false,
@@ -73,30 +73,33 @@ export const useGetTracks = (listId: string) => {
 
   useEffect(() => {
     setState({ ...state, request: true })
-    // axios.get('https://shazam.p.rapidapi.com/charts/track', {
-    //   headers: apiHeader,
-    //   params: {
-    //     locale: getCookie('country')
-    //   }
-    // }).then((res) => {
-    //   console.log(res)
-    //   if(res.status >= 200 && res.status < 300){
-    //     setState({ request: false, error: '', data: res.data.tracks, failed: false, })
-    //   } else {
-    //     throw new Error(res.statusText)
-    //   }
-    // }).catch((err) => {
-    //   setState({ ...state, request: false, error: err, failed: true })
-    // })
-    setTimeout(async () => {
-      return new Promise((resolve, reject) => {
-        resolve(listId === 'ip-country-chart-RU' ? countryChartRu : globalChartGenres[Number(listId.split('-')[3])])
-      }).then((req: any) => {
-        setState({ request: false, error: '', data: req.tracks, failed: false, })
+    if(process.env.NODE_ENV === 'production'){
+      axios.get('https://shazam.p.rapidapi.com/charts/track', {
+        headers: apiHeader,
+        params: {
+          locale: getCookie('country')
+        }
+      }).then((res) => {
+        console.log(res)
+        if(res.status >= 200 && res.status < 300){
+          setState({ request: false, error: '', data: res.data.tracks, failed: false, })
+        } else {
+          throw new Error(res.statusText)
+        }
       }).catch((err) => {
-        setState({ ...state, request: false, error: 'Failed to fetch', failed: true })
+        setState({ ...state, request: false, error: err, failed: true })
       })
-    }, 1000)
+    } else {    
+      setTimeout(async () => {
+        return new Promise((resolve, reject) => {
+          resolve(listId === 'ip-country-chart-RU' ? countryChartRu : globalChartGenres[Number(listId.split('-')[3])])
+        }).then((req: any) => {
+          setState({ request: false, error: '', data: req.tracks, failed: false, })
+        }).catch((err) => {
+          setState({ ...state, request: false, error: 'Failed to fetch', failed: true })
+        })
+      }, 1000)
+    }
   }, [ listId ])
 
   return state;

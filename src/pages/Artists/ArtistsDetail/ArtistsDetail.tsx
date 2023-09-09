@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router";
 import { useGetArtistQuery } from "../../../hooks/useGetArtistQuery";
 import { Wrapper } from "../../../components/Wrapper/Wrapper";
 import { Text } from '../../../components/Text/Text';
+import { Header } from '../../../components/Header/Header';
 
 export const ArtistsDetail: FC = () => {
   const navigate = useNavigate();
@@ -25,17 +26,15 @@ export const ArtistsDetail: FC = () => {
     }
   }, [data, location]);
 
+  console.log(songs)
+
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>
       { !request && !failed && data && (
         <>
-          <div className={styles.head} style={{background: `linear-gradient(180deg, ${ artist ? `#${artist.attributes.artwork.bgColor}` : `var(--background-purple)`} 0, var(--background-main) 100%)`}}>
-            { artist && (
-              <Text As='h2' size={40}>{ artist.attributes.name }</Text>
-
-              ) 
-            }
-          </div>
+          <Header color={artist && `#${artist.attributes.artwork.bgColor}`}>
+            <Text As='h2' size={40}>{ artist && artist.attributes.name }</Text>
+          </Header>
           <div className={styles.main}>
             <div className={styles.details}>
               <img src={artist && `${artist.attributes.artwork.url.split('/{w}')[0]}/300x300bb.jpg`} alt='' />

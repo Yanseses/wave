@@ -14,30 +14,33 @@ export const useGetSoundQuery = (soundId: string) => {
 
   useEffect(() => {
     setState({ ...state, request: true });
-    // axios.get('https://shazam.p.rapidapi.com/songs/get-details', {
-    //   headers: apiHeader,
-    //   params: {
-    //     key: soundId,
-    //     locale: getCookie('country')
-    //   }
-    // }).then((req) => {
-    //   if(req.status >= 200 && req.status < 300){
-    //     setState({ request: false, error: '', data: req.data, failed: false  })
-    //   } else {
-    //     throw new Error(req.statusText)
-    //   }
-    // }).catch((err) => {
-    //   setState({ ...state, error: 'Failed to fetch', failed: true })
-    // })
-    setTimeout(async () => {
-      return new Promise((resolve, reject) => {
-        resolve(sound)
-      }).then((data: any) => {
-        setState({ request: false, error: '', data: data, failed: false, })
+    if(process.env.NODE_ENV === 'production'){
+      axios.get('https://shazam.p.rapidapi.com/songs/get-details', {
+        headers: apiHeader,
+        params: {
+          key: soundId,
+          locale: getCookie('country')
+        }
+      }).then((req) => {
+        if(req.status >= 200 && req.status < 300){
+          setState({ request: false, error: '', data: req.data, failed: false  })
+        } else {
+          throw new Error(req.statusText)
+        }
       }).catch((err) => {
         setState({ ...state, error: 'Failed to fetch', failed: true })
       })
-    }, 1000)
+    } else {
+      setTimeout(async () => {
+        return new Promise((resolve, reject) => {
+          resolve(sound)
+        }).then((data: any) => {
+          setState({ request: false, error: '', data: data, failed: false, })
+        }).catch((err) => {
+          setState({ ...state, error: 'Failed to fetch', failed: true })
+        })
+      }, 1000)
+    }
   }, [ soundId ])
 
   return state;

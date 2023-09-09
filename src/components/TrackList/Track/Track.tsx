@@ -7,7 +7,7 @@ import { Avatar } from '../../Player/Avatar/Avatar';
 import { Button } from '../../Button/Button';
 import { playPause, setActiveSong } from '../../../services/actions/player';
 import classNames from 'classnames';
-import { ITrackData } from '../../../hooks/useGetTracks';
+import { ITrackData } from '../../../hooks/useGetTracksQuery';
 
 interface ITrack {
   index: number,

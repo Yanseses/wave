@@ -1,7 +1,7 @@
 import styles from './trackList.module.css';
 import { FC, useEffect } from "react";
 import { Track } from "./Track/Track";
-import { ITrackData, useGetTracks } from '../../hooks/useGetTracks';
+import { ITrackData, useGetTracksQuery } from '../../hooks/useGetTracksQuery';
 import { Text } from '../Text/Text';
 import { useDispatch, useSelector } from '../../services/hooks';
 import { setActiveSong } from '../../services/actions/player';
@@ -13,9 +13,9 @@ interface ITrackList {
 
 export const TrackList: FC<ITrackList> = ({ listId }) => {
   const dispatch = useDispatch();
-  const { data, request, failed, error } = useGetTracks(listId || `ip-country-chart-${getCookie('country')}`);
+  const { data, request, failed, error } = useGetTracksQuery(listId || `ip-country-chart-${getCookie('country')}`);
   const { isPlaying, activeSong } = useSelector(store => store.player);
-
+  
   useEffect(() => {
     if(!activeSong && data){
       dispatch(setActiveSong(data[0], data, 0))

@@ -1,4 +1,4 @@
-import { ITrackData } from "../../hooks/useGetTracks"
+import { ITrackData } from "../../hooks/useGetTracksQuery"
 import { NEXT_TRACK, PLAY_PAUSE, PREV_TRACK, SET_ACTIVE_SONG } from "../actionTypes/player"
 import { TPlayerActions } from "../actions/player"
 

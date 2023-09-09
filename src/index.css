@@ -28,6 +28,7 @@ a {
   --background-violet: #7209B7;
   --background-purple: #B5179E;
   --background-player: #11111180;
+  --background-gradient: linear-gradient(136deg, var(--background-purple) 0%, var(--background-violet) 100%);
   --text-primary-color: #fff;
   --text-secondary-color: #B8B8B8;
   --shadow-color: #000000cc;

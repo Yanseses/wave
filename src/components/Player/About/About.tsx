@@ -2,7 +2,7 @@ import styles from './about.module.css';
 import { FC } from "react";
 import { Link } from 'react-router-dom';
 import { Text } from '../../Text/Text';
-import { IArtists, ITrackData } from '../../../hooks/useGetTracks';
+import { IArtists, ITrackData } from '../../../hooks/useGetTracksQuery';
 
 interface IAbout {
   activeSong: ITrackData | null,

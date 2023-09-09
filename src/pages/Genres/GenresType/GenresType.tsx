@@ -4,6 +4,7 @@ import { Text } from '../../../components/Text/Text';
 import { useLocation, useNavigate } from 'react-router';
 import { TrackList } from '../../../components/TrackList/TrackList';
 import { Wrapper } from '../../../components/Wrapper/Wrapper';
+import { Header } from '../../../components/Header/Header';
 
 export const GenresType: FC = () => {
   const navigator = useNavigate();
@@ -17,8 +18,12 @@ export const GenresType: FC = () => {
 
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>
-      <Text As='h2' size={26}>{ `Genre: ${state && state.name}` }</Text>
-      <TrackList listId={ state && state.listId} />
+      <Header>
+        <Text As='h2' size={40}>{ `Genre: ${state && state.name}` }</Text>
+      </Header>
+      <Wrapper As='div' extraClass={styles.list}>
+        <TrackList listId={ state && state.listId} />
+      </Wrapper>
     </Wrapper>
   )
 }
