@@ -19,7 +19,7 @@ export const GenresType: FC = () => {
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>
       <Header>
-        <Text As='h2' size={40}>{ `Genre: ${state && state.name}` }</Text>
+        <Text As='h2' size={40}>{state && state.name}</Text>
       </Header>
       <Wrapper As='div' extraClass={styles.list}>
         <TrackList listId={ state && state.listId} />
