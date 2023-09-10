@@ -21,7 +21,7 @@ export const GenresType: FC = () => {
       <Header>
         <Text As='h2' size={40}>{state && state.name}</Text>
       </Header>
-      <Wrapper As='div' extraClass={styles.list}>
+      <Wrapper As='div'>
         <TrackList listId={ state && state.listId} />
       </Wrapper>
     </Wrapper>

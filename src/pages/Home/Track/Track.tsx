@@ -10,6 +10,8 @@ export const Track: FC = () => {
   const location = useLocation();
   const { request, failed, error, data } = useGetSoundQuery(location.state.key);
 
+  console.log(data)
+
   return (
     <Wrapper>
       { request && (
@@ -26,7 +28,7 @@ export const Track: FC = () => {
         <div className={styles.track}>
           <img src={ data.share.image || data.images.coverart } alt={data.title} className={styles.img}/>
           <div className={styles.about}>
-            <Text As="h2" size={20} color='secondary'>{ data.type }</Text>
+            <Text As="h2" size={20} color='secondary'>{ data.type}</Text>
             <Text As="h2" size={40}>{ data.title }</Text>
             <div className={styles.info}>
               <Text As="h2" size={16} color='secondary'>
@@ -43,12 +45,20 @@ export const Track: FC = () => {
                   {data.genres.primary}
                 </Link>
               </Text>
-              <Text As="h2" size={16} color='secondary'>
-                {`${data.sections[0].metadata[0].title}: ${data.sections[0].metadata[0].text}`}
-              </Text>
-              <Text As="h2" size={16} color='secondary'>
-                {`${data.sections[0].metadata[2].title}: ${data.sections[0].metadata[2].text}`}
-              </Text>
+              { data.sections[0].metadata.length > 0 && (
+                <>              
+                  <Text As="h2" size={16} color='secondary'>
+                    {`${data.sections[0].metadata[0].title || 'Album'}: ${data.sections[0].metadata[0].text || ''}`}
+                  </Text>
+                  <Text As="h2" size={16} color='secondary'>
+                    {`${data.sections[0].metadata[1].title || 'Label'}: ${data.sections[0].metadata[1].text || ''}`}
+                  </Text>
+                  <Text As="h2" size={16} color='secondary'>
+                    {`${data.sections[0].metadata[2].title || 'Released'}: ${data.sections[0].metadata[2].text || ''}`}
+                  </Text>
+                </>                
+                ) 
+              }
             </div>
           </div>
         </div>

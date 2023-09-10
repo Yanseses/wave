@@ -35,7 +35,7 @@ export const useGetSoundQuery = (soundId: string) => {
         return new Promise((resolve, reject) => {
           resolve(sound)
         }).then((data: any) => {
-          setState({ request: false, error: '', data: data, failed: false, })
+          setState({ request: false, error: '', data: data, failed: false })
         }).catch((err) => {
           setState({ ...state, error: 'Failed to fetch', failed: true })
         })
