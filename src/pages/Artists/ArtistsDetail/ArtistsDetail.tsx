@@ -26,7 +26,7 @@ export const ArtistsDetail: FC = () => {
     }
   }, [data, location]);
 
-  console.log(songs)
+  console.log(artist)
 
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>

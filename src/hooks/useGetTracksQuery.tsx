@@ -77,6 +77,7 @@ export const useGetTracksQuery = (listId: string) => {
       axios.get('https://shazam.p.rapidapi.com/charts/track', {
         headers: apiHeader,
         params: {
+          listId: listId,
           locale: getCookie('country')
         }
       }).then((res) => {
