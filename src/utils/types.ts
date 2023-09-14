@@ -3,3 +3,7 @@ export interface IRequest {
   failed: boolean,
   error: string
 }
+
+export interface IListLoader {
+  size: number
+}

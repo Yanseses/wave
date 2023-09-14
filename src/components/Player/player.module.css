@@ -16,8 +16,8 @@
 }
 
 .about {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 1fr;
   column-gap: 14px;
   align-items: center;
 }

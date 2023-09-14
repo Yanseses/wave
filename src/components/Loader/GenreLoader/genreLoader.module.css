@@ -1,0 +1,34 @@
+.item {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #2323234d;
+}
+
+.bottomWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: -webkit-fill-available;
+  background-color: var(--background-player);
+  backdrop-filter: blur(15px);
+  padding: 12px 28px;
+  animation: fade 1s linear infinite alternate;
+}
+
+@keyframes fade {
+  0% {
+    background-color: var(--background-loader);
+  }
+  100% {
+    background-color: var(--background-player);
+  }
+}

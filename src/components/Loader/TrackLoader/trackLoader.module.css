@@ -1,0 +1,54 @@
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2323234d;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.number {
+  width: 30px;
+  height: 30px;
+  background-color: var(--background-loader);
+  animation: fide 1s linear infinite alternate;
+}
+
+.avatar {
+  width: 58px;
+  height: 58px;
+  background-color: var(--background-loader);
+  border-radius: 50px;
+  animation: fide 1s linear infinite alternate;
+}
+
+.text {
+  height: 20px;
+  width: 200px;
+  background-color: var(--background-loader);
+  animation: fide 1s linear infinite alternate;
+}
+
+@media screen and (max-width: 700px) {
+  .text {
+    width: 100px;
+  }
+}
+
+@keyframes fide {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

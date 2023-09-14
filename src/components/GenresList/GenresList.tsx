@@ -6,6 +6,7 @@ import { PlayIcon } from '../../media/Icons/Navigate/PlayIcon';
 import { Link } from 'react-router-dom';
 import { IGenresGlobal, TGenresItem } from '../../services/actions/genres';
 import { useSelector } from '../../services/hooks';
+import { GenreLoader } from '../Loader/GenreLoader/GenreLoader';
 
 interface IGenresList {
   type?: string
@@ -36,7 +37,7 @@ export const GenresList: FC<IGenresList> = ({ type }) => {
   return (
     <section className={styles.section}>
       { request && (
-        <Text As='p' size={20} color='secondary'>Loading...</Text>
+        <GenreLoader size={type === 'country' ? 3 : 6}/>
         ) 
       }
 

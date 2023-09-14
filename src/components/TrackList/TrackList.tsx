@@ -6,6 +6,8 @@ import { Text } from '../Text/Text';
 import { useDispatch, useSelector } from '../../services/hooks';
 import { setActiveSong } from '../../services/actions/player';
 import { getCookie } from '../../utils/cookie';
+import { containTrack } from '../../utils/containTrack';
+import { TrackLoader } from '../Loader';
 
 interface ITrackList {
   listId: string
@@ -18,14 +20,15 @@ export const TrackList: FC<ITrackList> = ({ listId }) => {
   
   useEffect(() => {
     if(!activeSong && data){
-      dispatch(setActiveSong(data[0], data, 0))
+      const correctIndex = containTrack(0, data, 'current');
+      dispatch(setActiveSong(data[correctIndex], data, correctIndex))
     }
   }, [ data, activeSong, dispatch ]);
 
   return (
     <ul className={styles.list}>
-      { request && ( 
-        <Text As='p' size={20} color='secondary'>Loading...</Text>
+      { request && (
+        <TrackLoader size={6}/>
       )}
 
       { !request && failed && (

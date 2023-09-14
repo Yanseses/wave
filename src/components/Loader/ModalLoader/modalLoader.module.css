@@ -1,14 +1,14 @@
-.loader {
+.modal {
   margin: auto;
 }
 
-.loader__spinner {
+.modal__spinner {
   display: inline-block;
   position: relative;
   width: 176px;
   height: 176px;
 }
-.loader__spinner div {
+.modal__spinner div {
   box-sizing: border-box;
   display: block;
   position: absolute;
@@ -20,13 +20,13 @@
   animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: var(--background-purple) transparent transparent transparent;
 }
-.loader__spinner div:nth-child(1) {
+.modal__spinner div:nth-child(1) {
   animation-delay: -0.45s;
 }
-.loader__spinner div:nth-child(2) {
+.modal__spinner div:nth-child(2) {
   animation-delay: -0.3s;
 }
-.loader__spinner div:nth-child(3) {
+.modal__spinner div:nth-child(3) {
   animation-delay: -0.15s;
 }
 @keyframes spinner {

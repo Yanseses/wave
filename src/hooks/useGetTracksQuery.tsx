@@ -94,7 +94,6 @@ export const useGetTracksQuery = (listId: string) => {
         return new Promise((resolve, reject) => {
           resolve(listId === 'ip-country-chart-RU' ? countryChartRu : globalChartGenres[Number(listId.split('-')[3])])
         }).then((req: any) => {
-          console.log(req)
           setState({ request: false, error: '', data: req.tracks, failed: false, })
         }).catch((err) => {
           setState({ ...state, request: false, error: 'Failed to fetch', failed: true })
