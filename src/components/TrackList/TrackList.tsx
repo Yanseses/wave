@@ -5,7 +5,6 @@ import { ITrackData, useGetTracksQuery } from '../../hooks/useGetTracksQuery';
 import { Text } from '../Text/Text';
 import { useDispatch, useSelector } from '../../services/hooks';
 import { setActiveSong } from '../../services/actions/player';
-import { getCookie } from '../../utils/cookie';
 import { containTrack } from '../../utils/containTrack';
 import { TrackLoader } from '../Loader';
 
@@ -15,7 +14,7 @@ interface ITrackList {
 
 export const TrackList: FC<ITrackList> = ({ listId }) => {
   const dispatch = useDispatch();
-  const { data, request, failed, error } = useGetTracksQuery(listId || `ip-country-chart-${getCookie('country')}`);
+  const { data, request, failed, error } = useGetTracksQuery(listId);
   const { isPlaying, activeSong } = useSelector(store => store.player);
   
   useEffect(() => {

@@ -21,7 +21,7 @@ export const Controls: FC<IControls> = ({
   isShuffle, 
   isRepeat, 
   onPlay, 
-  onShuffle, 
+  onShuffle,
   onRepeat, 
   onPrevTrack, 
   onNextTrack 

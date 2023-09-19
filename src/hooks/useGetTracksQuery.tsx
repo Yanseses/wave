@@ -89,7 +89,7 @@ export const useGetTracksQuery = (listId: string) => {
       }).catch((err) => {
         setState({ ...state, request: false, error: err, failed: true })
       })
-    } else {    
+    } else {
       setTimeout(async () => {
         return new Promise((resolve, reject) => {
           resolve(listId === 'ip-country-chart-RU' ? countryChartRu : globalChartGenres[Number(listId.split('-')[3])])
