@@ -35,36 +35,45 @@ export const GenresList: FC<IGenresList> = ({ type }) => {
   }, [data, type])
 
   return (
-    <section className={styles.section}>
+    <>
       { request && (
-        <GenreLoader size={type === 'country' ? 3 : 6}/>
+        <section className={styles.section}>
+          <GenreLoader size={type === 'country' ? 3 : 6}/>
+        </section>
         ) 
       }
 
       { !request && failed && (
-        <Text As='p' size={20} color='secondary'>{ error }</Text>
+        <section className={styles.error}>
+          <Text As='p' size={20} color='secondary'>{ error }</Text>
+        </section>
         ) 
       }
 
-      { !request && !failed && data && genres && genres.map((genre: TGenresItem | IGenresGlobal) => (
-        <Link 
-          to={`/genres/${genre.urlPath}`} 
-          key={genre.listid}
-          className={styles.item}
-          style={{ backgroundImage: `url(${coverGenres[genre.name]})` }}
-          state={{
-            listId: genre.listid,
-            name: genre.name
-          }}>
-          <div className={styles.bottomWrapper}>
-            <Text As='p' size={18}>
-              { genre.name }
-            </Text>
-            <PlayIcon />
-          </div>
-        </Link>
-        )) 
+      { !request && !failed && data && genres && (
+        <section className={styles.section}>
+          { genres.map((genre: TGenresItem | IGenresGlobal) => (
+          <Link 
+            to={`/genres/${genre.urlPath}`} 
+            key={genre.listid}
+            className={styles.item}
+            style={{ backgroundImage: `url(${coverGenres[genre.name]})` }}
+            state={{
+              listId: genre.listid,
+              name: genre.name
+            }}>
+            <div className={styles.bottomWrapper}>
+              <Text As='p' size={18}>
+                { genre.name }
+              </Text>
+              <PlayIcon />
+            </div>
+          </Link>
+          )) 
+        }
+        </section>
+        )
       }
-    </section>
+    </>
   )
 }

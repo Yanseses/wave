@@ -31,7 +31,8 @@ export const genresReducer = (state: TGenres = genreStore, action: TGenresAction
       return {
         ...state,
         request: false,
-        failed: true
+        failed: true,
+        error: action.payload
       }
     }
     case GET_GENRES_COUNTRY_SUCCESS: {

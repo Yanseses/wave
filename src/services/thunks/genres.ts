@@ -32,7 +32,8 @@ export function getChartGenres(){
           throw new Error(res.statusText)
         }
       }).catch((err) => {
-        dispatch(getGenresCountryFailed(err))
+        console.log(err.response.data)
+        dispatch(getGenresCountryFailed(err.response.data))
       })
     } else {
       setTimeout(async () => {
