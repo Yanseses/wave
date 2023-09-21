@@ -3,6 +3,7 @@ import { countryChartRu, globalChartGenres } from "../utils/mocks/charts";
 import axios from "axios";
 import { apiHeader } from "../utils/constants";
 import { getCookie } from "../utils/cookie";
+import { error } from "console";
 
 export interface ITrackData {
   artists?: IArtists[],
@@ -87,7 +88,7 @@ export const useGetTracksQuery = (listId: string) => {
           throw new Error(res.statusText)
         }
       }).catch((err) => {
-        setState({ ...state, request: false, error: err, failed: true })
+        setState({ ...state, request: false, error: err.response.data, failed: true })
       })
     } else {
       setTimeout(async () => {

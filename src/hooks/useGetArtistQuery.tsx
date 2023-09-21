@@ -28,7 +28,7 @@ export const useGetArtistQuery = (artistId: string) => {
           throw new Error('Failed to fetch')
         }
       }).catch((err) => {
-        setState({ ...state, request: false, error: err, failed: true })
+        setState({ ...state, request: false, error: err.response.data, failed: true })
       })
     } else {    
       setTimeout(async () => {
