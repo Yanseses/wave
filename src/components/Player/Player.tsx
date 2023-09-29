@@ -9,7 +9,7 @@ import { VolumeBar } from './VolumeBar/VolumeBar';
 import { TimeLine } from './TimeLine/TimeLine';
 import { About } from './About/About';
 import { Controls } from './Сontrols/Controls';
-import { Modal } from '../Modal/Modal';
+// import { Modal } from '../Modal/Modal';
 import { Button } from '../Button/Button';
 import { PlayIcon, StopIcon } from '../../media/Icons';
 
@@ -77,6 +77,7 @@ export const Player: FC = () => {
   const handleOpenMobilePlayer = useCallback(() => {
     if(isMobile){
       setIsModalActive(!isModalActive)
+      console.log(`Mobile full-window player is ${isModalActive}`)
     }
   }, [isMobile, isModalActive]);
 
@@ -161,12 +162,12 @@ export const Player: FC = () => {
         </audio>
       </div>
 
-      { isModalActive && ( 
+      {/* { isModalActive && ( 
         <Modal>
           <div>Player</div>
         </Modal>  
         ) 
-      }
+      } */}
     </div>
   )
 }
