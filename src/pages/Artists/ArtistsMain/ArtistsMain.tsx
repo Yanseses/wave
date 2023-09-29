@@ -1,28 +1,26 @@
 import styles from './artisrsMain.module.css';
 import { FC } from "react";
-import { useSelector } from "../../../services/hooks";
 import { Text } from '../../../components/Text/Text';
 import { Link } from 'react-router-dom';
 import { Wrapper } from '../../../components/Wrapper/Wrapper';
+import { useGetArtistsQuery } from '../../../services/query/shazamApi';
 
 export const ArtistsMain: FC = () => {
-  const { request, failed, error, data } = useSelector(store => store.artists);
+  const { data: artists, isFetching, isError } = useGetArtistsQuery('');
+
+  if(isFetching){
+    return ( <div>Loading...</div> )
+  }
+
+  if(!isFetching && isError){
+    return ( <div>{ 'Ошибка сервера' }</div> )
+  }
 
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>
       <Text As='h2' size={26}>Top Artists</Text>
       <div className={styles.list}>
-        { request && (
-          <div>Loading...</div>
-          ) 
-        }
-
-        { !request && failed && (
-          <div>{ error }</div>
-          ) 
-        }
-
-        { !request && !failed && data && data.map((el: any) => {
+        { artists && artists.map((el: any) => {
           return (
             <Link 
               key={el.artist.adamid}

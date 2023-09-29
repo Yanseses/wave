@@ -1,15 +1,15 @@
 import styles from './artistsDetail.module.css';
 import { FC, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { useGetArtistQuery } from "../../../hooks/useGetArtistQuery";
 import { Wrapper } from "../../../components/Wrapper/Wrapper";
 import { Text } from '../../../components/Text/Text';
 import { Header } from '../../../components/Header/Header';
+import { useGetArtistsByIdQuery } from '../../../services/query/shazamApi';
 
 export const ArtistsDetail: FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { data, request, failed } = useGetArtistQuery(location.state && location.state.id);
+  const { data: data, isFetching, isError } = useGetArtistsByIdQuery(location.state && location.state.id);
   const [ artist, setArtist ] = useState<any>();
   const [ songs, setSongs ] = useState<any>();
 
@@ -26,11 +26,17 @@ export const ArtistsDetail: FC = () => {
     }
   }, [data, location]);
 
-  console.log(artist)
+  if(isFetching){
+    return ( <div>Loading...</div> )
+  }
+
+  if(!isFetching && isError){
+    return ( <div>{ 'Ошибка ответа сервера' }</div> )
+  }
 
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>
-      { !request && !failed && data && (
+      { data && (
         <>
           <Header color={artist && `#${artist.attributes.artwork.bgColor}`}>
             <Text As='h2' size={40}>{ artist && artist.attributes.name }</Text>

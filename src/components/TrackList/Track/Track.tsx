@@ -1,13 +1,13 @@
 import styles from './track.module.css';
+import classNames from 'classnames';
+import { useDispatch } from '../../../services/hooks';
+import { ITrackData } from '../../../services/types/types';
+import { playPause, setActiveSong } from '../../../services/features/playerSlice';
 import { BanIcon, PlayIcon, StopIcon } from '../../../media/Icons';
 import { FC, useCallback } from "react";
 import { Text } from '../../Text/Text';
-import { useDispatch } from '../../../services/hooks';
 import { Avatar } from '../../Player/Avatar/Avatar';
 import { Button } from '../../Button/Button';
-import { playPause, setActiveSong } from '../../../services/actions/player';
-import classNames from 'classnames';
-import { ITrackData } from '../../../hooks/useGetTracksQuery';
 
 interface ITrack {
   index: number,
@@ -33,7 +33,11 @@ export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) 
       } else {
         dispatch(playPause(true))
       }
-      dispatch(setActiveSong(song, data, index))
+      dispatch(setActiveSong({
+        song: song,
+        list: data,
+        index: index
+      }))
     }
   }, [activeSong, data, dispatch, index, isPlaying, song]);
   

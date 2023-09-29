@@ -30,9 +30,3 @@
   border-radius: 20px;
   box-shadow: -300px 0 0 300px var(--background-purple);
 }
-
-@media screen and (max-width: 700px) {
-  .wrapper {
-    display: none;
-  }
-}

@@ -1,9 +1,5 @@
 export interface IRequest {
-  request: boolean,
-  failed: boolean,
+  isFetching: boolean,
+  isError: boolean,
   error: string
-}
-
-export interface IListLoader {
-  size: number
 }

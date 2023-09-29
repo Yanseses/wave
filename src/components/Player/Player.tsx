@@ -1,16 +1,17 @@
 import styles from './player.module.css';
 import { FC, useCallback, useEffect, useRef, useState } from "react";
-import { useSelector } from "../../services/hooks";
-import { useDispatch } from "react-redux";
-import { prevTrack, nextTrack } from '../../services/actions/player';
+import { useSelector, useDispatch } from "../../services/hooks";
 import { Avatar } from "./Avatar/Avatar";
-import { playPause } from '../../services/actions/player';
+import { playPause, prevTrack, nextTrack } from '../../services/features/playerSlice';
 import { containTrack } from '../../utils/containTrack';
 import { useMediaQuery } from 'react-responsive';
 import { VolumeBar } from './VolumeBar/VolumeBar';
 import { TimeLine } from './TimeLine/TimeLine';
 import { About } from './About/About';
 import { Controls } from './Сontrols/Controls';
+import { Modal } from '../Modal/Modal';
+import { Button } from '../Button/Button';
+import { PlayIcon, StopIcon } from '../../media/Icons';
 
 export const Player: FC = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ export const Player: FC = () => {
   const [ duration, setDuration ] = useState<number>(0);
   const [ isRepeat, setIsRepeat ] = useState<boolean>(false);
   const [ isShuffle, setIsShuffle ] = useState<boolean>(false);
+  const [ isModalActive, setIsModalActive ] = useState<boolean>(false);
   const [ volume, setVolume ] = useState<number>(0.8);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -72,6 +74,12 @@ export const Player: FC = () => {
     }
   }, []);
 
+  const handleOpenMobilePlayer = useCallback(() => {
+    if(isMobile){
+      setIsModalActive(!isModalActive)
+    }
+  }, [isMobile, isModalActive]);
+
   useEffect(() => {
     if(audioRef.current){
       if(isPlaying){
@@ -95,7 +103,7 @@ export const Player: FC = () => {
   }, [ seekTime ])
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main} onClick={handleOpenMobilePlayer}>
       { !isMobile && (
         <TimeLine 
           duration={duration} 
@@ -114,22 +122,34 @@ export const Player: FC = () => {
           <About activeSong={activeSong} isMobile={isMobile} />
         </div>
 
-        <Controls 
-          isMobile={isMobile}
-          isPlaying={isPlaying}
-          isRepeat={isRepeat}
-          isShuffle={isShuffle}
-          onPlay={handlePlay}
-          onRepeat={() => setIsRepeat(!isRepeat)}
-          onShuffle={() => setIsShuffle(!isShuffle)}
-          onPrevTrack={handlePrevTrack}
-          onNextTrack={handleNextTrack}
-        />
+        <div className={styles.controls}>
+          { isMobile ? (
+            <Button onClick={handlePlay}>
+              { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
+            </Button>
+            ) : (
+            <Controls 
+              isPlaying={isPlaying}
+              isRepeat={isRepeat}
+              isShuffle={isShuffle}
+              onPlay={handlePlay}
+              onRepeat={() => setIsRepeat(!isRepeat)}
+              onShuffle={() => setIsShuffle(!isShuffle)}
+              onPrevTrack={handlePrevTrack}
+              onNextTrack={handleNextTrack}
+            />
+            ) 
+          }
+        </div>
 
-        <VolumeBar 
-          volume={volume} 
-          onInput={(e) => setVolume(Number(e.target.value))} 
-          onSpeaking={handleSpeaking}/>
+
+        { !isMobile && (
+          <VolumeBar 
+            volume={volume} 
+            onInput={(e) => setVolume(Number(e.target.value))} 
+            onSpeaking={handleSpeaking}/>  
+          ) 
+        }
 
         <audio 
           ref={audioRef}
@@ -140,6 +160,13 @@ export const Player: FC = () => {
           src={activeSong && activeSong.hub.actions && activeSong.hub.actions[1].uri}>
         </audio>
       </div>
+
+      { isModalActive && ( 
+        <Modal>
+          <div>Player</div>
+        </Modal>  
+        ) 
+      }
     </div>
   )
 }

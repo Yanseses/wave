@@ -1,5 +1,0 @@
-export const SET_ACTIVE_SONG: 'SET_ACTIVE_SONG' = 'SET_ACTIVE_SONG';
-
-export const PLAY_PAUSE: 'PLAY_PAUSE' = 'PLAY_PAUSE';
-export const PREV_TRACK: 'PREV_TRACK' = 'PREV_TRACK';
-export const NEXT_TRACK: 'NEXT_TRACK' = 'NEXT_TRACK';

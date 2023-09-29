@@ -1,11 +1,14 @@
-import { applyMiddleware, legacy_createStore as createStore } from 'redux';
-import { rootReducer } from './reducers';
-import { compose } from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import playerReducer from './features/playerSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import { shazamApi } from './query/shazamApi';
 
-export const initStore = (initialState = {}) =>
-createStore(
-  rootReducer,
-  initialState,
-  compose(applyMiddleware(thunkMiddleware))
-);
+export const store = configureStore({
+  reducer: {
+    [shazamApi.reducerPath]: shazamApi.reducer,
+    player: playerReducer
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(shazamApi.middleware),
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

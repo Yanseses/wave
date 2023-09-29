@@ -2,59 +2,55 @@ import styles from './track.module.css';
 import { FC } from "react";
 import { useLocation } from "react-router";
 import { Wrapper } from "../../../components/Wrapper/Wrapper";
-import { useGetSoundQuery } from "../../../hooks/useGetSoundQuery";
 import { Text } from "../../../components/Text/Text";
 import { Link } from 'react-router-dom';
+import { useGetSoundByIdQuery } from '../../../services/query/shazamApi';
 
 export const Track: FC = () => {
   const location = useLocation();
-  const { request, failed, error, data } = useGetSoundQuery(location.state.key);
+  const {isFetching, isError, data: track} = useGetSoundByIdQuery(location.state.key);
 
-  console.log(data)
+  if(isFetching){
+    return ( <div>Loading...</div> )
+  }
+
+  if(!isFetching && isError){
+    return ( <div>{ 'Ошибка запроса' }</div> )
+  }
 
   return (
     <Wrapper>
-      { request && (
-        <div>Loading...</div>
-        ) 
-      }
-
-      { !request && failed && (
-        <div>{ error }</div>
-        ) 
-      }
-
-      { !request && !failed && data && (
+      { track && (
         <div className={styles.track}>
-          <img src={ data.share.image || data.images.coverart } alt={data.title} className={styles.img}/>
+          <img src={ track.share.image || track.images.coverart } alt={track.title} className={styles.img}/>
           <div className={styles.about}>
-            <Text As="h2" size={20} color='secondary'>{ data.type}</Text>
-            <Text As="h2" size={40}>{ data.title }</Text>
+            <Text As="h2" size={20} color='secondary'>{ track.type}</Text>
+            <Text As="h2" size={40}>{ track.title }</Text>
             <div className={styles.info}>
               <Text As="h2" size={16} color='secondary'>
                 {'Singer: '}
                 <Link 
-                  to={`/artists/${data.subtitle.toLowerCase().split(' ').join('-')}`} 
-                  state={{ key: data.artists[0].adamid }}>
-                    {data.subtitle}
+                  to={`/artists/${track.subtitle.toLowerCase().split(' ').join('-')}`} 
+                  state={{ key: track.artists[0].adamid }}>
+                    {track.subtitle}
                 </Link>
               </Text>
               <Text As="h2" size={16} color='secondary'>
                 {`Genre: `}
                 <Link to={`/genres/`}>
-                  {data.genres.primary}
+                  {track.genres.primary}
                 </Link>
               </Text>
-              { data.sections[0].metadata.length > 0 && (
+              { track.sections[0].metadata.length > 0 && (
                 <>              
                   <Text As="h2" size={16} color='secondary'>
-                    {`${data.sections[0].metadata[0].title || 'Album'}: ${data.sections[0].metadata[0].text || ''}`}
+                    {`${track.sections[0].metadata[0].title || 'Album'}: ${track.sections[0].metadata[0].text || ''}`}
                   </Text>
                   <Text As="h2" size={16} color='secondary'>
-                    {`${data.sections[0].metadata[1].title || 'Label'}: ${data.sections[0].metadata[1].text || ''}`}
+                    {`${track.sections[0].metadata[1].title || 'Label'}: ${track.sections[0].metadata[1].text || ''}`}
                   </Text>
                   <Text As="h2" size={16} color='secondary'>
-                    {`${data.sections[0].metadata[2].title || 'Released'}: ${data.sections[0].metadata[2].text || ''}`}
+                    {`${track.sections[0].metadata[2].title || 'Released'}: ${track.sections[0].metadata[2].text || ''}`}
                   </Text>
                 </>                
                 ) 

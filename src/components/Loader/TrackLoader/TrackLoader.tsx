@@ -1,8 +1,7 @@
 import styles from './trackLoader.module.css';
-import { IListLoader } from '../../../utils/types';
 import { FC } from 'react'
 
-export const TrackLoader: FC<IListLoader> = ({ size = 6 }) => {
+export const TrackLoader: FC<{ size: number }> = ({ size = 6 }) => {
   const tracks = new Array(size).fill('');
 
   return (

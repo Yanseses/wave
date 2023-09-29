@@ -1,13 +1,8 @@
 import styles from './button.module.css';
 import classNames from "classnames";
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, SyntheticEvent } from "react";
 
-interface IButton {
-  onClick?: () => void,
-  extraClass?: string
-}
-
-export const Button: FC<PropsWithChildren<IButton>> = ({ 
+export const Button: FC<PropsWithChildren<{ onClick?: () => void, extraClass?: string }>> = ({ 
   onClick, 
   extraClass,
   children
@@ -17,8 +12,14 @@ export const Button: FC<PropsWithChildren<IButton>> = ({
     styles.button
   )
 
+  const handleClick = (e: SyntheticEvent) => {
+    e.stopPropagation();
+
+    if(typeof onClick === 'function') onClick()
+  }
+
   return (
-    <button onClick={onClick} className={classname}>
+    <button onClick={handleClick} className={classname}>
       { children }
     </button>  
   )

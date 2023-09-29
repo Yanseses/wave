@@ -21,12 +21,33 @@
 
 .artist {
   font-size: 14px;
+  cursor: pointer;
+  
   &:hover {
     color: var(--background-purple);
   }
 }
 
 @media screen and (max-width: 700px) {
+  .artists {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+  }
+
+  .title {
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+
+    &:hover {
+      color: inherit;
+    }
+  }
   .wrapper {
     row-gap: 4px;
   }

@@ -1,9 +1,8 @@
 import { PlayIcon } from '../../../media/Icons/Navigate/PlayIcon';
-import { IListLoader } from '../../../utils/types';
 import styles from './genreLoader.module.css';
 import { FC } from "react";
 
-export const GenreLoader: FC<IListLoader> = ({ size = 3 }) => {
+export const GenreLoader: FC<{ size: number }> = ({ size = 3 }) => {
   const genres = new Array(size).fill('');
   return (
     <>

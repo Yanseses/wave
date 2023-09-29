@@ -1,4 +1,4 @@
-import { ITrackData } from "../hooks/useGetTracksQuery";
+import { ITrackData } from "../services/types/types";
 
 export const containTrack  = (
   currntIndex: number, 
@@ -31,7 +31,6 @@ export const containTrack  = (
   }
 
   if(currentSongs && currentSongs[index].hub.actions){
-    console.log(index)
     return index;
   } else {
     return containTrack(index, currentSongs, type);
