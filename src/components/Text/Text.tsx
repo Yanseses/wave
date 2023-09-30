@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, memo } from "react";
 import classnames from 'classnames';
 import styles from './text.module.css';
 
@@ -12,7 +12,7 @@ interface IText {
   extraClass?: string;
 }
 
-export const Text: FC<PropsWithChildren<IText>> = ({
+export const Text: FC<PropsWithChildren<IText>> = memo(({
   As = 'span',
   size,
   color = 'primary',
@@ -31,4 +31,4 @@ export const Text: FC<PropsWithChildren<IText>> = ({
       { children }
     </As>
   )
-}
+})

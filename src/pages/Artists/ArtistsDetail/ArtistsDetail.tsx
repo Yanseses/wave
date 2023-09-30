@@ -26,32 +26,34 @@ export const ArtistsDetail: FC = () => {
     }
   }, [data, location]);
 
-  if(isFetching){
-    return ( <div>Loading...</div> )
-  }
-
-  if(!isFetching && isError){
-    return ( <div>{ 'Ошибка ответа сервера' }</div> )
-  }
-
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>
-      { data && (
-        <>
-          <Header color={artist && `#${artist.attributes.artwork.bgColor}`}>
-            <Text As='h2' size={40}>{ artist && artist.attributes.name }</Text>
-          </Header>
-          <div className={styles.main}>
+      <Header color={artist && `#${artist.attributes.artwork.bgColor}`}>
+        <Text As='h2' size={40}>{ location.state.name }</Text>
+      </Header>
+      <div className={styles.main}>
+        { isFetching && (
+            <div>Loading...</div>
+          ) 
+        }
+
+        { !isFetching && isError && (
+          <div>{ 'Ошибка ответа сервера' }</div>
+          ) 
+        }
+
+        { data && (
+          <>
             <div className={styles.details}>
               <img src={artist && `${artist.attributes.artwork.url.split('/{w}')[0]}/300x300bb.jpg`} alt='' />
             </div>
             <div className={styles.songs}>
 
             </div>
-          </div>  
-        </>
-        ) 
-      }
+          </>
+          ) 
+        }
+      </div>
     </Wrapper>
   )
 }

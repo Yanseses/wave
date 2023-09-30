@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { NavLink } from "react-router-dom";
 import { Text } from "../../Text/Text";
 import styles from './menuItem.module.css';
@@ -9,7 +9,7 @@ interface IMenuItem {
   text: string
 }
 
-export const MenuItem: FC<IMenuItem> = ({ link, Icon, text }) => {
+export const MenuItem: FC<IMenuItem> = memo(({ link, Icon, text }) => {
   return (
     <NavLink to={link} className={({ isActive }) => isActive ? `${styles.active} ${styles.item}` : styles.item}>
       <Icon />
@@ -18,4 +18,4 @@ export const MenuItem: FC<IMenuItem> = ({ link, Icon, text }) => {
       </Text>
     </NavLink>  
   )
-}
+})

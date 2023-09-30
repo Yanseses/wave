@@ -1,5 +1,5 @@
 import styles from './player.module.css';
-import { FC, useCallback, useEffect, useRef, useState } from "react";
+import { ChangeEvent, FC, useCallback, useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "../../services/hooks";
 import { Avatar } from "./Avatar/Avatar";
 import { playPause, prevTrack, nextTrack } from '../../services/features/playerSlice';
@@ -81,6 +81,18 @@ export const Player: FC = () => {
     }
   }, [isMobile, isModalActive]);
 
+  const handleChangeVolume = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setVolume(Number(e.target.value))
+  }, []);
+
+  const handleChangeRepeat = useCallback(() => {
+    setIsRepeat(!isRepeat)
+  }, [ isRepeat ]);
+
+  const handleChangeSuffle = useCallback(() => {
+    setIsShuffle(!isShuffle)
+  }, [ isShuffle ]);
+
   useEffect(() => {
     if(audioRef.current){
       if(isPlaying){
@@ -93,7 +105,7 @@ export const Player: FC = () => {
 
   useEffect(() => {
     if(audioRef.current){
-      audioRef.current.volume = volume
+      audioRef.current.volume = volume;
     }
   }, [ volume ]);
 
@@ -129,17 +141,17 @@ export const Player: FC = () => {
               { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
             </Button>
             ) : (
-            <Controls 
+            <Controls
               isPlaying={isPlaying}
               isRepeat={isRepeat}
               isShuffle={isShuffle}
               onPlay={handlePlay}
-              onRepeat={() => setIsRepeat(!isRepeat)}
-              onShuffle={() => setIsShuffle(!isShuffle)}
+              onRepeat={handleChangeRepeat}
+              onShuffle={handleChangeSuffle}
               onPrevTrack={handlePrevTrack}
               onNextTrack={handleNextTrack}
             />
-            ) 
+            )
           }
         </div>
 
@@ -147,7 +159,7 @@ export const Player: FC = () => {
         { !isMobile && (
           <VolumeBar 
             volume={volume} 
-            onInput={(e) => setVolume(Number(e.target.value))} 
+            onInput={handleChangeVolume} 
             onSpeaking={handleSpeaking}/>  
           ) 
         }

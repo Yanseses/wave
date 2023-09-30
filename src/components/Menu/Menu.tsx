@@ -12,7 +12,7 @@ export const Menu: FC = () => {
     { id: '2', name: 'Genres', icon: LikeIcon, link: '/genres' },
     { id: '3', name: 'Artists', icon: ArtistsIcon, link: '/artists' },
   ];
-
+  
   return (
     <nav className={styles.layout}>
       <Link to='/home' className={styles.logo}>

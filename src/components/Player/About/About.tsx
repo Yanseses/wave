@@ -1,5 +1,5 @@
 import styles from './about.module.css';
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Link } from 'react-router-dom';
 import { Text } from '../../Text/Text';
 import { IArtists, ITrackData } from '../../../services/types/types';
@@ -9,7 +9,7 @@ interface IAbout {
   isMobile: boolean
 }
 
-export const About: FC<IAbout> = ({ activeSong, isMobile }) => {
+export const About: FC<IAbout> = memo(({ activeSong, isMobile }) => {
   return (
     <>
       { activeSong 
@@ -31,13 +31,13 @@ export const About: FC<IAbout> = ({ activeSong, isMobile }) => {
             { activeSong.artists && activeSong.artists.length > 0 
               ? ( <div className={styles.artists}>
                 { activeSong.artists.map((el: IArtists, i: number, arr: IArtists[]) => {
-                  const name = decodeURI(el.alias).split('-').join(' ');
+                  const name = decodeURI(el.alias).split('-').map((str) => str[0].toUpperCase() + str.slice(1)).join(' ');
                   if((arr.length - 1) === i){
                     return ( 
                       <Link 
                         key={el.adamid} to={`/artists/${el.alias}`} 
                         className={styles.artist} 
-                        state={{ id: el.adamid }}>
+                        state={{ id: el.adamid, name: name }}>
                         { name }
                       </Link>
                     )
@@ -47,7 +47,7 @@ export const About: FC<IAbout> = ({ activeSong, isMobile }) => {
                       <Link 
                         to={`/artists/${el.alias}`} 
                         className={styles.artist} 
-                        state={{ id: el.adamid }}>
+                        state={{ id: el.adamid, name: name }}>
                         { name }
                       </Link>
                       <Text As='span' size={12}> & </Text>
@@ -67,4 +67,4 @@ export const About: FC<IAbout> = ({ activeSong, isMobile }) => {
         ) }
     </>  
   )
-}
+})

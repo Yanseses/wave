@@ -7,7 +7,6 @@ import { BanIcon, PlayIcon, StopIcon } from '../../../media/Icons';
 import { FC, useCallback } from "react";
 import { Text } from '../../Text/Text';
 import { Avatar } from '../../Player/Avatar/Avatar';
-import { Button } from '../../Button/Button';
 
 interface ITrack {
   index: number,
@@ -58,16 +57,14 @@ export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) 
           {`${song.subtitle} - ${song.title}`}
         </Text>
       </div>
-      <Button>
-        { !song.hub.actions 
-          ? ( <BanIcon size={25} color={ 'grey' } /> )
-          : activeSong 
-            ? song.key === activeSong.key && isPlaying
-              ? ( <StopIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> ) 
-              : ( <PlayIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> )
-            : ( <PlayIcon size={25} color={ 'white' } /> )
-        }
-      </Button>
+      { !song.hub.actions 
+        ? ( <BanIcon size={25} color={ 'grey' } /> )
+        : activeSong 
+          ? song.key === activeSong.key && isPlaying
+            ? ( <StopIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> ) 
+            : ( <PlayIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> )
+          : ( <PlayIcon size={25} color={ 'white' } /> )
+      }
     </li>  
   )
-} 
+}

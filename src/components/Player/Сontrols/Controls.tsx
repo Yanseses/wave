@@ -1,6 +1,6 @@
 import { NextTrackIcon, PlayIcon, PrevTrackIcon, RepeatIcon, StopIcon, SuffleIcon } from '../../../media/Icons';
 import { Button } from '../../Button/Button';
-import { FC } from "react";
+import { FC, memo } from "react";
 
 interface IControls {
   isPlaying: boolean,
@@ -13,9 +13,9 @@ interface IControls {
   onNextTrack: () => void
 }
 
-export const Controls: FC<IControls> = ({ 
+export const Controls: FC<IControls> = memo(({ 
   isPlaying, 
-  isShuffle, 
+  isShuffle,
   isRepeat, 
   onPlay, 
   onShuffle,
@@ -26,7 +26,7 @@ export const Controls: FC<IControls> = ({
   return (
     <>
       <Button onClick={onShuffle}>
-        <SuffleIcon color={isShuffle ? 'purple' : 'white'} />
+        <SuffleIcon color={ isShuffle ? 'purple' : 'white' } />
       </Button>
       <Button onClick={onPrevTrack}>
         <PrevTrackIcon />
@@ -42,4 +42,4 @@ export const Controls: FC<IControls> = ({
       </Button>
     </>
   )
-}
+})

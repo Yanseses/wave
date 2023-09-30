@@ -30,7 +30,7 @@ export const shazamApi = createApi({
         }
       }
     }),
-    getTracksByKey: builder.query({ 
+    getTracksByKey: builder.query({
       query: (listId) => ({
         url: '/charts/track',
         params: {

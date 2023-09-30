@@ -1,5 +1,5 @@
-import { FC } from "react";
 import styles from './aside.module.css';
+import { FC } from "react";
 import { Text } from "../Text/Text";
 import { Avatar } from "../Player/Avatar/Avatar";
 import { Link } from "react-router-dom";
@@ -20,7 +20,7 @@ export const Aside: FC = () => {
                 key={el.artist.alias}
                 to={`/artists/${el.artist.alias ? el.artist.alias : ''}`} 
                 className={styles.artist}
-                state={{ artist: el.name && el.artist.alias }}>
+                state={{ artist: el.name && el.artist.alias, name: el.name }}>
                 <Avatar image={el.image} name={el.subtitle}/>
                 <Text As="p" size={18}>{el.name.split('&')[0]}</Text>
               </Link>

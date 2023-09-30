@@ -26,7 +26,7 @@ export const ArtistsMain: FC = () => {
               key={el.artist.adamid}
               to={`./${el.artist.alias}`}
               className={styles.artist}
-              state={{ id: el.artist.adamid }}>
+              state={{ id: el.artist.adamid, name: el.name }}>
                 <img src={el.image} alt={el.name} className={styles.image} />
                 <Text As='p' size={20} extraClass={styles.text}>{ el.name }</Text>
             </Link>

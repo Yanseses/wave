@@ -1,5 +1,5 @@
 import styles from './volumeBar.module.css';
-import { ChangeEvent, FC } from "react"
+import { ChangeEvent, FC, memo } from "react"
 import { Button } from "../../Button/Button"
 import { SpeakerOffIcon, SpeakerOnIcon } from "../../../media/Icons";
 
@@ -9,7 +9,7 @@ interface IVolumeBar {
   onSpeaking(): void
 }
 
-export const VolumeBar: FC<IVolumeBar> = ({ volume, onInput, onSpeaking }) => {
+export const VolumeBar: FC<IVolumeBar> = memo(({ volume, onInput, onSpeaking }) => {
   return (
     <div className={styles.wrapper}>
       <Button onClick={onSpeaking}>
@@ -27,4 +27,4 @@ export const VolumeBar: FC<IVolumeBar> = ({ volume, onInput, onSpeaking }) => {
         className={styles.input} />
   </div>
   )
-}
+})

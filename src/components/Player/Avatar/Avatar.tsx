@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from './avatar.module.css';
 import { Unknown } from '../../../media/Unknown';
-import { FC } from "react";
+import { FC, memo } from "react";
 
 interface IAvatar {
   image?: string,
@@ -10,7 +10,7 @@ interface IAvatar {
   activeClass?: string
 }
 
-export const Avatar: FC<IAvatar> = ({ image, name, size = 58, activeClass }) => {
+export const Avatar: FC<IAvatar> = memo(({ image, name, size = 58, activeClass }) => {
   const classname = classNames(
     styles.wrapper,
     activeClass,
@@ -26,4 +26,4 @@ export const Avatar: FC<IAvatar> = ({ image, name, size = 58, activeClass }) => 
       ) }
     </div>  
   )
-}
+})
