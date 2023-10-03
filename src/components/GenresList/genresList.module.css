@@ -28,16 +28,41 @@
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+
+  &:hover > div {
+    height: 100%;
+    transition: .2s ease-in;
+  }
 }
 
 .bottomWrapper {
   display: flex;
+  height: 15%;
+  transition: .2s;
   justify-content: space-between;
   align-items: center;
   width: -webkit-fill-available;
   background-color: var(--background-player);
   backdrop-filter: blur(15px);
   padding: 12px 28px;
+}
+
+@keyframes height {
+  0% {
+    bottom: 0;
+    height: initial;
+  }
+  30% {
+    height: 15%;
+  }
+  50% {
+    bottom: 20%;
+    height: 20%;
+  }
+  100% {
+    bottom: 0;
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {

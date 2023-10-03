@@ -1,5 +1,5 @@
 import styles from './trackList.module.css';
-import { FC, useEffect } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Track } from "./Track/Track";
 import { ITrackData } from '../../services/types/types';
 import { Text } from '../Text/Text';
@@ -11,7 +11,9 @@ import { useGetTracksByKeyQuery } from '../../services/query/shazamApi';
 
 export const TrackList: FC<{ listId: string }> = ({ listId }) => {
   const dispatch = useDispatch();
-  const { data: tracks, isFetching, isError } = useGetTracksByKeyQuery(listId);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [ paginator, setPaginator ] = useState<number>(0);
+  const { data: tracks, isFetching, isError } = useGetTracksByKeyQuery({listId, paginator});
   const { isPlaying, activeSong } = useSelector(store => store.player);
   
   useEffect(() => {
@@ -19,25 +21,27 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
       const correctIndex = containTrack(0, tracks, 'current');
       dispatch(setActiveSong({
         song: tracks[correctIndex], 
-        list: tracks, 
+        list: tracks,
         index: correctIndex 
       }))
     }
   }, [ tracks, activeSong, dispatch ]);
 
-  if(isFetching){
-    return (
-      <ul className={styles.list}>
-        <TrackLoader size={6}/>
-      </ul>
-    )
-  }
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if(entries[0].isIntersecting && !isFetching){
+        setPaginator((prevState) => prevState + 20)
+      }
+    }, {
+      rootMargin: '10px'
+    })
 
-  if(!isFetching && isError){
-    return (
-      <Text As='p' size={20} color='secondary'>{ 'Ошибка запроса' }</Text> 
-    )
-  }
+    if(scrollRef.current) observer.observe(scrollRef.current);
+
+    return () => {
+      if(scrollRef.current) observer.unobserve(scrollRef.current);
+    }
+  }, [ paginator, isFetching]);
 
   return (
     <ul className={styles.list}>
@@ -50,6 +54,18 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
           index={i}
           isPlaying={isPlaying} />
       ))}
+
+      { isFetching && (
+        <TrackLoader size={6}/>
+        )
+      }
+
+      <div ref={scrollRef} />
+
+      { !isFetching && isError && (
+        <Text As='p' size={20} color='secondary'>{ 'Ошибка запроса' }</Text> 
+        ) 
+      }
     </ul>
   )
 }

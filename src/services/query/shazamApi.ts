@@ -1,12 +1,12 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { apiHeader } from '../../utils/constants'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { apiHeader, checkMode, localApiUrl, shazamApiUrl } from '../../utils/queryConstants'
 import { getCookie } from '../../utils/cookie';
 import { IGenres, IGenresCountry, ITrackData } from '../types/types';
 
 export const shazamApi = createApi({
   reducerPath: 'shazamApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.NODE_ENV === 'production' ? 'https://shazam.p.rapidapi.com' : 'http://localhost:3001',
+    baseUrl: checkMode() ? shazamApiUrl : localApiUrl,
     headers: apiHeader
   }),
   endpoints: (builder) => ({
@@ -17,7 +17,7 @@ export const shazamApi = createApi({
         const selectedCountry = cookie.length > 2 
         ? cookie.split('-')[0].toUpperCase() 
         : cookie.toUpperCase();
-        if(process.env.NODE_ENV === 'production'){
+        if(checkMode()){
           return {
             country: res.countries.find((country: IGenresCountry) => country.id === selectedCountry),
             global: res.global.genres
@@ -31,22 +31,31 @@ export const shazamApi = createApi({
       }
     }),
     getTracksByKey: builder.query({
-      query: (listId) => ({
+      query: ({listId, paginator}) => ({
         url: '/charts/track',
         params: {
           listId: listId,
           locale: getCookie('country'),
           pageSize: 20,
-          startFrom: 0
+          startFrom: paginator
         }
       }),
       transformResponse: (res: any) => {
-        if(process.env.NODE_ENV === 'production'){
+        if(checkMode()){
           return res.tracks;
         } else {
           return res.data.tracks;
         }
-      }
+      },
+      serializeQueryArgs: ({ endpointName }) => {
+        return endpointName
+      },
+      merge: (currentCashe, newData) => {
+        currentCashe.push(...newData)
+      },
+      forceRefetch({ currentArg, previousArg }) {
+        return currentArg !== previousArg
+      },
     }),
     getArtists: builder.query({
       query: () => ({ 
@@ -59,7 +68,7 @@ export const shazamApi = createApi({
       }),
       transformResponse: (res: any) => {
         let artists;
-        if(process.env.NODE_ENV === 'production'){
+        if(checkMode()){
           artists = res.tracks.map((el: ITrackData) => ({
             artist: el.artists ? el.artists[0] : null,
             name: el.subtitle.split(',')[0].split('&')[0],
@@ -84,7 +93,7 @@ export const shazamApi = createApi({
         }
       }),
       transformResponse: (res: any) => {
-        return process.env.NODE_ENV === 'production' ? res.resources : res.data.data.resources
+        return checkMode() ? res.resources : res.data.data.resources
       }
     }),
     getSoundById: builder.query({ 
@@ -96,7 +105,7 @@ export const shazamApi = createApi({
         }
       }),
       transformResponse: (res: any) => {
-        return process.env.NODE_ENV === 'production' ? res : res.data[0].data;
+        return checkMode() ? res : res.data[0].data;
       }
     })
   })
@@ -104,7 +113,7 @@ export const shazamApi = createApi({
 
 export const { 
   useGetGenresQuery, 
-  useGetTracksByKeyQuery, 
+  useGetTracksByKeyQuery,
   useGetArtistsByIdQuery, 
   useGetArtistsQuery,
   useGetSoundByIdQuery
