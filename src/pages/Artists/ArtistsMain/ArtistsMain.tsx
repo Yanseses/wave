@@ -8,18 +8,20 @@ import { useGetArtistsQuery } from '../../../services/query/shazamApi';
 export const ArtistsMain: FC = () => {
   const { data: artists, isFetching, isError } = useGetArtistsQuery('');
 
-  if(isFetching){
-    return ( <div>Loading...</div> )
-  }
-
-  if(!isFetching && isError){
-    return ( <div>{ 'Ошибка сервера' }</div> )
-  }
-
   return (
     <Wrapper As='section' extraClass={styles.wrapper}>
       <Text As='h2' size={26}>Top Artists</Text>
       <div className={styles.list}>
+        { isFetching && (
+          <Text size={16}>Loading...</Text>
+          ) 
+        }
+
+        { !isFetching && isError && (
+          <Text size={16}>Ошибка сервера</Text>
+          )   
+        }
+
         { artists && artists.map((el: any) => {
           return (
             <Link 

@@ -29,7 +29,7 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      if(entries[0].isIntersecting && !isFetching){
+      if(entries[0].isIntersecting && !isFetching && !isError){
         setPaginator((prevState) => prevState + 20)
       }
     }, {
@@ -41,7 +41,7 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
     return () => {
       if(scrollRef.current) observer.unobserve(scrollRef.current);
     }
-  }, [ paginator, isFetching]);
+  }, [paginator, isFetching, isError]);
 
   return (
     <ul className={styles.list}>
@@ -63,7 +63,7 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
       <div ref={scrollRef} />
 
       { !isFetching && isError && (
-        <Text As='p' size={20} color='secondary'>{ 'Ошибка запроса' }</Text> 
+        <Text As='p' size={20} color='secondary'>{'You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/apidojo/api/shazam'}</Text> 
         ) 
       }
     </ul>

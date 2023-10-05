@@ -9,6 +9,7 @@ export const shazamApi = createApi({
     baseUrl: checkMode() ? shazamApiUrl : localApiUrl,
     headers: apiHeader
   }),
+  tagTypes: ['Genres', 'Sounds', 'Artists'],
   endpoints: (builder) => ({
     getGenres: builder.query({
       query: () => `/charts/list`,
@@ -50,12 +51,12 @@ export const shazamApi = createApi({
       serializeQueryArgs: ({ endpointName }) => {
         return endpointName
       },
-      merge: (currentCashe, newData) => {
-        currentCashe.push(...newData)
-      },
       forceRefetch({ currentArg, previousArg }) {
         return currentArg !== previousArg
       },
+      merge: (currentCashe, newData) => {
+        currentCashe.push(...newData)
+      }
     }),
     getArtists: builder.query({
       query: () => ({ 

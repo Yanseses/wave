@@ -41,7 +41,7 @@ export const GenresList: FC<{ type?: string }> = ({ type }) => {
   if(!isFetching && isError){
     return (
       <section className={styles.error}>
-        <Text As='p' size={20} color='secondary'>{ 'Ошибка запроса' }</Text>
+        <Text As='p' size={20} color='secondary'>{ 'You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/apidojo/api/shazam' }</Text>
       </section>  
     )
   }
