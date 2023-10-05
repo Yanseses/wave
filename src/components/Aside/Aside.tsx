@@ -11,7 +11,19 @@ export const Aside: FC = () => {
   return (
     <aside className={styles.aside}>
       <Text As='h2' size={20} color={'secondary'}>Top Artists</Text>
-      { !isFetching ? (
+      { isFetching && (
+        <div className={styles.wrapper}>
+          <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Loading...</Text>
+        </div>
+        ) 
+      }
+      { isError && (
+        <div className={styles.wrapper}>
+          <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Content is empty</Text>  
+        </div>
+        ) 
+      }
+      { !isFetching && !isError && artists && (
         <div className={styles.artists}>
           { artists && artists.map((el: any, i: number) => {
             if(i < 6){
@@ -28,16 +40,7 @@ export const Aside: FC = () => {
             }
           }) }
         </div>
-      ) : (
-      <div className={styles.wrapper}>
-        { !isError ? (
-          <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Loading...</Text>
-          ) : (
-          <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Content is empty</Text>  
-          )
-        }
-      </div>
-      ) }
+      )}
     </aside>
   )
 }
