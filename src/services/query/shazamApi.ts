@@ -1,15 +1,14 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { apiHeader, checkMode, localApiUrl, shazamApiUrl } from '../../utils/queryConstants'
+import { apiHeader, getEnvMode, localApiUrl, shazamApiUrl } from '../../utils/queryConstants'
 import { getCookie } from '../../utils/cookie';
 import { IGenres, IGenresCountry, ITrackData } from '../types/types';
 
 export const shazamApi = createApi({
   reducerPath: 'shazamApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: checkMode() ? shazamApiUrl : localApiUrl,
+    baseUrl: getEnvMode() ? shazamApiUrl : localApiUrl,
     headers: apiHeader
   }),
-  tagTypes: ['Genres', 'Sounds', 'Artists'],
   endpoints: (builder) => ({
     getGenres: builder.query({
       query: () => `/charts/list`,
@@ -18,7 +17,7 @@ export const shazamApi = createApi({
         const selectedCountry = cookie.length > 2 
         ? cookie.split('-')[0].toUpperCase() 
         : cookie.toUpperCase();
-        if(checkMode()){
+        if(getEnvMode()){
           return {
             country: res.countries.find((country: IGenresCountry) => country.id === selectedCountry),
             global: res.global.genres
@@ -42,7 +41,7 @@ export const shazamApi = createApi({
         }
       }),
       transformResponse: (res: any) => {
-        if(checkMode()){
+        if(getEnvMode()){
           return res.tracks;
         } else {
           return res.data.tracks;
@@ -69,7 +68,7 @@ export const shazamApi = createApi({
       }),
       transformResponse: (res: any) => {
         let artists;
-        if(checkMode()){
+        if(getEnvMode()){
           artists = res.tracks.map((el: ITrackData) => ({
             artist: el.artists ? el.artists[0] : null,
             name: el.subtitle.split(',')[0].split('&')[0],
@@ -94,7 +93,7 @@ export const shazamApi = createApi({
         }
       }),
       transformResponse: (res: any) => {
-        return checkMode() ? res.resources : res.data.data.resources
+        return getEnvMode() ? res.resources : res.data.data.resources
       }
     }),
     getSoundById: builder.query({ 
@@ -106,7 +105,7 @@ export const shazamApi = createApi({
         }
       }),
       transformResponse: (res: any) => {
-        return checkMode() ? res : res.data[0].data;
+        return getEnvMode() ? res : res.data[0].data;
       }
     })
   })

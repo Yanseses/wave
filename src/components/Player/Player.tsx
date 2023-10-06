@@ -113,7 +113,7 @@ export const Player: FC = () => {
     if(audioRef.current){
       audioRef.current.currentTime = seekTime;
     }
-  }, [ seekTime ])
+  }, [ seekTime ]);
 
   return (
     <div className={styles.main} onClick={handleOpenMobilePlayer}>
@@ -136,12 +136,18 @@ export const Player: FC = () => {
         </div>
 
         <div className={styles.controls}>
-          { isMobile ? (
-            <Button onClick={handlePlay}>
-              { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
-            </Button>
+          { isMobile ? 
+              activeSong === null ? (
+                <Button>
+                  <PlayIcon color='grey' />
+                </Button>
+              ) : ( 
+                <Button onClick={handlePlay}>
+                  { isPlaying ? ( <StopIcon /> ) : ( <PlayIcon /> ) }
+                </Button>
             ) : (
             <Controls
+              isTrack={activeSong === null ? false : true}
               isPlaying={isPlaying}
               isRepeat={isRepeat}
               isShuffle={isShuffle}

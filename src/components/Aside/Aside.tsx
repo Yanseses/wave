@@ -17,12 +17,14 @@ export const Aside: FC = () => {
         </div>
         ) 
       }
+
       { isError && (
         <div className={styles.wrapper}>
           <Text As="p" size={16} color={'secondary'} extraClass={styles.error}>Content is empty</Text>  
         </div>
         ) 
       }
+      
       { !isFetching && !isError && artists && (
         <div className={styles.artists}>
           { artists && artists.map((el: any, i: number) => {

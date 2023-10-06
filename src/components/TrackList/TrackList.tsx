@@ -15,7 +15,7 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
   const [ paginator, setPaginator ] = useState<number>(0);
   const { data: tracks, isFetching, isError } = useGetTracksByKeyQuery({listId, paginator});
   const { isPlaying, activeSong } = useSelector(store => store.player);
-  
+
   useEffect(() => {
     if(!activeSong && tracks){
       const correctIndex = containTrack(0, tracks, 'current');
@@ -42,13 +42,13 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
       if(scrollRef.current) observer.unobserve(scrollRef.current);
     }
   }, [paginator, isFetching, isError]);
-
+  // el.key
   return (
     <ul className={styles.list}>
       { tracks && tracks.map((el: ITrackData, i: number) => (
         <Track 
           activeSong={activeSong} 
-          key={el.key} 
+          key={i} 
           song={el} 
           data={tracks} 
           index={i}

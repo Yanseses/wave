@@ -6,6 +6,6 @@ export const apiHeader = {
   'X-RapidAPI-Host':  process.env.REACT_APP_GEO_API || ''
 }
 
-export const checkMode = () => {
-  return process.env.NODE_ENV === 'development' ? true : false
+export const getEnvMode = () => {
+  return process.env.NODE_ENV === 'production' ? true : false
 }

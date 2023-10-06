@@ -13,12 +13,12 @@ export const ArtistsMain: FC = () => {
       <Text As='h2' size={26}>Top Artists</Text>
       <div className={styles.list}>
         { isFetching && (
-          <Text size={16}>Loading...</Text>
+          <Text size={16} color={'secondary'}>Loading...</Text>
           ) 
         }
 
         { !isFetching && isError && (
-          <Text size={16}>Ошибка сервера</Text>
+          <Text size={16} color={'secondary'}>Ошибка сервера</Text>
           )   
         }
 
