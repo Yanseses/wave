@@ -47,12 +47,10 @@ export const shazamApi = createApi({
           return res.data.tracks;
         }
       },
-      serializeQueryArgs: ({ endpointName }) => {
+      serializeQueryArgs: ({ endpointName }) =>  {
         return endpointName
       },
-      forceRefetch({ currentArg, previousArg }) {
-        return currentArg !== previousArg
-      },
+      forceRefetch: ({ currentArg, previousArg }) => currentArg !== previousArg,
       merge: (currentCashe, newData) => {
         currentCashe.push(...newData)
       }

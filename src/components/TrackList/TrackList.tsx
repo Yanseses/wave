@@ -41,14 +41,14 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
     return () => {
       if(scrollRef.current) observer.unobserve(scrollRef.current);
     }
-  }, [paginator, isFetching, isError]);
-  // el.key
+  }, [isError, isFetching, paginator]);
+
   return (
     <ul className={styles.list}>
       { tracks && tracks.map((el: ITrackData, i: number) => (
         <Track 
           activeSong={activeSong} 
-          key={i} 
+          key={el.key} 
           song={el} 
           data={tracks} 
           index={i}
