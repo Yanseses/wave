@@ -1,0 +1,17 @@
+<svg width="169" height="43" viewBox="0 0 1690 430" xmlns="http://www.w3.org/2000/svg">
+    <style>    
+    .Rrrrr {
+      font: bold 350px sans-serif;
+      fill: purple;
+      }
+    </style>
+    <rect x="0" y="165"  width="60" height="100" rx="20" ry="20" fill="purple"/>
+    <rect x="65" y="115"  width="60" height="200" rx="20" ry="20" fill="purple"/>
+    <rect x="130" y="65" width="60" height="300" rx="20" ry="20" fill="purple"/>
+    <rect x="195" y="35" width="60" height="360" rx="20" ry="20" fill="purple"/>
+    <rect x="260" y="0" width="60" height="430" rx="20" ry="20" fill="purple"/>
+    <rect x="325" y="35" width="60" height="360" rx="20" ry="20" fill="purple"/>
+    <rect x="390" y="65" width="60" height="300" rx="20" ry="20" fill="purple"/>
+    <rect x="455" y="115"  width="60" height="200" rx="20" ry="20" fill="purple"/>
+    <text x="600" y="350" class="Rrrrr">Wave</text>
+  </svg>

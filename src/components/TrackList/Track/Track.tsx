@@ -3,10 +3,11 @@ import classNames from 'classnames';
 import { useDispatch } from '../../../services/hooks';
 import { ITrackData } from '../../../services/types/types';
 import { playPause, setActiveSong } from '../../../services/features/playerSlice';
-import { BanIcon, PlayIcon, StopIcon } from '../../../media/Icons';
+import { BanIcon, PlayIcon, StopIcon, WaveIcon } from '../../../media/Icons';
 import { FC, useCallback } from "react";
 import { Text } from '../../Text/Text';
 import { Avatar } from '../../Player/Avatar/Avatar';
+import { useMediaQuery } from 'react-responsive';
 
 interface ITrack {
   index: number,
@@ -17,6 +18,7 @@ interface ITrack {
 }
 
 export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) => {
+  const isTablet = useMediaQuery({ query: '(max-width: 1200px)' });
   const dispatch = useDispatch();
   const classes = classNames(
     styles.track,
@@ -57,13 +59,19 @@ export const Track: FC<ITrack> = ({ song, isPlaying, activeSong, data, index }) 
           {`${song.subtitle} - ${song.title}`}
         </Text>
       </div>
+      { !isTablet && (        
+        <div>
+          { activeSong && song.key === activeSong.key && isPlaying && ( <WaveIcon size={50}/> ) }
+        </div>
+        ) 
+      }
       { !song.hub.actions 
         ? ( <BanIcon size={25} color={ 'grey' } /> )
         : activeSong 
           ? song.key === activeSong.key && isPlaying
             ? ( <StopIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> ) 
             : ( <PlayIcon size={25} color={ song.key === activeSong.key ? 'purple' : 'white' } /> )
-          : ( <PlayIcon size={25} color={ 'white' } /> )
+          : ( <PlayIcon size={25} /> )
       }
     </li>  
   )

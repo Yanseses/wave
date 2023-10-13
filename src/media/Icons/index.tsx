@@ -3,7 +3,7 @@ import { HomeIcon } from "./Navigate/HomeIcon";
 import { DotsMenuIcon } from "./Navigate/DotsMenuIcon";
 import { PlayIcon } from "./Player/PlayIcon";
 import { PodcastsIcon } from './Navigate/PodcastsIcon';
-import { WaveIcon } from "./Navigate/WaveIcon";
+import { WaveIcon } from "./Player/WaveIcon";
 import { ArtistsIcon } from "./Navigate/ArtistsIcon";
 import { StopIcon } from "./Player/StopIcon";
 import { SpeakerOnIcon } from "./Player/SperakerOnIcon";
@@ -16,4 +16,4 @@ import { HeadsetIcon } from './Navigate/HeadsetIcon';
 import { BanIcon } from "./Player/BanIcon";
 import { SuffleIcon } from './Player/ShuffleIcon';
 
-export { PrevTrackIcon, NextTrackIcon, RepeatIcon, NoteIcon, PlayIcon, StopIcon, SpeakerOnIcon, SpeakerOffIcon, HeadsetIcon, BanIcon, SuffleIcon, ArtistsIcon, LikeIcon, HomeIcon, DotsMenuIcon, PodcastsIcon, WaveIcon };
+export { PrevTrackIcon, NextTrackIcon, RepeatIcon, NoteIcon, PlayIcon, StopIcon, SpeakerOnIcon, SpeakerOffIcon, HeadsetIcon, BanIcon, SuffleIcon, WaveIcon, ArtistsIcon, LikeIcon, HomeIcon, DotsMenuIcon, PodcastsIcon };

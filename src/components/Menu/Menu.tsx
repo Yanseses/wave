@@ -1,6 +1,5 @@
 import { FC } from "react";
 import styles from './menu.module.css';
-import { Text } from "../Text/Text";
 import { Link } from "react-router-dom";
 import { Logo } from "../../media/Logo";
 import { ArtistsIcon, HomeIcon, LikeIcon } from "../../media/Icons";
@@ -18,18 +17,11 @@ export const Menu: FC = () => {
       <Link to='/home' className={styles.logo}>
         <Logo />
       </Link>
-      <div className={styles.wrapper}>
-        <div className={styles.menu}>
-          <Text As='h2' size={20} color={'secondary'} extraClass={styles.heading}>
-            Menu
-          </Text>
-          <div className={styles.menuList}>
-            { menu.map((el, i) => 
-              <MenuItem key={i} text={el.name} Icon={el.icon} link={el.link} />
-              ) 
-            }
-          </div>
-        </div>
+      <div className={styles.menuList}>
+        { menu.map((el, i) => 
+          <MenuItem key={i} text={el.name} Icon={el.icon} link={el.link} />
+          ) 
+        }
       </div>
     </nav>
   )

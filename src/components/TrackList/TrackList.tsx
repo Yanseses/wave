@@ -43,6 +43,8 @@ export const TrackList: FC<{ listId: string }> = ({ listId }) => {
     }
   }, [isError, isFetching, paginator]);
 
+  console.log(tracks)
+
   return (
     <ul className={styles.list}>
       { tracks && tracks.map((el: ITrackData, i: number) => (
